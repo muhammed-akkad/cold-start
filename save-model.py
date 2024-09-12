@@ -50,7 +50,7 @@ def save_dict(model_state_dict: Dict[str, torch.Tensor], model_path: str):
     # save tensors using the C++ function
     print("Starting save_tensors_cpp")
 
-    tensor_offsets = cuda_saver.save_tensors_cpp(tensor_names, tensor_data_index)
+    tensor_offsets = cuda_saver.save_tensors_cpu_cpp(tensor_names, tensor_data_index)
     output = sys.stdout.getvalue()
 
     # Reset stdout to original

@@ -9,9 +9,42 @@
 #include <ctime>
 #include <unordered_map>
 #include <cuda.h>
-#include <thread> // For std::this_thread::sleep_for
-#include <chrono> // For std::chrono::milliseconds
+#include <thread>     // For std::this_thread::sleep_for
+#include <chrono>     // For std::chrono::milliseconds
+#include <sys/mman.h> // For mmap
+#include <fcntl.h>    // For O_CREAT, O_RDWR
+#include <sys/stat.h> // For ftruncate
+#include <sstream>    // For std::istringstream
 
+bool sendSharedMemoryHandle(int client_socket, int shm_fd)
+{
+    struct msghdr msg = {0};
+    struct cmsghdr *cmsg;
+    char buf[CMSG_SPACE(sizeof(int))];
+    memset(buf, '\0', sizeof(buf));
+
+    struct iovec io = {.iov_base = (void *)"FD", .iov_len = 2};
+
+    msg.msg_iov = &io;
+    msg.msg_iovlen = 1;
+    msg.msg_control = buf;
+    msg.msg_controllen = sizeof(buf);
+
+    cmsg = CMSG_FIRSTHDR(&msg);
+    cmsg->cmsg_level = SOL_SOCKET;
+    cmsg->cmsg_type = SCM_RIGHTS;
+    cmsg->cmsg_len = CMSG_LEN(sizeof(int));
+
+    memcpy(CMSG_DATA(cmsg), &shm_fd, sizeof(int));
+
+    if (sendmsg(client_socket, &msg, 0) == -1)
+    {
+        std::cerr << "Failed to send file descriptor: " << strerror(errno) << std::endl;
+        return false;
+    }
+
+    return true;
+}
 class GpuMemoryManager
 {
 public:
@@ -72,14 +105,113 @@ public:
     }
 };
 
+class HostMemoryManager
+{
+public:
+    HostMemoryManager()
+    {
+        log("Host Memory Manager initialized.");
+    }
+
+    ~HostMemoryManager()
+    {
+        log("Host Memory Manager destroyed.");
+    }
+
+    void *allocateMemory(const std::string &name, size_t size, int &shm_fd)
+    {
+        // Create shared memory object
+        shm_fd = shm_open(name.c_str(), O_CREAT | O_RDWR, 0666);
+        if (shm_fd == -1)
+        {
+            log("shm_open failed for memory " + name);
+            return nullptr;
+        }
+
+        // Set the size of the shared memory object
+        if (ftruncate(shm_fd, size) == -1)
+        {
+            log("ftruncate failed for memory " + name);
+            close(shm_fd);
+            shm_unlink(name.c_str());
+            return nullptr;
+        }
+
+        // Map the shared memory object to the process's address space
+        void *h_memory = mmap(0, size, PROT_READ | PROT_WRITE, MAP_SHARED, shm_fd, 0);
+        if (h_memory == MAP_FAILED)
+        {
+            log("mmap failed for memory " + name);
+            close(shm_fd);
+            shm_unlink(name.c_str());
+            return nullptr;
+        }
+
+        log("Allocated " + std::to_string(size) + " bytes of shared host memory for " + name);
+        return h_memory;
+    }
+
+    void *importMemory(const std::string &name, size_t size, int &shm_fd)
+    {
+        // Open the shared memory object
+        shm_fd = shm_open(name.c_str(), O_RDWR, 0666);
+        if (shm_fd == -1)
+        {
+            log("shm_open failed for memory " + name);
+            return nullptr;
+        }
+
+        // Map the shared memory object to the process's address space
+        void *h_memory = mmap(0, size, PROT_READ | PROT_WRITE, MAP_SHARED, shm_fd, 0);
+        if (h_memory == MAP_FAILED)
+        {
+            log("mmap failed for memory " + name);
+            close(shm_fd);
+            return nullptr;
+        }
+
+        log("Imported shared host memory for " + name);
+        return h_memory;
+    }
+
+    bool freeMemory(void *h_memory, const std::string &name, size_t size, int shm_fd)
+    {
+        if (h_memory != nullptr)
+        {
+            // Unmap the shared memory
+            munmap(h_memory, size);
+            // Close the shared memory file descriptor
+            close(shm_fd);
+            // Unlink the shared memory object
+            shm_unlink(name.c_str());
+
+            log("Freed shared host memory for " + name);
+            return true;
+        }
+        log("Shared host memory for " + name + " not allocated.");
+        return false;
+    }
+
+    static void log(const std::string &message)
+    {
+        std::ofstream log_file;
+        log_file.open("cuda_daemon.log", std::ios_base::app);
+        std::time_t now = std::time(nullptr);
+        log_file << std::ctime(&now) << ": " << message << std::endl;
+        log_file.close();
+    }
+};
+
 GpuMemoryManager gpuManager;
+HostMemoryManager hostManager;
 
 void handleClient(int client_socket)
 {
     char buffer[1024] = {0};
     int read_size;
-    void *d_tensor = nullptr;
+    void *memory = nullptr;
     cudaIpcMemHandle_t ipc_handle; // To store the IPC handle
+    int shm_fd = -1;               // Shared memory file descriptor
 
     while ((read_size = read(client_socket, buffer, 1024)) > 0)
     {
@@ -87,59 +219,143 @@ void handleClient(int client_socket)
 
         GpuMemoryManager::log("Received command: " + command);
 
-        if (command.find("ALLOCATE") == 0)
-        {
-            std::string name = command.substr(9, command.find(" ") - 9);
-            size_t size = std::stoul(command.substr(command.find_last_of(" ") + 1));
+        // Split the command into parts
+        std::istringstream iss(command);
+        std::string cmd_type, mem_type, name;
+        size_t size = 0;
 
-            d_tensor = gpuManager.allocateMemory(name, size, ipc_handle);
-            if (d_tensor)
+        iss >> cmd_type >> mem_type >> name >> size;
+
+        if (cmd_type == "ALLOCATE" && mem_type == "GPU")
+        {
+            memory = gpuManager.allocateMemory(name, size, ipc_handle);
+            if (memory)
             {
-                GpuMemoryManager::log("Allocated memory at pointer: " + std::to_string(reinterpret_cast<uint64_t>(d_tensor)));
-                // Send the "ALLOCATED" message to the client
-                std::string response = "ALLOCATED " + name + "\n";
+                GpuMemoryManager::log("Allocated GPU memory at pointer: " + std::to_string(reinterpret_cast<uint64_t>(memory)));
+                std::string response = "ALLOCATED GPU " + name + "\n";
                 send(client_socket, response.c_str(), response.size(), 0);
-                // Add a delay before sending the IPC handle
                 std::this_thread::sleep_for(std::chrono::milliseconds(500)); // 500 ms delay
 
-                // Send the IPC handle back to the client
                 send(client_socket, &ipc_handle, sizeof(cudaIpcMemHandle_t), 0);
+                GpuMemoryManager::log("Sent IPC handle for GPU tensor " + name);
+            }
+            else
+            {
+                std::string response = "FAILED GPU\n";
+                send(client_socket, response.c_str(), response.size(), 0);
+                GpuMemoryManager::log("GPU memory allocation failed for tensor " + name);
+            }
+        }
+        else if (cmd_type == "ALLOCATE" && mem_type == "HOST")
+        {
+            memory = hostManager.allocateMemory(name, size, shm_fd);
+            if (memory)
+            {
+                HostMemoryManager::log("Allocated shared host memory at pointer: " + std::to_string(reinterpret_cast<uint64_t>(memory)));
+                std::string response = "ALLOCATED HOST " + name + "\n";
+                send(client_socket, response.c_str(), response.size(), 0);
+                // Prepare to send the shared memory file descriptor to the client
+                std::this_thread::sleep_for(std::chrono::milliseconds(500)); // 500 ms delay
 
-                GpuMemoryManager::log("Sent IPC handle for tensor " + name);
+                struct msghdr msg = {0};
+                struct cmsghdr *cmsg;
+                char cmsg_buf[CMSG_SPACE(sizeof(int))];
+                char dummy_buf[1] = {' '}; // You need to send at least 1 byte of real data
+
+                // Prepare the iovec
+                struct iovec io = {.iov_base = dummy_buf, .iov_len = sizeof(dummy_buf)};
+                msg.msg_iov = &io;
+                msg.msg_iovlen = 1;
+
+                // Set up the control message buffer
+                msg.msg_control = cmsg_buf;
+                msg.msg_controllen = sizeof(cmsg_buf);
+
+                // Get the first control message header
+                cmsg = CMSG_FIRSTHDR(&msg);
+                cmsg->cmsg_level = SOL_SOCKET;
+                cmsg->cmsg_type = SCM_RIGHTS;
+                cmsg->cmsg_len = CMSG_LEN(sizeof(int));
+
+                // Copy the file descriptor to the control message
+                // Step 2: Print the dummy buffer, file descriptor, and control message details
+                HostMemoryManager::log("Sending dummy buffer: " + std::string(dummy_buf, sizeof(dummy_buf)));
+                HostMemoryManager::log("File descriptor to be sent: " + std::to_string(shm_fd));
+                HostMemoryManager::log("Control message length: " + std::to_string(cmsg->cmsg_len));
+                HostMemoryManager::log("Control message level: " + std::to_string(cmsg->cmsg_level));
+                HostMemoryManager::log("Control message type: " + std::to_string(cmsg->cmsg_type));
+
+                // Send the message with the file descriptor
+                if (sendmsg(client_socket, &msg, 0) == -1)
+                {
+                    perror("sendmsg");
+                    HostMemoryManager::log("Failed to send file descriptor.");
+                }
+                else
+                {
+                    HostMemoryManager::log("Sent shared memory descriptor for host memory " + name);
+                }
             }
             else
             {
-                std::string response = "FAILED\n";
+                std::string response = "FAILED HOST\n";
                 send(client_socket, response.c_str(), response.size(), 0);
-                GpuMemoryManager::log("Memory allocation failed for tensor " + name);
+                HostMemoryManager::log("Host memory allocation failed for " + name);
             }
         }
-        else if (command.find("IMPORT") == 0)
+        else if (cmd_type == "IMPORT" && mem_type == "GPU")
         {
-            // Assume the IPC handle is passed by the client
             read(client_socket, &ipc_handle, sizeof(cudaIpcMemHandle_t));
-            d_tensor = gpuManager.importMemory(ipc_handle);
-            if (d_tensor)
+            memory = gpuManager.importMemory(ipc_handle);
+            if (memory)
             {
-                std::string response = "IMPORTED\n";
+                std::string response = "IMPORTED GPU\n";
                 send(client_socket, response.c_str(), response.size(), 0);
-                GpuMemoryManager::log("Imported memory for tensor with IPC handle.");
+                GpuMemoryManager::log("Imported GPU memory for tensor with IPC handle.");
             }
             else
             {
-                std::string response = "IMPORT_FAILED\n";
+                std::string response = "IMPORT FAILED GPU\n";
                 send(client_socket, response.c_str(), response.size(), 0);
-                GpuMemoryManager::log("Memory import failed.");
+                GpuMemoryManager::log("GPU memory import failed.");
             }
         }
-        else if (command.find("FREE") == 0)
+        else if (cmd_type == "IMPORT" && mem_type == "HOST")
         {
-            std::string name = command.substr(5);
-            bool success = gpuManager.freeMemory(d_tensor, name);
-            std::string response = success ? "FREED\n" : "NOT_ALLOCATED\n";
+            read(client_socket, &shm_fd, sizeof(shm_fd));
+            memory = hostManager.importMemory(name, size, shm_fd);
+            if (memory)
+            {
+                std::string response = "IMPORTED HOST\n";
+                send(client_socket, response.c_str(), response.size(), 0);
+                HostMemoryManager::log("Imported shared host memory for " + name);
+            }
+            else
+            {
+                std::string response = "IMPORT FAILED HOST\n";
+                send(client_socket, response.c_str(), response.size(), 0);
+                HostMemoryManager::log("Host memory import failed.");
+            }
+        }
+        else if (cmd_type == "FREE" && mem_type == "GPU")
+        {
+            bool success = gpuManager.freeMemory(memory, name);
+            std::string response = success ? "FREED GPU\n" : "NOT_ALLOCATED GPU\n";
             send(client_socket, response.c_str(), response.size(), 0);
-            GpuMemoryManager::log("Memory free request for tensor " + name + " resulted in: " + response);
-            d_tensor = nullptr;
+            GpuMemoryManager::log("GPU memory free request for tensor " + name + " resulted in: " + response);
+        }
+        else if (cmd_type == "FREE" && mem_type == "HOST")
+        {
+            bool success = hostManager.freeMemory(memory, name, size, shm_fd);
+            std::string response = success ? "FREED HOST\n" : "NOT_ALLOCATED HOST\n";
+            send(client_socket, response.c_str(), response.size(), 0);
+            HostMemoryManager::log("Host memory free request for " + name + " resulted in: " + response);
+        }
+        else
+        {
+            std::string response = "UNKNOWN COMMAND\n";
+            send(client_socket, response.c_str(), response.size(), 0);
+            GpuMemoryManager::log("Received unknown command: " + command);
         }
 
         // Clear the buffer for the next command
