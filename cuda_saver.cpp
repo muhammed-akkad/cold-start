@@ -47,15 +47,6 @@ int connectToDaemon()
 
 std::string sendCommandToDaemon(int sock, const std::string &command)
 {
-    char buffer[1024] = {0};
-    send(sock, command.c_str(), command.size(), 0);
-    read(sock, buffer, 1024);
-    return std::string(buffer);
-}
-
-// Function to send the command to the daemon and receive the response
-std::string sendCommandToDaemonCpu(int sock, const std::string &command)
-{
     send(sock, command.c_str(), command.size(), 0);
     char buffer[1024] = {0};
     int bytes_received = recv(sock, buffer, sizeof(buffer) - 1, 0);
@@ -282,32 +273,22 @@ std::map<std::string, uint64_t> save_tensors_cpu_cpp(const std::vector<std::stri
 
         std::cout << "Data pointer: " << data_ptr << ", Size: " << size << std::endl;
 
-        // Send allocate command to the daemon with the new structure: "ALLOCATE HOST"
+        // Send allocate command to the daemon
         std::string command = "ALLOCATE HOST " + name + " " + std::to_string(size);
-        std::string response = sendCommandToDaemonCpu(sock, command);
+        std::string response = sendCommandToDaemon(sock, command);
 
         if (response.find("ALLOCATED HOST") == 0)
         {
             std::cout << "Allocated shared host memory for tensor: " << name << std::endl;
-
-            int shm_fd;
-            // Receive the shared memory file descriptor from the daemon
-            if (receiveSharedMemoryHandle(sock, shm_fd))
+            // Open the shared memory using the tensor name
+            std::string shm_name = "/" + name;
+            int shm_fd = shm_open(shm_name.c_str(), O_RDWR, 0666);
+            if (shm_fd == -1)
             {
-                std::cout << "Received shared memory file descriptor: " << shm_fd << std::endl;
-            }
-            else
-            {
-                std::cerr << "Failed to receive shared memory file descriptor for tensor: " << name << std::endl;
-            }
-            // Save the shared memory handle to a file
-            std::string filename = name + "_shm_handle.bin";
-            saveSharedMemoryHandleToFile(filename, shm_fd);
-            if (shm_fd < 0)
-            {
-                std::cerr << "Received an invalid file descriptor for tensor: " << name << std::endl;
+                std::cerr << "shm_open failed for tensor: " << name << " with error: " << strerror(errno) << std::endl;
                 continue;
             }
+
             // Map the shared memory into the process's address space
             void *h_memory = mmap(0, size, PROT_READ | PROT_WRITE, MAP_SHARED, shm_fd, 0);
             if (h_memory == MAP_FAILED)
@@ -317,10 +298,19 @@ std::map<std::string, uint64_t> save_tensors_cpu_cpp(const std::vector<std::stri
                 continue;
             }
 
-            std::cout << "Mapped shared host memory for tensor: " << name << " at address: " << h_memory << std::endl;
+            // Close the file descriptor after mapping
+            close(shm_fd);
 
-            // Copy data from the provided host pointer to the shared memory
-            std::memcpy(h_memory, reinterpret_cast<void *>(data_ptr), size);
+            std::cout << "Mapped shared host memory for tensor: " << name << " at address: " << h_memory << std::endl;
+            std::cout << "data_ptr address: " << reinterpret_cast<void *>(data_ptr) << std::endl;
+
+            cudaError_t status = cudaMemcpy(h_memory, reinterpret_cast<void *>(data_ptr), size, cudaMemcpyDeviceToHost);
+            if (status != cudaSuccess)
+            {
+                std::cerr << "cudaMemcpy failed for tensor: " << name << " with error: " << cudaGetErrorString(status) << std::endl;
+                // Handle the error appropriately
+                continue;
+            }
 
             std::cout << "Copied data to shared host memory for tensor: " << name << std::endl;
             tensor_offsets[name] = reinterpret_cast<uint64_t>(h_memory);
@@ -335,7 +325,6 @@ std::map<std::string, uint64_t> save_tensors_cpu_cpp(const std::vector<std::stri
     std::cout << "Finished save_tensors_cpu_cpp" << std::endl;
     return tensor_offsets;
 }
-
 torch::Tensor load_tensor_from_gpu(uint64_t ptr, std::vector<int64_t> shape, std::vector<int64_t> stride, std::string dtype_str)
 {
     torch::ScalarType dtype;

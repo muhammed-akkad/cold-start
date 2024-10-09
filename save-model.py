@@ -37,12 +37,14 @@ def save_dict(model_state_dict: Dict[str, torch.Tensor], model_path: str):
     tensor_data_index = {}
     for name, param in model_state_dict.items():
         if param.is_cuda:
+            if name == "layer2.0.bn1.running_var":
+                print(param)
             data_ptr = param.data_ptr()  # Get the pointer to the data on the GPU
             size = param.numel() * param.element_size()  # Calculate the size of the tensor in bytes
             tensor_data_index[name] = (data_ptr, size)
         else:
             raise ValueError(f"Tensor {name} is not on the GPU.")
-        
+
     if not os.path.exists(model_path):
         os.makedirs(model_path, exist_ok=True)
     original_stdout = sys.stdout
@@ -50,7 +52,8 @@ def save_dict(model_state_dict: Dict[str, torch.Tensor], model_path: str):
     # save tensors using the C++ function
     print("Starting save_tensors_cpp")
 
-    tensor_offsets = cuda_saver.save_tensors_cpu_cpp(tensor_names, tensor_data_index)
+    tensor_offsets_ = cuda_saver.save_tensors_cpu_cpp(tensor_names, tensor_data_index)
+    
     output = sys.stdout.getvalue()
 
     # Reset stdout to original
@@ -68,7 +71,7 @@ def save_dict(model_state_dict: Dict[str, torch.Tensor], model_path: str):
     with open(os.path.join(model_path, "tensor_index.json"), "w") as f:
         json.dump(tensor_index, f)
 
-
+""" 
 def save_tensors_py(tensor_names, tensor_data_index):
     tensor_offsets = {}
 
@@ -86,7 +89,10 @@ def save_tensors_py(tensor_names, tensor_data_index):
         size = tensor_data_index[name][1]
 
         print(f"Data pointer: {data_ptr}, Size: {size}")
-
+        print("running_var")
+        if name == "layer2.0.bn1.running_var":
+            print("running_var")
+            print(tensor_data_index[name])
         # Send allocate command to the daemon
         command = f"ALLOCATE {name} {size}"
         response = send_command_to_daemon(sock, command)
@@ -112,7 +118,7 @@ def save_tensors_py(tensor_names, tensor_data_index):
 
     sock.close()
     print("Finished save_tensors_py")
-    return tensor_offsets
+    return tensor_offsets """
 
 def main():
 
