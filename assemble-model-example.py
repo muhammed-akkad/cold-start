@@ -1,97 +1,143 @@
-import torch
+import errno
+import mmap
 import os
-import shutil
 import json
-import cuda_saver
-import torchvision.models as models
-import ctypes
 import time
-from torchvision.models import MobileNet_V3_Large_Weights
+import torch
+import ctypes
+import cuda_saver
+import posix_ipc
 
-# Function to load IPC handle from a file
-def load_ipc_handle(filename):
-    with open(filename, 'rb') as f:
-        ipc_handle_bytes = f.read()
-    # Reconstruct cudaIpcMemHandle_t from bytes
-    ipc_handle = (ctypes.c_char * len(ipc_handle_bytes)).from_buffer_copy(ipc_handle_bytes)
-    return ipc_handle
+def load_model(model_class, model_path):
+    """
+    Loads a model's state dictionary from GPU, CPU, and Disk, and returns the model.
 
-def load_model_from_ipc(model_class, tensor_index_file, ipc_handles_dir):
-    # Load tensor metadata
-    with open(tensor_index_file, 'r') as f:
+    Args:
+        model_class: The class of the model to instantiate.
+        model_path (str): Path where the model parts are saved.
+
+    Returns:
+        model: The model with the state dictionary loaded.
+    """
+    # Load tensor index
+    with open(os.path.join(model_path, "tensor_index.json"), 'r') as f:
         tensor_index = json.load(f)
 
     state_dict = {}
+
+    # Load tensors based on their location
     for name, meta in tensor_index.items():
-        shape = meta[2]
-        dtype_str = meta[4] 
-        dtype_name = dtype_str.replace('torch.', '') 
-        dtype = getattr(torch, dtype_name) 
-        dtype_code = dtype_to_code(dtype)
-        ipc_handle_file = os.path.join(ipc_handles_dir, f"{name}_ipc_handle.bin")
+        location = meta['location']
+        size = meta['size']
+        shape = meta['shape']
+        dtype_str = meta['dtype']
+        dtype = getattr(torch, dtype_str.split('.')[1])  # Convert 'torch.float32' to 'float32'
 
-        # Load the IPC handle
-        ipc_handle = load_ipc_handle(ipc_handle_file)
-        ipc_handle_str = ipc_handle.raw  # Get the raw bytes
+        if location == 'gpu':
+            # Load tensor from GPU using IPC handle
+            ipc_handle_file = os.path.join(model_path, 'handlers_gpu', f"{name}_ipc_handle.bin")
+            tensor = cuda_saver.load_model_tensor(ipc_handle_file, shape, dtype)
+            state_dict[name] = tensor
 
-        # Create the tensor from the IPC handle
-        tensor = cuda_saver.tensor_from_ipc_handle(ipc_handle_str, shape, dtype_code)
-        
-        state_dict[name] = tensor
+        elif location == 'cpu':
+            # Load tensor from shared CPU memory using posix_ipc
+            shm_name = f"/{name}"
 
-    # Instantiate the model and load the state dict
-    model = model_class().cuda()
+            try:
+                # Open the shared memory object
+                shm = posix_ipc.SharedMemory(shm_name, flags=posix_ipc.O_RDONLY)
+            except posix_ipc.ExistentialError:
+                raise FileNotFoundError(f"Shared memory {shm_name} not found")
+
+            # Map the shared memory into the process's address space
+            fd = shm.fd
+            h_memory = mmap.mmap(fd, size, mmap.MAP_SHARED, mmap.PROT_READ)
+            # Close the file descriptor as it's no longer needed
+            shm.close_fd()
+
+            # Create tensor from shared memory (keep on CPU for now)
+            buffer = memoryview(h_memory)
+            tensor = torch.frombuffer(buffer, dtype=dtype).reshape(shape)
+            state_dict[name] = tensor
+
+        elif location == 'disk':
+            # Load tensor directly from disk
+            filename = os.path.join(model_path, 'tensors_data', f"{name}_data.bin")
+            with open(filename, 'rb') as f:
+                buffer = f.read()
+            tensor = torch.frombuffer(buffer, dtype=dtype).reshape(shape)
+            # Keep on CPU for now
+            state_dict[name] = tensor
+
+        else:
+            raise ValueError(f"Unknown location '{location}' for tensor '{name}'")
+
+    # Instantiate the model
+    model = model_class()
+
+    # Load state_dict
     model.load_state_dict(state_dict)
+
+    # Move the entire model to GPU
+    model.to('cuda')
+
     return model
 
-def dtype_to_code(dtype):
-    dtype_map = {
-        torch.float32: 6, 
-        torch.float64: 7, 
-        torch.int32: 3,    
-        torch.int64: 4,    
-    }
-    return dtype_map.get(dtype, -1)
-def delete_pytorch_cache():
-    # Delete PyTorch's cached model weights
-    cache_dir = os.path.expanduser('~/.cache/torch/hub/checkpoints')
-    if os.path.exists(cache_dir):
-        shutil.rmtree(cache_dir)
-
-def clear_os_cache():
-    # Clear the OS file system cache (Linux only)
-    os.system('sudo sync')
-    os.system('sudo sh -c "echo 3 > /proc/sys/vm/drop_caches"')
-    
 def main():
-    delete_pytorch_cache()
-    clear_os_cache()
+    from torchvision import models
 
-    model = models.mobilenet_v3_large().cuda()
-    # Load the model normally for comparison
-    start_time_normal = time.time()
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    normal_model = models.mobilenet_v3_large(weights=MobileNet_V3_Large_Weights.DEFAULT).to(device)
-    end_time_normal = time.time()
+    model_path = './'
+    model_class = models.mobilenet_v3_large
+    # Prepare input data
+    input_tensor = torch.randn(1, 3, 224, 224).to('cuda')
+    torch.cuda.init()
+    torch.cuda.synchronize()
+    # ---------------------------
+    # Custom Loading Method
+    # ---------------------------
+    start_time = time.time()
+    # Load the model with parameters split between GPU, CPU, and Disk
+    custom_model = load_model(model_class, model_path)
+    custom_model.eval()
+    custom_loading_time = time.time() - start_time
 
-    normal_model.eval()
+    # Inference with custom model
+    start_time = time.time()
+    custom_output = custom_model(input_tensor)
+    custom_inference_time = time.time() - start_time
+
+    # ---------------------------
+    # Standard Loading Method
+    # ---------------------------
+    # start_time = time.time()
+    # # Load the model using the standard method
+    # standard_model = model_class(weights=models.MobileNet_V3_Large_Weights.DEFAULT).to('cuda')
+    # standard_model.eval()
+    # standard_loading_time = time.time() - start_time
+
+    # # Inference with standard model
+    # start_time = time.time()
+    # standard_output = standard_model(input_tensor)
+    # standard_inference_time = time.time() - start_time
+
+    # ---------------------------
+    # Compare Outputs
+    # ---------------------------
+    # outputs_match = torch.allclose(custom_output, standard_output, atol=1e-6)
+
+    # ---------------------------
+    # Print Results
+    # ---------------------------
+    print("Custom Loading Method:")
+    print(f"  Loading Time: {custom_loading_time:.4f} seconds")
+    print(f"  Inference Time: {custom_inference_time:.4f} seconds")
+
+    # print("\nStandard Loading Method:")
+    # print(f"  Loading Time: {standard_loading_time:.4f} seconds")
+    # print(f"  Inference Time: {standard_inference_time:.4f} seconds")
+
+    # print(f"\nDo the outputs match? {'Yes' if outputs_match else 'No'}")
 
 
-    start_time_ipc = time.time()
-    # Load state dict from IPC using the C++ extension
-    state_dict = cuda_saver.load_model_from_ipc('tensor_index.json', 'handlers_gpu')
-
-    # Instantiate the model and load the state dict
-
-    model.load_state_dict(state_dict)
-    end_time_ipc = time.time()
-
-    model.eval()
-    # Calculate loading times
-    normal_load_time = end_time_normal - start_time_normal
-    ipc_load_time = end_time_ipc - start_time_ipc
-
-    print(f"Model loaded normally in {normal_load_time:.6f} seconds")
-    print(f"Model loaded using IPC in {ipc_load_time:.6f} seconds")
 if __name__ == "__main__":
-    main() 
+    main()

@@ -1,1 +1,3626 @@
-{"features.0.0.weight": [140403611271168, 1728, [16, 3, 3, 3], [27, 9, 3, 1], "torch.float32"], "features.0.1.weight": [140403611273216, 64, [16], [1], "torch.float32"], "features.0.1.bias": [140403611273728, 64, [16], [1], "torch.float32"], "features.0.1.running_mean": [140403611274240, 64, [16], [1], "torch.float32"], "features.0.1.running_var": [140403611274752, 64, [16], [1], "torch.float32"], "features.0.1.num_batches_tracked": [140403611275264, 8, [], [], "torch.int64"], "features.1.block.0.0.weight": [140403611275776, 576, [16, 1, 3, 3], [9, 9, 3, 1], "torch.float32"], "features.1.block.0.1.weight": [140403611276800, 64, [16], [1], "torch.float32"], "features.1.block.0.1.bias": [140403611277312, 64, [16], [1], "torch.float32"], "features.1.block.0.1.running_mean": [140403611277824, 64, [16], [1], "torch.float32"], "features.1.block.0.1.running_var": [140403611278336, 64, [16], [1], "torch.float32"], "features.1.block.0.1.num_batches_tracked": [140403611278848, 8, [], [], "torch.int64"], "features.1.block.1.0.weight": [140403611279360, 1024, [16, 16, 1, 1], [16, 1, 1, 1], "torch.float32"], "features.1.block.1.1.weight": [140403611280384, 64, [16], [1], "torch.float32"], "features.1.block.1.1.bias": [140403611280896, 64, [16], [1], "torch.float32"], "features.1.block.1.1.running_mean": [140403611281408, 64, [16], [1], "torch.float32"], "features.1.block.1.1.running_var": [140403611281920, 64, [16], [1], "torch.float32"], "features.1.block.1.1.num_batches_tracked": [140403611282432, 8, [], [], "torch.int64"], "features.2.block.0.0.weight": [140403611282944, 4096, [64, 16, 1, 1], [16, 1, 1, 1], "torch.float32"], "features.2.block.0.1.weight": [140403611287040, 256, [64], [1], "torch.float32"], "features.2.block.0.1.bias": [140403611287552, 256, [64], [1], "torch.float32"], "features.2.block.0.1.running_mean": [140403611288064, 256, [64], [1], "torch.float32"], "features.2.block.0.1.running_var": [140403611288576, 256, [64], [1], "torch.float32"], "features.2.block.0.1.num_batches_tracked": [140403611289088, 8, [], [], "torch.int64"], "features.2.block.1.0.weight": [140403611289600, 2304, [64, 1, 3, 3], [9, 9, 3, 1], "torch.float32"], "features.2.block.1.1.weight": [140403611292160, 256, [64], [1], "torch.float32"], "features.2.block.1.1.bias": [140403611292672, 256, [64], [1], "torch.float32"], "features.2.block.1.1.running_mean": [140403611293184, 256, [64], [1], "torch.float32"], "features.2.block.1.1.running_var": [140403611293696, 256, [64], [1], "torch.float32"], "features.2.block.1.1.num_batches_tracked": [140403611294208, 8, [], [], "torch.int64"], "features.2.block.2.0.weight": [140403611294720, 6144, [24, 64, 1, 1], [64, 1, 1, 1], "torch.float32"], "features.2.block.2.1.weight": [140403611300864, 96, [24], [1], "torch.float32"], "features.2.block.2.1.bias": [140403611301376, 96, [24], [1], "torch.float32"], "features.2.block.2.1.running_mean": [140403611301888, 96, [24], [1], "torch.float32"], "features.2.block.2.1.running_var": [140403611302400, 96, [24], [1], "torch.float32"], "features.2.block.2.1.num_batches_tracked": [140403611302912, 8, [], [], "torch.int64"], "features.3.block.0.0.weight": [140403611303424, 6912, [72, 24, 1, 1], [24, 1, 1, 1], "torch.float32"], "features.3.block.0.1.weight": [140403611310592, 288, [72], [1], "torch.float32"], "features.3.block.0.1.bias": [140403611311104, 288, [72], [1], "torch.float32"], "features.3.block.0.1.running_mean": [140403611311616, 288, [72], [1], "torch.float32"], "features.3.block.0.1.running_var": [140403611312128, 288, [72], [1], "torch.float32"], "features.3.block.0.1.num_batches_tracked": [140403611312640, 8, [], [], "torch.int64"], "features.3.block.1.0.weight": [140403611313152, 2592, [72, 1, 3, 3], [9, 9, 3, 1], "torch.float32"], "features.3.block.1.1.weight": [140403611316224, 288, [72], [1], "torch.float32"], "features.3.block.1.1.bias": [140403611316736, 288, [72], [1], "torch.float32"], "features.3.block.1.1.running_mean": [140403611317248, 288, [72], [1], "torch.float32"], "features.3.block.1.1.running_var": [140403611317760, 288, [72], [1], "torch.float32"], "features.3.block.1.1.num_batches_tracked": [140403611318272, 8, [], [], "torch.int64"], "features.3.block.2.0.weight": [140403611318784, 6912, [24, 72, 1, 1], [72, 1, 1, 1], "torch.float32"], "features.3.block.2.1.weight": [140403611325952, 96, [24], [1], "torch.float32"], "features.3.block.2.1.bias": [140403611326464, 96, [24], [1], "torch.float32"], "features.3.block.2.1.running_mean": [140403611326976, 96, [24], [1], "torch.float32"], "features.3.block.2.1.running_var": [140403611327488, 96, [24], [1], "torch.float32"], "features.3.block.2.1.num_batches_tracked": [140403611328000, 8, [], [], "torch.int64"], "features.4.block.0.0.weight": [140403611328512, 6912, [72, 24, 1, 1], [24, 1, 1, 1], "torch.float32"], "features.4.block.0.1.weight": [140403611335680, 288, [72], [1], "torch.float32"], "features.4.block.0.1.bias": [140403611336192, 288, [72], [1], "torch.float32"], "features.4.block.0.1.running_mean": [140403611336704, 288, [72], [1], "torch.float32"], "features.4.block.0.1.running_var": [140403611337216, 288, [72], [1], "torch.float32"], "features.4.block.0.1.num_batches_tracked": [140403611337728, 8, [], [], "torch.int64"], "features.4.block.1.0.weight": [140403611338240, 7200, [72, 1, 5, 5], [25, 25, 5, 1], "torch.float32"], "features.4.block.1.1.weight": [140403611345920, 288, [72], [1], "torch.float32"], "features.4.block.1.1.bias": [140403611346432, 288, [72], [1], "torch.float32"], "features.4.block.1.1.running_mean": [140403611346944, 288, [72], [1], "torch.float32"], "features.4.block.1.1.running_var": [140403611347456, 288, [72], [1], "torch.float32"], "features.4.block.1.1.num_batches_tracked": [140403611347968, 8, [], [], "torch.int64"], "features.4.block.2.fc1.weight": [140403611348480, 6912, [24, 72, 1, 1], [72, 1, 1, 1], "torch.float32"], "features.4.block.2.fc1.bias": [140403611355648, 96, [24], [1], "torch.float32"], "features.4.block.2.fc2.weight": [140403611356160, 6912, [72, 24, 1, 1], [24, 1, 1, 1], "torch.float32"], "features.4.block.2.fc2.bias": [140403611363328, 288, [72], [1], "torch.float32"], "features.4.block.3.0.weight": [140403611363840, 11520, [40, 72, 1, 1], [72, 1, 1, 1], "torch.float32"], "features.4.block.3.1.weight": [140403611375616, 160, [40], [1], "torch.float32"], "features.4.block.3.1.bias": [140403611376128, 160, [40], [1], "torch.float32"], "features.4.block.3.1.running_mean": [140403611376640, 160, [40], [1], "torch.float32"], "features.4.block.3.1.running_var": [140403611377152, 160, [40], [1], "torch.float32"], "features.4.block.3.1.num_batches_tracked": [140403611377664, 8, [], [], "torch.int64"], "features.5.block.0.0.weight": [140403611378176, 19200, [120, 40, 1, 1], [40, 1, 1, 1], "torch.float32"], "features.5.block.0.1.weight": [140403611397632, 480, [120], [1], "torch.float32"], "features.5.block.0.1.bias": [140403611398144, 480, [120], [1], "torch.float32"], "features.5.block.0.1.running_mean": [140403611398656, 480, [120], [1], "torch.float32"], "features.5.block.0.1.running_var": [140403611399168, 480, [120], [1], "torch.float32"], "features.5.block.0.1.num_batches_tracked": [140403611399680, 8, [], [], "torch.int64"], "features.5.block.1.0.weight": [140403611400192, 12000, [120, 1, 5, 5], [25, 25, 5, 1], "torch.float32"], "features.5.block.1.1.weight": [140403611412480, 480, [120], [1], "torch.float32"], "features.5.block.1.1.bias": [140403611412992, 480, [120], [1], "torch.float32"], "features.5.block.1.1.running_mean": [140403611413504, 480, [120], [1], "torch.float32"], "features.5.block.1.1.running_var": [140403611414016, 480, [120], [1], "torch.float32"], "features.5.block.1.1.num_batches_tracked": [140403611414528, 8, [], [], "torch.int64"], "features.5.block.2.fc1.weight": [140403611415040, 15360, [32, 120, 1, 1], [120, 1, 1, 1], "torch.float32"], "features.5.block.2.fc1.bias": [140403611430400, 128, [32], [1], "torch.float32"], "features.5.block.2.fc2.weight": [140403611430912, 15360, [120, 32, 1, 1], [32, 1, 1, 1], "torch.float32"], "features.5.block.2.fc2.bias": [140403611446272, 480, [120], [1], "torch.float32"], "features.5.block.3.0.weight": [140403611446784, 19200, [40, 120, 1, 1], [120, 1, 1, 1], "torch.float32"], "features.5.block.3.1.weight": [140403611466240, 160, [40], [1], "torch.float32"], "features.5.block.3.1.bias": [140403611466752, 160, [40], [1], "torch.float32"], "features.5.block.3.1.running_mean": [140403611467264, 160, [40], [1], "torch.float32"], "features.5.block.3.1.running_var": [140403611467776, 160, [40], [1], "torch.float32"], "features.5.block.3.1.num_batches_tracked": [140403611468288, 8, [], [], "torch.int64"], "features.6.block.0.0.weight": [140403611468800, 19200, [120, 40, 1, 1], [40, 1, 1, 1], "torch.float32"], "features.6.block.0.1.weight": [140403611488256, 480, [120], [1], "torch.float32"], "features.6.block.0.1.bias": [140403611488768, 480, [120], [1], "torch.float32"], "features.6.block.0.1.running_mean": [140403611489280, 480, [120], [1], "torch.float32"], "features.6.block.0.1.running_var": [140403611489792, 480, [120], [1], "torch.float32"], "features.6.block.0.1.num_batches_tracked": [140403611490304, 8, [], [], "torch.int64"], "features.6.block.1.0.weight": [140403611490816, 12000, [120, 1, 5, 5], [25, 25, 5, 1], "torch.float32"], "features.6.block.1.1.weight": [140403611503104, 480, [120], [1], "torch.float32"], "features.6.block.1.1.bias": [140403611503616, 480, [120], [1], "torch.float32"], "features.6.block.1.1.running_mean": [140403611504128, 480, [120], [1], "torch.float32"], "features.6.block.1.1.running_var": [140403611504640, 480, [120], [1], "torch.float32"], "features.6.block.1.1.num_batches_tracked": [140403611505152, 8, [], [], "torch.int64"], "features.6.block.2.fc1.weight": [140403611505664, 15360, [32, 120, 1, 1], [120, 1, 1, 1], "torch.float32"], "features.6.block.2.fc1.bias": [140403611521024, 128, [32], [1], "torch.float32"], "features.6.block.2.fc2.weight": [140403611521536, 15360, [120, 32, 1, 1], [32, 1, 1, 1], "torch.float32"], "features.6.block.2.fc2.bias": [140403611536896, 480, [120], [1], "torch.float32"], "features.6.block.3.0.weight": [140403611537408, 19200, [40, 120, 1, 1], [120, 1, 1, 1], "torch.float32"], "features.6.block.3.1.weight": [140403611556864, 160, [40], [1], "torch.float32"], "features.6.block.3.1.bias": [140403611557376, 160, [40], [1], "torch.float32"], "features.6.block.3.1.running_mean": [140403611557888, 160, [40], [1], "torch.float32"], "features.6.block.3.1.running_var": [140403611558400, 160, [40], [1], "torch.float32"], "features.6.block.3.1.num_batches_tracked": [140403611558912, 8, [], [], "torch.int64"], "features.7.block.0.0.weight": [140403611559424, 38400, [240, 40, 1, 1], [40, 1, 1, 1], "torch.float32"], "features.7.block.0.1.weight": [140403611597824, 960, [240], [1], "torch.float32"], "features.7.block.0.1.bias": [140403611598848, 960, [240], [1], "torch.float32"], "features.7.block.0.1.running_mean": [140403611599872, 960, [240], [1], "torch.float32"], "features.7.block.0.1.running_var": [140403611600896, 960, [240], [1], "torch.float32"], "features.7.block.0.1.num_batches_tracked": [140403611601920, 8, [], [], "torch.int64"], "features.7.block.1.0.weight": [140403611602432, 8640, [240, 1, 3, 3], [9, 9, 3, 1], "torch.float32"], "features.7.block.1.1.weight": [140403611611136, 960, [240], [1], "torch.float32"], "features.7.block.1.1.bias": [140403611612160, 960, [240], [1], "torch.float32"], "features.7.block.1.1.running_mean": [140403611613184, 960, [240], [1], "torch.float32"], "features.7.block.1.1.running_var": [140403611614208, 960, [240], [1], "torch.float32"], "features.7.block.1.1.num_batches_tracked": [140403611615232, 8, [], [], "torch.int64"], "features.7.block.2.0.weight": [140403611615744, 76800, [80, 240, 1, 1], [240, 1, 1, 1], "torch.float32"], "features.7.block.2.1.weight": [140403611692544, 320, [80], [1], "torch.float32"], "features.7.block.2.1.bias": [140403611693056, 320, [80], [1], "torch.float32"], "features.7.block.2.1.running_mean": [140403611693568, 320, [80], [1], "torch.float32"], "features.7.block.2.1.running_var": [140403611694080, 320, [80], [1], "torch.float32"], "features.7.block.2.1.num_batches_tracked": [140403611694592, 8, [], [], "torch.int64"], "features.8.block.0.0.weight": [140403611695104, 64000, [200, 80, 1, 1], [80, 1, 1, 1], "torch.float32"], "features.8.block.0.1.weight": [140403611759104, 800, [200], [1], "torch.float32"], "features.8.block.0.1.bias": [140403611760128, 800, [200], [1], "torch.float32"], "features.8.block.0.1.running_mean": [140403611761152, 800, [200], [1], "torch.float32"], "features.8.block.0.1.running_var": [140403611762176, 800, [200], [1], "torch.float32"], "features.8.block.0.1.num_batches_tracked": [140403611763200, 8, [], [], "torch.int64"], "features.8.block.1.0.weight": [140403611763712, 7200, [200, 1, 3, 3], [9, 9, 3, 1], "torch.float32"], "features.8.block.1.1.weight": [140403611771392, 800, [200], [1], "torch.float32"], "features.8.block.1.1.bias": [140403611772416, 800, [200], [1], "torch.float32"], "features.8.block.1.1.running_mean": [140403611773440, 800, [200], [1], "torch.float32"], "features.8.block.1.1.running_var": [140403611774464, 800, [200], [1], "torch.float32"], "features.8.block.1.1.num_batches_tracked": [140403611775488, 8, [], [], "torch.int64"], "features.8.block.2.0.weight": [140403611776000, 64000, [80, 200, 1, 1], [200, 1, 1, 1], "torch.float32"], "features.8.block.2.1.weight": [140403611840000, 320, [80], [1], "torch.float32"], "features.8.block.2.1.bias": [140403611840512, 320, [80], [1], "torch.float32"], "features.8.block.2.1.running_mean": [140403611841024, 320, [80], [1], "torch.float32"], "features.8.block.2.1.running_var": [140403611841536, 320, [80], [1], "torch.float32"], "features.8.block.2.1.num_batches_tracked": [140403611842048, 8, [], [], "torch.int64"], "features.9.block.0.0.weight": [140403611842560, 58880, [184, 80, 1, 1], [80, 1, 1, 1], "torch.float32"], "features.9.block.0.1.weight": [140403611901440, 736, [184], [1], "torch.float32"], "features.9.block.0.1.bias": [140403611902464, 736, [184], [1], "torch.float32"], "features.9.block.0.1.running_mean": [140403611903488, 736, [184], [1], "torch.float32"], "features.9.block.0.1.running_var": [140403611904512, 736, [184], [1], "torch.float32"], "features.9.block.0.1.num_batches_tracked": [140403611905536, 8, [], [], "torch.int64"], "features.9.block.1.0.weight": [140403611906048, 6624, [184, 1, 3, 3], [9, 9, 3, 1], "torch.float32"], "features.9.block.1.1.weight": [140403611912704, 736, [184], [1], "torch.float32"], "features.9.block.1.1.bias": [140403611913728, 736, [184], [1], "torch.float32"], "features.9.block.1.1.running_mean": [140403611914752, 736, [184], [1], "torch.float32"], "features.9.block.1.1.running_var": [140403611915776, 736, [184], [1], "torch.float32"], "features.9.block.1.1.num_batches_tracked": [140403611916800, 8, [], [], "torch.int64"], "features.9.block.2.0.weight": [140403611917312, 58880, [80, 184, 1, 1], [184, 1, 1, 1], "torch.float32"], "features.9.block.2.1.weight": [140403611976192, 320, [80], [1], "torch.float32"], "features.9.block.2.1.bias": [140403611976704, 320, [80], [1], "torch.float32"], "features.9.block.2.1.running_mean": [140403611977216, 320, [80], [1], "torch.float32"], "features.9.block.2.1.running_var": [140403611977728, 320, [80], [1], "torch.float32"], "features.9.block.2.1.num_batches_tracked": [140403611978240, 8, [], [], "torch.int64"], "features.10.block.0.0.weight": [140403611978752, 58880, [184, 80, 1, 1], [80, 1, 1, 1], "torch.float32"], "features.10.block.0.1.weight": [140403612037632, 736, [184], [1], "torch.float32"], "features.10.block.0.1.bias": [140403612038656, 736, [184], [1], "torch.float32"], "features.10.block.0.1.running_mean": [140403612039680, 736, [184], [1], "torch.float32"], "features.10.block.0.1.running_var": [140403612040704, 736, [184], [1], "torch.float32"], "features.10.block.0.1.num_batches_tracked": [140403612041728, 8, [], [], "torch.int64"], "features.10.block.1.0.weight": [140403612042240, 6624, [184, 1, 3, 3], [9, 9, 3, 1], "torch.float32"], "features.10.block.1.1.weight": [140403612048896, 736, [184], [1], "torch.float32"], "features.10.block.1.1.bias": [140403612049920, 736, [184], [1], "torch.float32"], "features.10.block.1.1.running_mean": [140403612050944, 736, [184], [1], "torch.float32"], "features.10.block.1.1.running_var": [140403612051968, 736, [184], [1], "torch.float32"], "features.10.block.1.1.num_batches_tracked": [140403612052992, 8, [], [], "torch.int64"], "features.10.block.2.0.weight": [140403612053504, 58880, [80, 184, 1, 1], [184, 1, 1, 1], "torch.float32"], "features.10.block.2.1.weight": [140403612112384, 320, [80], [1], "torch.float32"], "features.10.block.2.1.bias": [140403612112896, 320, [80], [1], "torch.float32"], "features.10.block.2.1.running_mean": [140403612113408, 320, [80], [1], "torch.float32"], "features.10.block.2.1.running_var": [140403612113920, 320, [80], [1], "torch.float32"], "features.10.block.2.1.num_batches_tracked": [140403612114432, 8, [], [], "torch.int64"], "features.11.block.0.0.weight": [140403612114944, 153600, [480, 80, 1, 1], [80, 1, 1, 1], "torch.float32"], "features.11.block.0.1.weight": [140403612268544, 1920, [480], [1], "torch.float32"], "features.11.block.0.1.bias": [140403612270592, 1920, [480], [1], "torch.float32"], "features.11.block.0.1.running_mean": [140403612272640, 1920, [480], [1], "torch.float32"], "features.11.block.0.1.running_var": [140403612274688, 1920, [480], [1], "torch.float32"], "features.11.block.0.1.num_batches_tracked": [140403612276736, 8, [], [], "torch.int64"], "features.11.block.1.0.weight": [140403612277248, 17280, [480, 1, 3, 3], [9, 9, 3, 1], "torch.float32"], "features.11.block.1.1.weight": [140403612294656, 1920, [480], [1], "torch.float32"], "features.11.block.1.1.bias": [140403612296704, 1920, [480], [1], "torch.float32"], "features.11.block.1.1.running_mean": [140403612298752, 1920, [480], [1], "torch.float32"], "features.11.block.1.1.running_var": [140403612300800, 1920, [480], [1], "torch.float32"], "features.11.block.1.1.num_batches_tracked": [140403612302848, 8, [], [], "torch.int64"], "features.11.block.2.fc1.weight": [140403612303360, 230400, [120, 480, 1, 1], [480, 1, 1, 1], "torch.float32"], "features.11.block.2.fc1.bias": [140403612533760, 480, [120], [1], "torch.float32"], "features.11.block.2.fc2.weight": [140403612534272, 230400, [480, 120, 1, 1], [120, 1, 1, 1], "torch.float32"], "features.11.block.2.fc2.bias": [140403612764672, 1920, [480], [1], "torch.float32"], "features.11.block.3.0.weight": [140403612766720, 215040, [112, 480, 1, 1], [480, 1, 1, 1], "torch.float32"], "features.11.block.3.1.weight": [140403612981760, 448, [112], [1], "torch.float32"], "features.11.block.3.1.bias": [140403612982272, 448, [112], [1], "torch.float32"], "features.11.block.3.1.running_mean": [140403612982784, 448, [112], [1], "torch.float32"], "features.11.block.3.1.running_var": [140403612983296, 448, [112], [1], "torch.float32"], "features.11.block.3.1.num_batches_tracked": [140403612983808, 8, [], [], "torch.int64"], "features.12.block.0.0.weight": [140403612984320, 301056, [672, 112, 1, 1], [112, 1, 1, 1], "torch.float32"], "features.12.block.0.1.weight": [140403613285376, 2688, [672], [1], "torch.float32"], "features.12.block.0.1.bias": [140403613288448, 2688, [672], [1], "torch.float32"], "features.12.block.0.1.running_mean": [140403613291520, 2688, [672], [1], "torch.float32"], "features.12.block.0.1.running_var": [140403613294592, 2688, [672], [1], "torch.float32"], "features.12.block.0.1.num_batches_tracked": [140403613297664, 8, [], [], "torch.int64"], "features.12.block.1.0.weight": [140403613298176, 24192, [672, 1, 3, 3], [9, 9, 3, 1], "torch.float32"], "features.12.block.1.1.weight": [140403613322752, 2688, [672], [1], "torch.float32"], "features.12.block.1.1.bias": [140403613325824, 2688, [672], [1], "torch.float32"], "features.12.block.1.1.running_mean": [140403613328896, 2688, [672], [1], "torch.float32"], "features.12.block.1.1.running_var": [140403613331968, 2688, [672], [1], "torch.float32"], "features.12.block.1.1.num_batches_tracked": [140403613335040, 8, [], [], "torch.int64"], "features.12.block.2.fc1.weight": [140403613368320, 451584, [168, 672, 1, 1], [672, 1, 1, 1], "torch.float32"], "features.12.block.2.fc1.bias": [140403613335552, 672, [168], [1], "torch.float32"], "features.12.block.2.fc2.weight": [140403613819904, 451584, [672, 168, 1, 1], [168, 1, 1, 1], "torch.float32"], "features.12.block.2.fc2.bias": [140403613336576, 2688, [672], [1], "torch.float32"], "features.12.block.3.0.weight": [140403614271488, 301056, [112, 672, 1, 1], [672, 1, 1, 1], "torch.float32"], "features.12.block.3.1.weight": [140403613339648, 448, [112], [1], "torch.float32"], "features.12.block.3.1.bias": [140403613340160, 448, [112], [1], "torch.float32"], "features.12.block.3.1.running_mean": [140403613340672, 448, [112], [1], "torch.float32"], "features.12.block.3.1.running_var": [140403613341184, 448, [112], [1], "torch.float32"], "features.12.block.3.1.num_batches_tracked": [140403613341696, 8, [], [], "torch.int64"], "features.13.block.0.0.weight": [140403614572544, 301056, [672, 112, 1, 1], [112, 1, 1, 1], "torch.float32"], "features.13.block.0.1.weight": [140403613342208, 2688, [672], [1], "torch.float32"], "features.13.block.0.1.bias": [140403613345280, 2688, [672], [1], "torch.float32"], "features.13.block.0.1.running_mean": [140403613348352, 2688, [672], [1], "torch.float32"], "features.13.block.0.1.running_var": [140403613351424, 2688, [672], [1], "torch.float32"], "features.13.block.0.1.num_batches_tracked": [140403613354496, 8, [], [], "torch.int64"], "features.13.block.1.0.weight": [140403614873600, 67200, [672, 1, 5, 5], [25, 25, 5, 1], "torch.float32"], "features.13.block.1.1.weight": [140403613355008, 2688, [672], [1], "torch.float32"], "features.13.block.1.1.bias": [140403613358080, 2688, [672], [1], "torch.float32"], "features.13.block.1.1.running_mean": [140403613361152, 2688, [672], [1], "torch.float32"], "features.13.block.1.1.running_var": [140403613364224, 2688, [672], [1], "torch.float32"], "features.13.block.1.1.num_batches_tracked": [140403613367296, 8, [], [], "torch.int64"], "features.13.block.2.fc1.weight": [140403614941184, 451584, [168, 672, 1, 1], [672, 1, 1, 1], "torch.float32"], "features.13.block.2.fc1.bias": [140403615392768, 672, [168], [1], "torch.float32"], "features.13.block.2.fc2.weight": [140403615465472, 451584, [672, 168, 1, 1], [168, 1, 1, 1], "torch.float32"], "features.13.block.2.fc2.bias": [140403615393792, 2688, [672], [1], "torch.float32"], "features.13.block.3.0.weight": [140403615917056, 430080, [160, 672, 1, 1], [672, 1, 1, 1], "torch.float32"], "features.13.block.3.1.weight": [140403615396864, 640, [160], [1], "torch.float32"], "features.13.block.3.1.bias": [140403615397888, 640, [160], [1], "torch.float32"], "features.13.block.3.1.running_mean": [140403615398912, 640, [160], [1], "torch.float32"], "features.13.block.3.1.running_var": [140403615399936, 640, [160], [1], "torch.float32"], "features.13.block.3.1.num_batches_tracked": [140403613367808, 8, [], [], "torch.int64"], "features.14.block.0.0.weight": [140403616347136, 614400, [960, 160, 1, 1], [160, 1, 1, 1], "torch.float32"], "features.14.block.0.1.weight": [140403615400960, 3840, [960], [1], "torch.float32"], "features.14.block.0.1.bias": [140403615405056, 3840, [960], [1], "torch.float32"], "features.14.block.0.1.running_mean": [140403615409152, 3840, [960], [1], "torch.float32"], "features.14.block.0.1.running_var": [140403615413248, 3840, [960], [1], "torch.float32"], "features.14.block.0.1.num_batches_tracked": [140403615417344, 8, [], [], "torch.int64"], "features.14.block.1.0.weight": [140403616961536, 96000, [960, 1, 5, 5], [25, 25, 5, 1], "torch.float32"], "features.14.block.1.1.weight": [140403615417856, 3840, [960], [1], "torch.float32"], "features.14.block.1.1.bias": [140403615421952, 3840, [960], [1], "torch.float32"], "features.14.block.1.1.running_mean": [140403615426048, 3840, [960], [1], "torch.float32"], "features.14.block.1.1.running_var": [140403615430144, 3840, [960], [1], "torch.float32"], "features.14.block.1.1.num_batches_tracked": [140403615434240, 8, [], [], "torch.int64"], "features.14.block.2.fc1.weight": [140403617562624, 921600, [240, 960, 1, 1], [960, 1, 1, 1], "torch.float32"], "features.14.block.2.fc1.bias": [140403615434752, 960, [240], [1], "torch.float32"], "features.14.block.2.fc2.weight": [140403618484224, 921600, [960, 240, 1, 1], [240, 1, 1, 1], "torch.float32"], "features.14.block.2.fc2.bias": [140403615435776, 3840, [960], [1], "torch.float32"], "features.14.block.3.0.weight": [140403619659776, 614400, [160, 960, 1, 1], [960, 1, 1, 1], "torch.float32"], "features.14.block.3.1.weight": [140403615439872, 640, [160], [1], "torch.float32"], "features.14.block.3.1.bias": [140403615440896, 640, [160], [1], "torch.float32"], "features.14.block.3.1.running_mean": [140403615441920, 640, [160], [1], "torch.float32"], "features.14.block.3.1.running_var": [140403615442944, 640, [160], [1], "torch.float32"], "features.14.block.3.1.num_batches_tracked": [140403615443968, 8, [], [], "torch.int64"], "features.15.block.0.0.weight": [140403620274176, 614400, [960, 160, 1, 1], [160, 1, 1, 1], "torch.float32"], "features.15.block.0.1.weight": [140403615444480, 3840, [960], [1], "torch.float32"], "features.15.block.0.1.bias": [140403615448576, 3840, [960], [1], "torch.float32"], "features.15.block.0.1.running_mean": [140403615452672, 3840, [960], [1], "torch.float32"], "features.15.block.0.1.running_var": [140403615456768, 3840, [960], [1], "torch.float32"], "features.15.block.0.1.num_batches_tracked": [140403615460864, 8, [], [], "torch.int64"], "features.15.block.1.0.weight": [140403619405824, 96000, [960, 1, 5, 5], [25, 25, 5, 1], "torch.float32"], "features.15.block.1.1.weight": [140403615461376, 3840, [960], [1], "torch.float32"], "features.15.block.1.1.bias": [140403619502080, 3840, [960], [1], "torch.float32"], "features.15.block.1.1.running_mean": [140403619506176, 3840, [960], [1], "torch.float32"], "features.15.block.1.1.running_var": [140403619510272, 3840, [960], [1], "torch.float32"], "features.15.block.1.1.num_batches_tracked": [140403619514368, 8, [], [], "torch.int64"], "features.15.block.2.fc1.weight": [140403453984768, 921600, [240, 960, 1, 1], [960, 1, 1, 1], "torch.float32"], "features.15.block.2.fc1.bias": [140403619514880, 960, [240], [1], "torch.float32"], "features.15.block.2.fc2.weight": [140403454906368, 921600, [960, 240, 1, 1], [240, 1, 1, 1], "torch.float32"], "features.15.block.2.fc2.bias": [140403619515904, 3840, [960], [1], "torch.float32"], "features.15.block.3.0.weight": [140403620888576, 614400, [160, 960, 1, 1], [960, 1, 1, 1], "torch.float32"], "features.15.block.3.1.weight": [140403619520000, 640, [160], [1], "torch.float32"], "features.15.block.3.1.bias": [140403619521024, 640, [160], [1], "torch.float32"], "features.15.block.3.1.running_mean": [140403619522048, 640, [160], [1], "torch.float32"], "features.15.block.3.1.running_var": [140403619523072, 640, [160], [1], "torch.float32"], "features.15.block.3.1.num_batches_tracked": [140403619524096, 8, [], [], "torch.int64"], "features.16.0.weight": [140403456081920, 614400, [960, 160, 1, 1], [160, 1, 1, 1], "torch.float32"], "features.16.1.weight": [140403619524608, 3840, [960], [1], "torch.float32"], "features.16.1.bias": [140403619528704, 3840, [960], [1], "torch.float32"], "features.16.1.running_mean": [140403619532800, 3840, [960], [1], "torch.float32"], "features.16.1.running_var": [140403619536896, 3840, [960], [1], "torch.float32"], "features.16.1.num_batches_tracked": [140403619540992, 8, [], [], "torch.int64"], "classifier.0.weight": [140403458179072, 4915200, [1280, 960], [960, 1], "torch.float32"], "classifier.0.bias": [140403619541504, 5120, [1280], [1], "torch.float32"], "classifier.3.weight": [140403464470528, 5120000, [1000, 1280], [1280, 1], "torch.float32"], "classifier.3.bias": [140403619546624, 4000, [1000], [1], "torch.float32"]}
+{
+    "features.0.0.weight": {
+        "location": "gpu",
+        "size": 1728,
+        "shape": [
+            16,
+            3,
+            3,
+            3
+        ],
+        "stride": [
+            27,
+            9,
+            3,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.0.1.weight": {
+        "location": "gpu",
+        "size": 64,
+        "shape": [
+            16
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.0.1.bias": {
+        "location": "gpu",
+        "size": 64,
+        "shape": [
+            16
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.0.1.running_mean": {
+        "location": "gpu",
+        "size": 64,
+        "shape": [
+            16
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.0.1.running_var": {
+        "location": "gpu",
+        "size": 64,
+        "shape": [
+            16
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.0.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.1.block.0.0.weight": {
+        "location": "gpu",
+        "size": 576,
+        "shape": [
+            16,
+            1,
+            3,
+            3
+        ],
+        "stride": [
+            9,
+            9,
+            3,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.1.block.0.1.weight": {
+        "location": "gpu",
+        "size": 64,
+        "shape": [
+            16
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.1.block.0.1.bias": {
+        "location": "gpu",
+        "size": 64,
+        "shape": [
+            16
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.1.block.0.1.running_mean": {
+        "location": "gpu",
+        "size": 64,
+        "shape": [
+            16
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.1.block.0.1.running_var": {
+        "location": "gpu",
+        "size": 64,
+        "shape": [
+            16
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.1.block.0.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.1.block.1.0.weight": {
+        "location": "gpu",
+        "size": 1024,
+        "shape": [
+            16,
+            16,
+            1,
+            1
+        ],
+        "stride": [
+            16,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.1.block.1.1.weight": {
+        "location": "gpu",
+        "size": 64,
+        "shape": [
+            16
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.1.block.1.1.bias": {
+        "location": "gpu",
+        "size": 64,
+        "shape": [
+            16
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.1.block.1.1.running_mean": {
+        "location": "gpu",
+        "size": 64,
+        "shape": [
+            16
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.1.block.1.1.running_var": {
+        "location": "gpu",
+        "size": 64,
+        "shape": [
+            16
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.1.block.1.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.2.block.0.0.weight": {
+        "location": "gpu",
+        "size": 4096,
+        "shape": [
+            64,
+            16,
+            1,
+            1
+        ],
+        "stride": [
+            16,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.2.block.0.1.weight": {
+        "location": "gpu",
+        "size": 256,
+        "shape": [
+            64
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.2.block.0.1.bias": {
+        "location": "gpu",
+        "size": 256,
+        "shape": [
+            64
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.2.block.0.1.running_mean": {
+        "location": "gpu",
+        "size": 256,
+        "shape": [
+            64
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.2.block.0.1.running_var": {
+        "location": "gpu",
+        "size": 256,
+        "shape": [
+            64
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.2.block.0.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.2.block.1.0.weight": {
+        "location": "gpu",
+        "size": 2304,
+        "shape": [
+            64,
+            1,
+            3,
+            3
+        ],
+        "stride": [
+            9,
+            9,
+            3,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.2.block.1.1.weight": {
+        "location": "gpu",
+        "size": 256,
+        "shape": [
+            64
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.2.block.1.1.bias": {
+        "location": "gpu",
+        "size": 256,
+        "shape": [
+            64
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.2.block.1.1.running_mean": {
+        "location": "gpu",
+        "size": 256,
+        "shape": [
+            64
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.2.block.1.1.running_var": {
+        "location": "gpu",
+        "size": 256,
+        "shape": [
+            64
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.2.block.1.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.2.block.2.0.weight": {
+        "location": "gpu",
+        "size": 6144,
+        "shape": [
+            24,
+            64,
+            1,
+            1
+        ],
+        "stride": [
+            64,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.2.block.2.1.weight": {
+        "location": "gpu",
+        "size": 96,
+        "shape": [
+            24
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.2.block.2.1.bias": {
+        "location": "gpu",
+        "size": 96,
+        "shape": [
+            24
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.2.block.2.1.running_mean": {
+        "location": "gpu",
+        "size": 96,
+        "shape": [
+            24
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.2.block.2.1.running_var": {
+        "location": "gpu",
+        "size": 96,
+        "shape": [
+            24
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.2.block.2.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.3.block.0.0.weight": {
+        "location": "gpu",
+        "size": 6912,
+        "shape": [
+            72,
+            24,
+            1,
+            1
+        ],
+        "stride": [
+            24,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.3.block.0.1.weight": {
+        "location": "gpu",
+        "size": 288,
+        "shape": [
+            72
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.3.block.0.1.bias": {
+        "location": "gpu",
+        "size": 288,
+        "shape": [
+            72
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.3.block.0.1.running_mean": {
+        "location": "gpu",
+        "size": 288,
+        "shape": [
+            72
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.3.block.0.1.running_var": {
+        "location": "gpu",
+        "size": 288,
+        "shape": [
+            72
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.3.block.0.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.3.block.1.0.weight": {
+        "location": "gpu",
+        "size": 2592,
+        "shape": [
+            72,
+            1,
+            3,
+            3
+        ],
+        "stride": [
+            9,
+            9,
+            3,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.3.block.1.1.weight": {
+        "location": "gpu",
+        "size": 288,
+        "shape": [
+            72
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.3.block.1.1.bias": {
+        "location": "gpu",
+        "size": 288,
+        "shape": [
+            72
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.3.block.1.1.running_mean": {
+        "location": "gpu",
+        "size": 288,
+        "shape": [
+            72
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.3.block.1.1.running_var": {
+        "location": "gpu",
+        "size": 288,
+        "shape": [
+            72
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.3.block.1.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.3.block.2.0.weight": {
+        "location": "gpu",
+        "size": 6912,
+        "shape": [
+            24,
+            72,
+            1,
+            1
+        ],
+        "stride": [
+            72,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.3.block.2.1.weight": {
+        "location": "gpu",
+        "size": 96,
+        "shape": [
+            24
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.3.block.2.1.bias": {
+        "location": "gpu",
+        "size": 96,
+        "shape": [
+            24
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.3.block.2.1.running_mean": {
+        "location": "gpu",
+        "size": 96,
+        "shape": [
+            24
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.3.block.2.1.running_var": {
+        "location": "gpu",
+        "size": 96,
+        "shape": [
+            24
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.3.block.2.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.4.block.0.0.weight": {
+        "location": "gpu",
+        "size": 6912,
+        "shape": [
+            72,
+            24,
+            1,
+            1
+        ],
+        "stride": [
+            24,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.4.block.0.1.weight": {
+        "location": "gpu",
+        "size": 288,
+        "shape": [
+            72
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.4.block.0.1.bias": {
+        "location": "gpu",
+        "size": 288,
+        "shape": [
+            72
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.4.block.0.1.running_mean": {
+        "location": "gpu",
+        "size": 288,
+        "shape": [
+            72
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.4.block.0.1.running_var": {
+        "location": "gpu",
+        "size": 288,
+        "shape": [
+            72
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.4.block.0.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.4.block.1.0.weight": {
+        "location": "gpu",
+        "size": 7200,
+        "shape": [
+            72,
+            1,
+            5,
+            5
+        ],
+        "stride": [
+            25,
+            25,
+            5,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.4.block.1.1.weight": {
+        "location": "gpu",
+        "size": 288,
+        "shape": [
+            72
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.4.block.1.1.bias": {
+        "location": "gpu",
+        "size": 288,
+        "shape": [
+            72
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.4.block.1.1.running_mean": {
+        "location": "gpu",
+        "size": 288,
+        "shape": [
+            72
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.4.block.1.1.running_var": {
+        "location": "gpu",
+        "size": 288,
+        "shape": [
+            72
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.4.block.1.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.4.block.2.fc1.weight": {
+        "location": "gpu",
+        "size": 6912,
+        "shape": [
+            24,
+            72,
+            1,
+            1
+        ],
+        "stride": [
+            72,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.4.block.2.fc1.bias": {
+        "location": "gpu",
+        "size": 96,
+        "shape": [
+            24
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.4.block.2.fc2.weight": {
+        "location": "gpu",
+        "size": 6912,
+        "shape": [
+            72,
+            24,
+            1,
+            1
+        ],
+        "stride": [
+            24,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.4.block.2.fc2.bias": {
+        "location": "gpu",
+        "size": 288,
+        "shape": [
+            72
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.4.block.3.0.weight": {
+        "location": "gpu",
+        "size": 11520,
+        "shape": [
+            40,
+            72,
+            1,
+            1
+        ],
+        "stride": [
+            72,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.4.block.3.1.weight": {
+        "location": "gpu",
+        "size": 160,
+        "shape": [
+            40
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.4.block.3.1.bias": {
+        "location": "gpu",
+        "size": 160,
+        "shape": [
+            40
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.4.block.3.1.running_mean": {
+        "location": "gpu",
+        "size": 160,
+        "shape": [
+            40
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.4.block.3.1.running_var": {
+        "location": "gpu",
+        "size": 160,
+        "shape": [
+            40
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.4.block.3.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.5.block.0.0.weight": {
+        "location": "gpu",
+        "size": 19200,
+        "shape": [
+            120,
+            40,
+            1,
+            1
+        ],
+        "stride": [
+            40,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.5.block.0.1.weight": {
+        "location": "gpu",
+        "size": 480,
+        "shape": [
+            120
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.5.block.0.1.bias": {
+        "location": "gpu",
+        "size": 480,
+        "shape": [
+            120
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.5.block.0.1.running_mean": {
+        "location": "gpu",
+        "size": 480,
+        "shape": [
+            120
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.5.block.0.1.running_var": {
+        "location": "gpu",
+        "size": 480,
+        "shape": [
+            120
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.5.block.0.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.5.block.1.0.weight": {
+        "location": "gpu",
+        "size": 12000,
+        "shape": [
+            120,
+            1,
+            5,
+            5
+        ],
+        "stride": [
+            25,
+            25,
+            5,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.5.block.1.1.weight": {
+        "location": "gpu",
+        "size": 480,
+        "shape": [
+            120
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.5.block.1.1.bias": {
+        "location": "gpu",
+        "size": 480,
+        "shape": [
+            120
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.5.block.1.1.running_mean": {
+        "location": "gpu",
+        "size": 480,
+        "shape": [
+            120
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.5.block.1.1.running_var": {
+        "location": "gpu",
+        "size": 480,
+        "shape": [
+            120
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.5.block.1.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.5.block.2.fc1.weight": {
+        "location": "gpu",
+        "size": 15360,
+        "shape": [
+            32,
+            120,
+            1,
+            1
+        ],
+        "stride": [
+            120,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.5.block.2.fc1.bias": {
+        "location": "gpu",
+        "size": 128,
+        "shape": [
+            32
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.5.block.2.fc2.weight": {
+        "location": "gpu",
+        "size": 15360,
+        "shape": [
+            120,
+            32,
+            1,
+            1
+        ],
+        "stride": [
+            32,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.5.block.2.fc2.bias": {
+        "location": "gpu",
+        "size": 480,
+        "shape": [
+            120
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.5.block.3.0.weight": {
+        "location": "gpu",
+        "size": 19200,
+        "shape": [
+            40,
+            120,
+            1,
+            1
+        ],
+        "stride": [
+            120,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.5.block.3.1.weight": {
+        "location": "gpu",
+        "size": 160,
+        "shape": [
+            40
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.5.block.3.1.bias": {
+        "location": "gpu",
+        "size": 160,
+        "shape": [
+            40
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.5.block.3.1.running_mean": {
+        "location": "gpu",
+        "size": 160,
+        "shape": [
+            40
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.5.block.3.1.running_var": {
+        "location": "gpu",
+        "size": 160,
+        "shape": [
+            40
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.5.block.3.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.6.block.0.0.weight": {
+        "location": "gpu",
+        "size": 19200,
+        "shape": [
+            120,
+            40,
+            1,
+            1
+        ],
+        "stride": [
+            40,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.6.block.0.1.weight": {
+        "location": "gpu",
+        "size": 480,
+        "shape": [
+            120
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.6.block.0.1.bias": {
+        "location": "gpu",
+        "size": 480,
+        "shape": [
+            120
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.6.block.0.1.running_mean": {
+        "location": "gpu",
+        "size": 480,
+        "shape": [
+            120
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.6.block.0.1.running_var": {
+        "location": "gpu",
+        "size": 480,
+        "shape": [
+            120
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.6.block.0.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.6.block.1.0.weight": {
+        "location": "gpu",
+        "size": 12000,
+        "shape": [
+            120,
+            1,
+            5,
+            5
+        ],
+        "stride": [
+            25,
+            25,
+            5,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.6.block.1.1.weight": {
+        "location": "gpu",
+        "size": 480,
+        "shape": [
+            120
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.6.block.1.1.bias": {
+        "location": "gpu",
+        "size": 480,
+        "shape": [
+            120
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.6.block.1.1.running_mean": {
+        "location": "gpu",
+        "size": 480,
+        "shape": [
+            120
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.6.block.1.1.running_var": {
+        "location": "gpu",
+        "size": 480,
+        "shape": [
+            120
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.6.block.1.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.6.block.2.fc1.weight": {
+        "location": "gpu",
+        "size": 15360,
+        "shape": [
+            32,
+            120,
+            1,
+            1
+        ],
+        "stride": [
+            120,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.6.block.2.fc1.bias": {
+        "location": "gpu",
+        "size": 128,
+        "shape": [
+            32
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.6.block.2.fc2.weight": {
+        "location": "gpu",
+        "size": 15360,
+        "shape": [
+            120,
+            32,
+            1,
+            1
+        ],
+        "stride": [
+            32,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.6.block.2.fc2.bias": {
+        "location": "gpu",
+        "size": 480,
+        "shape": [
+            120
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.6.block.3.0.weight": {
+        "location": "gpu",
+        "size": 19200,
+        "shape": [
+            40,
+            120,
+            1,
+            1
+        ],
+        "stride": [
+            120,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.6.block.3.1.weight": {
+        "location": "gpu",
+        "size": 160,
+        "shape": [
+            40
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.6.block.3.1.bias": {
+        "location": "gpu",
+        "size": 160,
+        "shape": [
+            40
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.6.block.3.1.running_mean": {
+        "location": "gpu",
+        "size": 160,
+        "shape": [
+            40
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.6.block.3.1.running_var": {
+        "location": "gpu",
+        "size": 160,
+        "shape": [
+            40
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.6.block.3.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.7.block.0.0.weight": {
+        "location": "gpu",
+        "size": 38400,
+        "shape": [
+            240,
+            40,
+            1,
+            1
+        ],
+        "stride": [
+            40,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.7.block.0.1.weight": {
+        "location": "gpu",
+        "size": 960,
+        "shape": [
+            240
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.7.block.0.1.bias": {
+        "location": "gpu",
+        "size": 960,
+        "shape": [
+            240
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.7.block.0.1.running_mean": {
+        "location": "gpu",
+        "size": 960,
+        "shape": [
+            240
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.7.block.0.1.running_var": {
+        "location": "gpu",
+        "size": 960,
+        "shape": [
+            240
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.7.block.0.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.7.block.1.0.weight": {
+        "location": "gpu",
+        "size": 8640,
+        "shape": [
+            240,
+            1,
+            3,
+            3
+        ],
+        "stride": [
+            9,
+            9,
+            3,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.7.block.1.1.weight": {
+        "location": "gpu",
+        "size": 960,
+        "shape": [
+            240
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.7.block.1.1.bias": {
+        "location": "gpu",
+        "size": 960,
+        "shape": [
+            240
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.7.block.1.1.running_mean": {
+        "location": "gpu",
+        "size": 960,
+        "shape": [
+            240
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.7.block.1.1.running_var": {
+        "location": "gpu",
+        "size": 960,
+        "shape": [
+            240
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.7.block.1.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.7.block.2.0.weight": {
+        "location": "gpu",
+        "size": 76800,
+        "shape": [
+            80,
+            240,
+            1,
+            1
+        ],
+        "stride": [
+            240,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.7.block.2.1.weight": {
+        "location": "gpu",
+        "size": 320,
+        "shape": [
+            80
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.7.block.2.1.bias": {
+        "location": "gpu",
+        "size": 320,
+        "shape": [
+            80
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.7.block.2.1.running_mean": {
+        "location": "gpu",
+        "size": 320,
+        "shape": [
+            80
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.7.block.2.1.running_var": {
+        "location": "gpu",
+        "size": 320,
+        "shape": [
+            80
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.7.block.2.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.8.block.0.0.weight": {
+        "location": "gpu",
+        "size": 64000,
+        "shape": [
+            200,
+            80,
+            1,
+            1
+        ],
+        "stride": [
+            80,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.8.block.0.1.weight": {
+        "location": "gpu",
+        "size": 800,
+        "shape": [
+            200
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.8.block.0.1.bias": {
+        "location": "gpu",
+        "size": 800,
+        "shape": [
+            200
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.8.block.0.1.running_mean": {
+        "location": "gpu",
+        "size": 800,
+        "shape": [
+            200
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.8.block.0.1.running_var": {
+        "location": "gpu",
+        "size": 800,
+        "shape": [
+            200
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.8.block.0.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.8.block.1.0.weight": {
+        "location": "gpu",
+        "size": 7200,
+        "shape": [
+            200,
+            1,
+            3,
+            3
+        ],
+        "stride": [
+            9,
+            9,
+            3,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.8.block.1.1.weight": {
+        "location": "gpu",
+        "size": 800,
+        "shape": [
+            200
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.8.block.1.1.bias": {
+        "location": "gpu",
+        "size": 800,
+        "shape": [
+            200
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.8.block.1.1.running_mean": {
+        "location": "gpu",
+        "size": 800,
+        "shape": [
+            200
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.8.block.1.1.running_var": {
+        "location": "gpu",
+        "size": 800,
+        "shape": [
+            200
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.8.block.1.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.8.block.2.0.weight": {
+        "location": "gpu",
+        "size": 64000,
+        "shape": [
+            80,
+            200,
+            1,
+            1
+        ],
+        "stride": [
+            200,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.8.block.2.1.weight": {
+        "location": "gpu",
+        "size": 320,
+        "shape": [
+            80
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.8.block.2.1.bias": {
+        "location": "gpu",
+        "size": 320,
+        "shape": [
+            80
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.8.block.2.1.running_mean": {
+        "location": "gpu",
+        "size": 320,
+        "shape": [
+            80
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.8.block.2.1.running_var": {
+        "location": "gpu",
+        "size": 320,
+        "shape": [
+            80
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.8.block.2.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.9.block.0.0.weight": {
+        "location": "gpu",
+        "size": 58880,
+        "shape": [
+            184,
+            80,
+            1,
+            1
+        ],
+        "stride": [
+            80,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.9.block.0.1.weight": {
+        "location": "gpu",
+        "size": 736,
+        "shape": [
+            184
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.9.block.0.1.bias": {
+        "location": "gpu",
+        "size": 736,
+        "shape": [
+            184
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.9.block.0.1.running_mean": {
+        "location": "gpu",
+        "size": 736,
+        "shape": [
+            184
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.9.block.0.1.running_var": {
+        "location": "gpu",
+        "size": 736,
+        "shape": [
+            184
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.9.block.0.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.9.block.1.0.weight": {
+        "location": "gpu",
+        "size": 6624,
+        "shape": [
+            184,
+            1,
+            3,
+            3
+        ],
+        "stride": [
+            9,
+            9,
+            3,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.9.block.1.1.weight": {
+        "location": "gpu",
+        "size": 736,
+        "shape": [
+            184
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.9.block.1.1.bias": {
+        "location": "gpu",
+        "size": 736,
+        "shape": [
+            184
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.9.block.1.1.running_mean": {
+        "location": "gpu",
+        "size": 736,
+        "shape": [
+            184
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.9.block.1.1.running_var": {
+        "location": "gpu",
+        "size": 736,
+        "shape": [
+            184
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.9.block.1.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.9.block.2.0.weight": {
+        "location": "gpu",
+        "size": 58880,
+        "shape": [
+            80,
+            184,
+            1,
+            1
+        ],
+        "stride": [
+            184,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.9.block.2.1.weight": {
+        "location": "gpu",
+        "size": 320,
+        "shape": [
+            80
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.9.block.2.1.bias": {
+        "location": "gpu",
+        "size": 320,
+        "shape": [
+            80
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.9.block.2.1.running_mean": {
+        "location": "gpu",
+        "size": 320,
+        "shape": [
+            80
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.9.block.2.1.running_var": {
+        "location": "gpu",
+        "size": 320,
+        "shape": [
+            80
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.9.block.2.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.10.block.0.0.weight": {
+        "location": "gpu",
+        "size": 58880,
+        "shape": [
+            184,
+            80,
+            1,
+            1
+        ],
+        "stride": [
+            80,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.10.block.0.1.weight": {
+        "location": "gpu",
+        "size": 736,
+        "shape": [
+            184
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.10.block.0.1.bias": {
+        "location": "gpu",
+        "size": 736,
+        "shape": [
+            184
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.10.block.0.1.running_mean": {
+        "location": "gpu",
+        "size": 736,
+        "shape": [
+            184
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.10.block.0.1.running_var": {
+        "location": "gpu",
+        "size": 736,
+        "shape": [
+            184
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.10.block.0.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.10.block.1.0.weight": {
+        "location": "gpu",
+        "size": 6624,
+        "shape": [
+            184,
+            1,
+            3,
+            3
+        ],
+        "stride": [
+            9,
+            9,
+            3,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.10.block.1.1.weight": {
+        "location": "gpu",
+        "size": 736,
+        "shape": [
+            184
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.10.block.1.1.bias": {
+        "location": "gpu",
+        "size": 736,
+        "shape": [
+            184
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.10.block.1.1.running_mean": {
+        "location": "gpu",
+        "size": 736,
+        "shape": [
+            184
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.10.block.1.1.running_var": {
+        "location": "gpu",
+        "size": 736,
+        "shape": [
+            184
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.10.block.1.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.10.block.2.0.weight": {
+        "location": "gpu",
+        "size": 58880,
+        "shape": [
+            80,
+            184,
+            1,
+            1
+        ],
+        "stride": [
+            184,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.10.block.2.1.weight": {
+        "location": "gpu",
+        "size": 320,
+        "shape": [
+            80
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.10.block.2.1.bias": {
+        "location": "gpu",
+        "size": 320,
+        "shape": [
+            80
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.10.block.2.1.running_mean": {
+        "location": "gpu",
+        "size": 320,
+        "shape": [
+            80
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.10.block.2.1.running_var": {
+        "location": "gpu",
+        "size": 320,
+        "shape": [
+            80
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.10.block.2.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.11.block.0.0.weight": {
+        "location": "gpu",
+        "size": 153600,
+        "shape": [
+            480,
+            80,
+            1,
+            1
+        ],
+        "stride": [
+            80,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.11.block.0.1.weight": {
+        "location": "gpu",
+        "size": 1920,
+        "shape": [
+            480
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.11.block.0.1.bias": {
+        "location": "gpu",
+        "size": 1920,
+        "shape": [
+            480
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.11.block.0.1.running_mean": {
+        "location": "gpu",
+        "size": 1920,
+        "shape": [
+            480
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.11.block.0.1.running_var": {
+        "location": "gpu",
+        "size": 1920,
+        "shape": [
+            480
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.11.block.0.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.11.block.1.0.weight": {
+        "location": "gpu",
+        "size": 17280,
+        "shape": [
+            480,
+            1,
+            3,
+            3
+        ],
+        "stride": [
+            9,
+            9,
+            3,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.11.block.1.1.weight": {
+        "location": "gpu",
+        "size": 1920,
+        "shape": [
+            480
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.11.block.1.1.bias": {
+        "location": "gpu",
+        "size": 1920,
+        "shape": [
+            480
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.11.block.1.1.running_mean": {
+        "location": "gpu",
+        "size": 1920,
+        "shape": [
+            480
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.11.block.1.1.running_var": {
+        "location": "gpu",
+        "size": 1920,
+        "shape": [
+            480
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.11.block.1.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.11.block.2.fc1.weight": {
+        "location": "gpu",
+        "size": 230400,
+        "shape": [
+            120,
+            480,
+            1,
+            1
+        ],
+        "stride": [
+            480,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.11.block.2.fc1.bias": {
+        "location": "gpu",
+        "size": 480,
+        "shape": [
+            120
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.11.block.2.fc2.weight": {
+        "location": "gpu",
+        "size": 230400,
+        "shape": [
+            480,
+            120,
+            1,
+            1
+        ],
+        "stride": [
+            120,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.11.block.2.fc2.bias": {
+        "location": "gpu",
+        "size": 1920,
+        "shape": [
+            480
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.11.block.3.0.weight": {
+        "location": "gpu",
+        "size": 215040,
+        "shape": [
+            112,
+            480,
+            1,
+            1
+        ],
+        "stride": [
+            480,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.11.block.3.1.weight": {
+        "location": "gpu",
+        "size": 448,
+        "shape": [
+            112
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.11.block.3.1.bias": {
+        "location": "gpu",
+        "size": 448,
+        "shape": [
+            112
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.11.block.3.1.running_mean": {
+        "location": "gpu",
+        "size": 448,
+        "shape": [
+            112
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.11.block.3.1.running_var": {
+        "location": "gpu",
+        "size": 448,
+        "shape": [
+            112
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.11.block.3.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.12.block.0.0.weight": {
+        "location": "gpu",
+        "size": 301056,
+        "shape": [
+            672,
+            112,
+            1,
+            1
+        ],
+        "stride": [
+            112,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.12.block.0.1.weight": {
+        "location": "gpu",
+        "size": 2688,
+        "shape": [
+            672
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.12.block.0.1.bias": {
+        "location": "gpu",
+        "size": 2688,
+        "shape": [
+            672
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.12.block.0.1.running_mean": {
+        "location": "gpu",
+        "size": 2688,
+        "shape": [
+            672
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.12.block.0.1.running_var": {
+        "location": "gpu",
+        "size": 2688,
+        "shape": [
+            672
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.12.block.0.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.12.block.1.0.weight": {
+        "location": "gpu",
+        "size": 24192,
+        "shape": [
+            672,
+            1,
+            3,
+            3
+        ],
+        "stride": [
+            9,
+            9,
+            3,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.12.block.1.1.weight": {
+        "location": "gpu",
+        "size": 2688,
+        "shape": [
+            672
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.12.block.1.1.bias": {
+        "location": "gpu",
+        "size": 2688,
+        "shape": [
+            672
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.12.block.1.1.running_mean": {
+        "location": "gpu",
+        "size": 2688,
+        "shape": [
+            672
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.12.block.1.1.running_var": {
+        "location": "gpu",
+        "size": 2688,
+        "shape": [
+            672
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.12.block.1.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.12.block.2.fc1.weight": {
+        "location": "gpu",
+        "size": 451584,
+        "shape": [
+            168,
+            672,
+            1,
+            1
+        ],
+        "stride": [
+            672,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.12.block.2.fc1.bias": {
+        "location": "gpu",
+        "size": 672,
+        "shape": [
+            168
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.12.block.2.fc2.weight": {
+        "location": "gpu",
+        "size": 451584,
+        "shape": [
+            672,
+            168,
+            1,
+            1
+        ],
+        "stride": [
+            168,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.12.block.2.fc2.bias": {
+        "location": "gpu",
+        "size": 2688,
+        "shape": [
+            672
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.12.block.3.0.weight": {
+        "location": "gpu",
+        "size": 301056,
+        "shape": [
+            112,
+            672,
+            1,
+            1
+        ],
+        "stride": [
+            672,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.12.block.3.1.weight": {
+        "location": "gpu",
+        "size": 448,
+        "shape": [
+            112
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.12.block.3.1.bias": {
+        "location": "gpu",
+        "size": 448,
+        "shape": [
+            112
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.12.block.3.1.running_mean": {
+        "location": "gpu",
+        "size": 448,
+        "shape": [
+            112
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.12.block.3.1.running_var": {
+        "location": "gpu",
+        "size": 448,
+        "shape": [
+            112
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.12.block.3.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.13.block.0.0.weight": {
+        "location": "gpu",
+        "size": 301056,
+        "shape": [
+            672,
+            112,
+            1,
+            1
+        ],
+        "stride": [
+            112,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.13.block.0.1.weight": {
+        "location": "gpu",
+        "size": 2688,
+        "shape": [
+            672
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.13.block.0.1.bias": {
+        "location": "gpu",
+        "size": 2688,
+        "shape": [
+            672
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.13.block.0.1.running_mean": {
+        "location": "gpu",
+        "size": 2688,
+        "shape": [
+            672
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.13.block.0.1.running_var": {
+        "location": "gpu",
+        "size": 2688,
+        "shape": [
+            672
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.13.block.0.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.13.block.1.0.weight": {
+        "location": "gpu",
+        "size": 67200,
+        "shape": [
+            672,
+            1,
+            5,
+            5
+        ],
+        "stride": [
+            25,
+            25,
+            5,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.13.block.1.1.weight": {
+        "location": "gpu",
+        "size": 2688,
+        "shape": [
+            672
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.13.block.1.1.bias": {
+        "location": "gpu",
+        "size": 2688,
+        "shape": [
+            672
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.13.block.1.1.running_mean": {
+        "location": "gpu",
+        "size": 2688,
+        "shape": [
+            672
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.13.block.1.1.running_var": {
+        "location": "gpu",
+        "size": 2688,
+        "shape": [
+            672
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.13.block.1.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.13.block.2.fc1.weight": {
+        "location": "gpu",
+        "size": 451584,
+        "shape": [
+            168,
+            672,
+            1,
+            1
+        ],
+        "stride": [
+            672,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.13.block.2.fc1.bias": {
+        "location": "gpu",
+        "size": 672,
+        "shape": [
+            168
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.13.block.2.fc2.weight": {
+        "location": "gpu",
+        "size": 451584,
+        "shape": [
+            672,
+            168,
+            1,
+            1
+        ],
+        "stride": [
+            168,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.13.block.2.fc2.bias": {
+        "location": "gpu",
+        "size": 2688,
+        "shape": [
+            672
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.13.block.3.0.weight": {
+        "location": "gpu",
+        "size": 430080,
+        "shape": [
+            160,
+            672,
+            1,
+            1
+        ],
+        "stride": [
+            672,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.13.block.3.1.weight": {
+        "location": "gpu",
+        "size": 640,
+        "shape": [
+            160
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.13.block.3.1.bias": {
+        "location": "gpu",
+        "size": 640,
+        "shape": [
+            160
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.13.block.3.1.running_mean": {
+        "location": "gpu",
+        "size": 640,
+        "shape": [
+            160
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.13.block.3.1.running_var": {
+        "location": "gpu",
+        "size": 640,
+        "shape": [
+            160
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.13.block.3.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.14.block.0.0.weight": {
+        "location": "gpu",
+        "size": 614400,
+        "shape": [
+            960,
+            160,
+            1,
+            1
+        ],
+        "stride": [
+            160,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.14.block.0.1.weight": {
+        "location": "gpu",
+        "size": 3840,
+        "shape": [
+            960
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.14.block.0.1.bias": {
+        "location": "gpu",
+        "size": 3840,
+        "shape": [
+            960
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.14.block.0.1.running_mean": {
+        "location": "gpu",
+        "size": 3840,
+        "shape": [
+            960
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.14.block.0.1.running_var": {
+        "location": "gpu",
+        "size": 3840,
+        "shape": [
+            960
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.14.block.0.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.14.block.1.0.weight": {
+        "location": "gpu",
+        "size": 96000,
+        "shape": [
+            960,
+            1,
+            5,
+            5
+        ],
+        "stride": [
+            25,
+            25,
+            5,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.14.block.1.1.weight": {
+        "location": "gpu",
+        "size": 3840,
+        "shape": [
+            960
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.14.block.1.1.bias": {
+        "location": "gpu",
+        "size": 3840,
+        "shape": [
+            960
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.14.block.1.1.running_mean": {
+        "location": "gpu",
+        "size": 3840,
+        "shape": [
+            960
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.14.block.1.1.running_var": {
+        "location": "gpu",
+        "size": 3840,
+        "shape": [
+            960
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.14.block.1.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.14.block.2.fc1.weight": {
+        "location": "gpu",
+        "size": 921600,
+        "shape": [
+            240,
+            960,
+            1,
+            1
+        ],
+        "stride": [
+            960,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.14.block.2.fc1.bias": {
+        "location": "gpu",
+        "size": 960,
+        "shape": [
+            240
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.14.block.2.fc2.weight": {
+        "location": "gpu",
+        "size": 921600,
+        "shape": [
+            960,
+            240,
+            1,
+            1
+        ],
+        "stride": [
+            240,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.14.block.2.fc2.bias": {
+        "location": "gpu",
+        "size": 3840,
+        "shape": [
+            960
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.14.block.3.0.weight": {
+        "location": "gpu",
+        "size": 614400,
+        "shape": [
+            160,
+            960,
+            1,
+            1
+        ],
+        "stride": [
+            960,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.14.block.3.1.weight": {
+        "location": "gpu",
+        "size": 640,
+        "shape": [
+            160
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.14.block.3.1.bias": {
+        "location": "gpu",
+        "size": 640,
+        "shape": [
+            160
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.14.block.3.1.running_mean": {
+        "location": "gpu",
+        "size": 640,
+        "shape": [
+            160
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.14.block.3.1.running_var": {
+        "location": "gpu",
+        "size": 640,
+        "shape": [
+            160
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.14.block.3.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.15.block.0.0.weight": {
+        "location": "gpu",
+        "size": 614400,
+        "shape": [
+            960,
+            160,
+            1,
+            1
+        ],
+        "stride": [
+            160,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.15.block.0.1.weight": {
+        "location": "gpu",
+        "size": 3840,
+        "shape": [
+            960
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.15.block.0.1.bias": {
+        "location": "gpu",
+        "size": 3840,
+        "shape": [
+            960
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.15.block.0.1.running_mean": {
+        "location": "gpu",
+        "size": 3840,
+        "shape": [
+            960
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.15.block.0.1.running_var": {
+        "location": "gpu",
+        "size": 3840,
+        "shape": [
+            960
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.15.block.0.1.num_batches_tracked": {
+        "location": "gpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.15.block.1.0.weight": {
+        "location": "gpu",
+        "size": 96000,
+        "shape": [
+            960,
+            1,
+            5,
+            5
+        ],
+        "stride": [
+            25,
+            25,
+            5,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.15.block.1.1.weight": {
+        "location": "cpu",
+        "size": 3840,
+        "shape": [
+            960
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.15.block.1.1.bias": {
+        "location": "cpu",
+        "size": 3840,
+        "shape": [
+            960
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.15.block.1.1.running_mean": {
+        "location": "cpu",
+        "size": 3840,
+        "shape": [
+            960
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.15.block.1.1.running_var": {
+        "location": "cpu",
+        "size": 3840,
+        "shape": [
+            960
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.15.block.1.1.num_batches_tracked": {
+        "location": "cpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.15.block.2.fc1.weight": {
+        "location": "cpu",
+        "size": 921600,
+        "shape": [
+            240,
+            960,
+            1,
+            1
+        ],
+        "stride": [
+            960,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.15.block.2.fc1.bias": {
+        "location": "cpu",
+        "size": 960,
+        "shape": [
+            240
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.15.block.2.fc2.weight": {
+        "location": "cpu",
+        "size": 921600,
+        "shape": [
+            960,
+            240,
+            1,
+            1
+        ],
+        "stride": [
+            240,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.15.block.2.fc2.bias": {
+        "location": "cpu",
+        "size": 3840,
+        "shape": [
+            960
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.15.block.3.0.weight": {
+        "location": "cpu",
+        "size": 614400,
+        "shape": [
+            160,
+            960,
+            1,
+            1
+        ],
+        "stride": [
+            960,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.15.block.3.1.weight": {
+        "location": "cpu",
+        "size": 640,
+        "shape": [
+            160
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.15.block.3.1.bias": {
+        "location": "cpu",
+        "size": 640,
+        "shape": [
+            160
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.15.block.3.1.running_mean": {
+        "location": "cpu",
+        "size": 640,
+        "shape": [
+            160
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.15.block.3.1.running_var": {
+        "location": "cpu",
+        "size": 640,
+        "shape": [
+            160
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.15.block.3.1.num_batches_tracked": {
+        "location": "cpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "features.16.0.weight": {
+        "location": "cpu",
+        "size": 614400,
+        "shape": [
+            960,
+            160,
+            1,
+            1
+        ],
+        "stride": [
+            160,
+            1,
+            1,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.16.1.weight": {
+        "location": "cpu",
+        "size": 3840,
+        "shape": [
+            960
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.16.1.bias": {
+        "location": "cpu",
+        "size": 3840,
+        "shape": [
+            960
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.16.1.running_mean": {
+        "location": "cpu",
+        "size": 3840,
+        "shape": [
+            960
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.16.1.running_var": {
+        "location": "cpu",
+        "size": 3840,
+        "shape": [
+            960
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "features.16.1.num_batches_tracked": {
+        "location": "cpu",
+        "size": 8,
+        "shape": [],
+        "stride": [],
+        "dtype": "torch.int64"
+    },
+    "classifier.0.weight": {
+        "location": "cpu",
+        "size": 4915200,
+        "shape": [
+            1280,
+            960
+        ],
+        "stride": [
+            960,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "classifier.0.bias": {
+        "location": "cpu",
+        "size": 5120,
+        "shape": [
+            1280
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "classifier.3.weight": {
+        "location": "cpu",
+        "size": 5120000,
+        "shape": [
+            1000,
+            1280
+        ],
+        "stride": [
+            1280,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "classifier.3.bias": {
+        "location": "disk",
+        "size": 4000,
+        "shape": [
+            1000
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    }
+}

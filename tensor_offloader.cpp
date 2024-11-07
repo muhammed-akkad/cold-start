@@ -342,40 +342,52 @@ std::map<std::string, uint64_t> saveTensorsToDisk(const std::vector<std::string>
     return tensor_offsets;
 }
 
-
-
-cudaIpcMemHandle_t load_ipc_handle(const std::string& filename) {
+cudaIpcMemHandle_t load_ipc_handle(const std::string &filename)
+{
     cudaIpcMemHandle_t ipc_handle;
     std::ifstream f(filename, std::ios::binary);
-    if (!f.is_open()) {
+    if (!f.is_open())
+    {
         throw std::runtime_error("Failed to open IPC handle file: " + filename);
     }
-    f.read(reinterpret_cast<char*>(&ipc_handle), sizeof(cudaIpcMemHandle_t));
+    f.read(reinterpret_cast<char *>(&ipc_handle), sizeof(cudaIpcMemHandle_t));
     f.close();
     return ipc_handle;
 }
 
-torch::ScalarType dtype_string_to_scalar_type(const std::string& dtype_str) {
-    if (dtype_str == "torch.float32") {
+torch::ScalarType dtype_string_to_scalar_type(const std::string &dtype_str)
+{
+    if (dtype_str == "torch.float32")
+    {
         return torch::kFloat32;
-    } else if (dtype_str == "torch.float64") {
+    }
+    else if (dtype_str == "torch.float64")
+    {
         return torch::kFloat64;
-    } else if (dtype_str == "torch.int32") {
+    }
+    else if (dtype_str == "torch.int32")
+    {
         return torch::kInt32;
-    } else if (dtype_str == "torch.int64") {
+    }
+    else if (dtype_str == "torch.int64")
+    {
         return torch::kInt64;
-    } else {
+    }
+    else
+    {
         throw std::runtime_error("Unsupported dtype string: " + dtype_str);
     }
 }
 
-torch::Tensor tensor_from_ipc_handle(const cudaIpcMemHandle_t& ipc_handle,
-                                     const std::vector<int64_t>& shape,
-                                     torch::ScalarType dtype) {
+torch::Tensor tensor_from_ipc_handle(const cudaIpcMemHandle_t &ipc_handle,
+                                     const std::vector<int64_t> &shape,
+                                     torch::ScalarType dtype)
+{
     // Open the IPC memory handle
-    void* dev_ptr = nullptr;
+    void *dev_ptr = nullptr;
     cudaError_t status = cudaIpcOpenMemHandle(&dev_ptr, ipc_handle, cudaIpcMemLazyEnablePeerAccess);
-    if (status != cudaSuccess) {
+    if (status != cudaSuccess)
+    {
         throw std::runtime_error("cudaIpcOpenMemHandle failed: " + std::string(cudaGetErrorString(status)));
     }
 
@@ -391,12 +403,28 @@ torch::Tensor tensor_from_ipc_handle(const cudaIpcMemHandle_t& ipc_handle,
     return tensor;
 }
 
+torch::Tensor load_model_tensor(const std::string &filename, const std::vector<int64_t> &shape,  torch::ScalarType dtype)
+{
+    cudaIpcMemHandle_t ipc_handle;
+    std::ifstream f(filename, std::ios::binary);
+    if (!f.is_open())
+    {
+        throw std::runtime_error("Failed to open IPC handle file: " + filename);
+    }
+    f.read(reinterpret_cast<char *>(&ipc_handle), sizeof(cudaIpcMemHandle_t));
+    f.close();
+    torch::Tensor tensor = tensor_from_ipc_handle(ipc_handle, shape, dtype);
 
-py::dict load_model_from_ipc(const std::string& tensor_index_file,
-                             const std::string& ipc_handles_dir) {
+    return tensor;
+}
+
+py::dict load_model_from_ipc(const std::string &tensor_index_file,
+                             const std::string &ipc_handles_dir)
+{
     // Load tensor metadata from JSON
     std::ifstream f(tensor_index_file);
-    if (!f.is_open()) {
+    if (!f.is_open())
+    {
         throw std::runtime_error("Failed to open tensor index file: " + tensor_index_file);
     }
     json tensor_index;
@@ -405,13 +433,16 @@ py::dict load_model_from_ipc(const std::string& tensor_index_file,
 
     py::dict state_dict;
 
-    for (auto& [name, meta] : tensor_index.items()) {
-        try {
+    for (auto &[name, meta] : tensor_index.items())
+    {
+        try
+        {
             std::string tensor_name = name;
             std::string ipc_handle_file = ipc_handles_dir + "/" + tensor_name + "_ipc_handle.bin";
 
             // Extract metadata
-            if (meta.size() < 5) {
+            if (meta.size() < 5)
+            {
                 throw std::runtime_error("Incomplete metadata for tensor: " + tensor_name);
             }
 
@@ -426,7 +457,9 @@ py::dict load_model_from_ipc(const std::string& tensor_index_file,
             torch::Tensor tensor = tensor_from_ipc_handle(ipc_handle, shape, dtype);
 
             state_dict[py::str(name)] = tensor;
-        } catch (const std::exception& e) {
+        }
+        catch (const std::exception &e)
+        {
             std::cerr << "Error processing tensor " << name << ": " << e.what() << std::endl;
             throw;
         }
@@ -441,6 +474,7 @@ PYBIND11_MODULE(cuda_saver, m)
     m.def("save_tensors_to_gpu", &saveTensorsToGpu, "Save tensors to GPU memory");
     m.def("save_tensors_to_cpu", &saveTensorsToCpu, "Save tensors to CPU memory");
     m.def("save_tensors_to_disk", &saveTensorsToDisk, "Save tensors to Disk memory");
+    m.def("load_model_tensor", &load_model_tensor, " Create a torch::Tensor from the device pointer");
     m.def("load_model_from_ipc", &load_model_from_ipc, "Load model state dict from IPC handles",
           py::arg("tensor_index_file"),
           py::arg("ipc_handles_dir"));
