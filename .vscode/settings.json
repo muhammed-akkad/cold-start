@@ -52,6 +52,10 @@
         "ratio": "cpp",
         "thread": "cpp",
         "iomanip": "cpp",
-        "future": "cpp"
+        "future": "cpp",
+        "condition_variable": "cpp",
+        "forward_list": "cpp",
+        "mutex": "cpp",
+        "valarray": "cpp"
     }
 }

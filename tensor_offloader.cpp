@@ -243,14 +243,9 @@ std::map<std::string, uint64_t> saveTensorsToCpu(const std::vector<std::string> 
 
             std::cout << "Mapped shared host memory for tensor: " << name << " at address: " << h_memory << std::endl;
             std::cout << "data_ptr address: " << reinterpret_cast<void *>(data_ptr) << std::endl;
+            //cudaError_t status = cudaMemcpy(h_memory, reinterpret_cast<void *>(data_ptr), size, cudaMemcpyDeviceToHost);
+            std::memcpy(h_memory, reinterpret_cast<void *>(data_ptr), size);
 
-            cudaError_t status = cudaMemcpy(h_memory, reinterpret_cast<void *>(data_ptr), size, cudaMemcpyDeviceToHost);
-            if (status != cudaSuccess)
-            {
-                std::cerr << "cudaMemcpy failed for tensor: " << name << " with error: " << cudaGetErrorString(status) << std::endl;
-                // Handle the error appropriately
-                continue;
-            }
 
             std::cout << "Copied data to shared host memory for tensor: " << name << std::endl;
             tensor_offsets[name] = reinterpret_cast<uint64_t>(h_memory);
@@ -301,13 +296,9 @@ std::map<std::string, uint64_t> saveTensorsToDisk(const std::vector<std::string>
         }
 
         // Copy data from GPU to host
-        cudaError_t status = cudaMemcpy(host_buffer, reinterpret_cast<void *>(data_ptr), size, cudaMemcpyDeviceToHost);
-        if (status != cudaSuccess)
-        {
-            std::cerr << "cudaMemcpy failed for tensor: " << name << " with error: " << cudaGetErrorString(status) << std::endl;
-            free(host_buffer);
-            continue;
-        }
+        //cudaError_t status = cudaMemcpy(host_buffer, reinterpret_cast<void *>(data_ptr), size, cudaMemcpyDeviceToHost);
+        std::memcpy(host_buffer, reinterpret_cast<void *>(data_ptr), size);
+
 
         // Create a filename for the tensor data
         std::string filename = directory + "/" + name + "_data.bin";
