@@ -1,6 +1,6 @@
 {
   "_attn_implementation_autoset": true,
-  "_name_or_path": "facebook/opt-6.7b",
+  "_name_or_path": "facebook/opt-1.3b",
   "_remove_final_layer_norm": false,
   "activation_dropout": 0.0,
   "activation_function": "relu",
@@ -13,20 +13,20 @@
   "dropout": 0.1,
   "enable_bias": true,
   "eos_token_id": 2,
-  "ffn_dim": 16384,
-  "hidden_size": 4096,
+  "ffn_dim": 8192,
+  "hidden_size": 2048,
   "init_std": 0.02,
   "layer_norm_elementwise_affine": true,
   "layerdrop": 0.0,
   "max_position_embeddings": 2048,
   "model_type": "opt",
   "num_attention_heads": 32,
-  "num_hidden_layers": 32,
+  "num_hidden_layers": 24,
   "pad_token_id": 1,
   "prefix": "</s>",
   "torch_dtype": "float16",
   "transformers_version": "4.46.3",
   "use_cache": true,
   "vocab_size": 50272,
-  "word_embed_proj_dim": 4096
+  "word_embed_proj_dim": 2048
 }

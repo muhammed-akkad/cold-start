@@ -8,16 +8,19 @@ import concurrent.futures
 from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer
 from typing import Dict
 from accelerate import init_empty_weights, dispatch_model
+from collections import defaultdict
 
 import cuda_saver  # Your custom module for handling tensor loading
+USAGE_COUNTS_FILE = "model_usage.json"
 
+model_usage_counts = defaultdict(int)
 def _load_tensor_from_index_entry(model_path: str, name: str, meta: Dict) -> (str, torch.Tensor):
     """
     Helper function to load a single parameter based on its metadata.
     Returns a tuple of (parameter_name, tensor).
     """
     location = meta['location']
-    size = meta['size']
+    size = meta['size_bytes']
     shape = meta['shape']
     dtype_str = meta['dtype']
     dtype = getattr(torch, dtype_str.split('.')[-1])  # e.g., "torch.float32" -> torch.float32
@@ -243,9 +246,34 @@ def load_model_parallel(
 
     return model
 
+def pre_load_model(model_class,
+    model_path: str,
+    hf_model_name: str = "facebook/opt-1.3b"):
+    load_usage_counts()
+    model_name = hf_model_name
+    increment_usage(model_name)
+    model = load_model_parallel(model_class, model_path, hf_model_name)
+    save_usage_counts()
+    return model
+
+
+def load_usage_counts():
+    if os.path.exists(USAGE_COUNTS_FILE):
+        with open(USAGE_COUNTS_FILE, 'r') as f:
+            data = json.load(f)
+        for k, v in data.items():
+            model_usage_counts[k] = v
+
+def save_usage_counts():
+    with open(USAGE_COUNTS_FILE, 'w') as f:
+        json.dump(dict(model_usage_counts), f)
+
+def increment_usage(model_name: str):
+    model_usage_counts[model_name] += 1
+    
 def main():
     model_path = "./"  # Directory where your model shards (GPU, CPU, Disk) are saved
-    hf_model_name = "facebook/opt-6.7b"  # or "facebook/opt-350m", etc.
+    hf_model_name = "facebook/opt-1.3b"  # or "facebook/opt-350m", etc.
 
     # 1) Load the tokenizer from Hugging Face
     tokenizer = AutoTokenizer.from_pretrained(hf_model_name)
@@ -256,7 +284,7 @@ def main():
 
     # 3) Load the model using our custom loader
     start_time = time.time()
-    custom_model = load_model_parallel(AutoModelForCausalLM, model_path, hf_model_name=hf_model_name)
+    custom_model = pre_load_model(AutoModelForCausalLM, model_path, hf_model_name=hf_model_name)
     custom_model.eval()
     custom_loading_time = time.time() - start_time
 

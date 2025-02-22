@@ -1,0 +1,9 @@
+[
+    {
+        "model_name": "facebook/opt-6.7b_0",
+        "loading_time": 0.9099307060241699,
+        "end_to_end_time": 40.301555156707764,
+        "throughput": 0.8436399009367027,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nI'm not sure if this is a joke or not, but it's actually a very good answer."
+    }
+]

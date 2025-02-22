@@ -333,6 +333,79 @@ std::map<std::string, uint64_t> saveTensorsToDisk(const std::vector<std::string>
     return tensor_offsets;
 }
 
+std::map<std::string, bool> freeTensorsFromGpu(const std::vector<std::string> &tensor_names)
+{
+    std::map<std::string, bool> freed_results;
+
+    int sock = connectToServer();
+    if (sock < 0)
+    {
+        std::cerr << "Failed to connect to the server" << std::endl;
+        // Return empty map (or handle error)
+        return freed_results;
+    }
+
+    for (const auto &name : tensor_names)
+    {
+        // Send the FREE command
+        std::string command = "FREE GPU " + name + " 0"; 
+        // The “0” is just a placeholder for size if your daemon parses a size param. 
+        // If your daemon doesn't need it, you can omit it.
+        std::string response = sendCommandToServer(sock, command);
+
+        // The server might respond with "FREED GPU\n" or "NOT_ALLOCATED GPU\n"
+        if (response.find("FREED GPU") != std::string::npos)
+        {
+            std::cout << "Freed GPU memory for tensor: " << name << std::endl;
+            freed_results[name] = true;
+        }
+        else
+        {
+            std::cerr << "Failed to free GPU memory for tensor: " << name
+                      << " response: " << response << std::endl;
+            freed_results[name] = false;
+        }
+    }
+
+    close(sock);
+    return freed_results;
+}
+
+
+std::map<std::string, bool> freeTensorsFromCpu(const std::vector<std::string> &tensor_names)
+{
+    std::map<std::string, bool> freed_results;
+
+    int sock = connectToServer();
+    if (sock < 0)
+    {
+        std::cerr << "Failed to connect to the server" << std::endl;
+        return freed_results;
+    }
+
+    for (const auto &name : tensor_names)
+    {
+        std::string command = "FREE HOST " + name + " 0";
+        std::string response = sendCommandToServer(sock, command);
+
+        if (response.find("FREED HOST") != std::string::npos)
+        {
+            std::cout << "Freed HOST memory for tensor: " << name << std::endl;
+            freed_results[name] = true;
+        }
+        else
+        {
+            std::cerr << "Failed to free HOST memory for tensor: " << name
+                      << " response: " << response << std::endl;
+            freed_results[name] = false;
+        }
+    }
+
+    close(sock);
+    return freed_results;
+}
+
+
 cudaIpcMemHandle_t load_ipc_handle(const std::string &filename)
 {
     cudaIpcMemHandle_t ipc_handle;

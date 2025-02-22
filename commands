@@ -1,0 +1,9 @@
+cuda-gdb ./gpu-daemon
+python3 assemble-model-example.py 
+cuda-gdb ./memory-manager-server
+python3 model-offloader-example.py 
+$ python3 model_offloader_example.py 
+g++ -o memory-manager-server memory-manager-server.cpp  -lrt -I/usr/local/cuda/include -L/usr/local/cuda/lib64 -lcuda -lcudart
+g++ -o gpu-daemon gpu-daemon.cpp  -lrt -I/usr/local/cuda/include -L/usr/local/cuda/lib64 -lcuda -lcudart
+cuda-gdb ./memory-manager-server
+python3 setup.py build_ext --inplace

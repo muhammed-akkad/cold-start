@@ -270,6 +270,13 @@ void handleClient(int client_socket)
             send(client_socket, response.c_str(), response.size(), 0);
             GpuMemoryManager::log("GPU memory free request for tensor " + name + " resulted in: " + response);
         }
+        else if(cmd_type == "FREE" && mem_type == "HOST")
+        {
+            bool success = hostManager.freeMemory(memory, name, size);
+            std::string response = success ? "FREED HOST\n" : "NOT_ALLOCATED HOST\n";
+            send(client_socket, response.c_str(), response.size(), 0);
+            HostMemoryManager::log("Host memory free request for tensor " + name + " resulted in: " + response);
+        }
         else
         {
             std::string response = "UNKNOWN COMMAND\n";
