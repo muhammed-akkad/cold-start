@@ -1,0 +1,212 @@
+[
+    {
+        "model_name": "facebook/opt-1.3b_0",
+        "loading_time_sec": 1.232347011566162,
+        "inference_time_sec": 0.5961422920227051,
+        "throughput": 102.32456381013932,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_1",
+        "loading_time_sec": 1.2357914447784424,
+        "inference_time_sec": 0.6217360496520996,
+        "throughput": 98.11237426900585,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_2",
+        "loading_time_sec": 1.154928207397461,
+        "inference_time_sec": 0.6043775081634521,
+        "throughput": 100.93029468512704,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_3",
+        "loading_time_sec": 1.1646246910095215,
+        "inference_time_sec": 0.7979154586791992,
+        "throughput": 76.44920190037948,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_4",
+        "loading_time_sec": 1.1070806980133057,
+        "inference_time_sec": 0.6040983200073242,
+        "throughput": 100.97694030875707,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_5",
+        "loading_time_sec": 0.973024845123291,
+        "inference_time_sec": 0.606276273727417,
+        "throughput": 100.61419627221916,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_6",
+        "loading_time_sec": 0.9756112098693848,
+        "inference_time_sec": 0.6213047504425049,
+        "throughput": 98.1804822135267,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_7",
+        "loading_time_sec": 1.0948834419250488,
+        "inference_time_sec": 0.5984461307525635,
+        "throughput": 101.93064482393882,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_8",
+        "loading_time_sec": 1.121673345565796,
+        "inference_time_sec": 0.6267187595367432,
+        "throughput": 97.33233459469103,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_9",
+        "loading_time_sec": 1.1518046855926514,
+        "inference_time_sec": 0.7868180274963379,
+        "throughput": 77.52745599144767,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_10",
+        "loading_time_sec": 1.1226692199707031,
+        "inference_time_sec": 0.6099495887756348,
+        "throughput": 100.00826481815758,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_11",
+        "loading_time_sec": 1.1505672931671143,
+        "inference_time_sec": 0.612323522567749,
+        "throughput": 99.62054004425545,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_12",
+        "loading_time_sec": 1.144937515258789,
+        "inference_time_sec": 0.6215837001800537,
+        "throughput": 98.13642150257508,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_13",
+        "loading_time_sec": 1.0169761180877686,
+        "inference_time_sec": 0.6216039657592773,
+        "throughput": 98.13322205158339,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_14",
+        "loading_time_sec": 1.2391185760498047,
+        "inference_time_sec": 0.5940287113189697,
+        "throughput": 102.68863918135673,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_15",
+        "loading_time_sec": 1.1244349479675293,
+        "inference_time_sec": 0.6025199890136719,
+        "throughput": 101.24145441192299,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_16",
+        "loading_time_sec": 1.1532213687896729,
+        "inference_time_sec": 0.6072812080383301,
+        "throughput": 100.44769901088365,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_17",
+        "loading_time_sec": 1.1517243385314941,
+        "inference_time_sec": 0.6247384548187256,
+        "throughput": 97.64085999428319,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_18",
+        "loading_time_sec": 1.1381707191467285,
+        "inference_time_sec": 0.6062595844268799,
+        "throughput": 100.61696601079818,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_19",
+        "loading_time_sec": 1.1528730392456055,
+        "inference_time_sec": 0.6209685802459717,
+        "throughput": 98.23363361772235,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_20",
+        "loading_time_sec": 1.1347427368164062,
+        "inference_time_sec": 0.605492353439331,
+        "throughput": 100.74445970045113,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_21",
+        "loading_time_sec": 0.9544920921325684,
+        "inference_time_sec": 0.6358366012573242,
+        "throughput": 95.93659735752328,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_22",
+        "loading_time_sec": 1.1171224117279053,
+        "inference_time_sec": 0.5968785285949707,
+        "throughput": 102.19834870520754,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_23",
+        "loading_time_sec": 1.1487760543823242,
+        "inference_time_sec": 0.6050469875335693,
+        "throughput": 100.81861616841053,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_24",
+        "loading_time_sec": 1.165788173675537,
+        "inference_time_sec": 0.6195735931396484,
+        "throughput": 98.45480936475441,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_25",
+        "loading_time_sec": 1.1860666275024414,
+        "inference_time_sec": 0.6172616481781006,
+        "throughput": 98.82357049080662,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_26",
+        "loading_time_sec": 0.9723751544952393,
+        "inference_time_sec": 0.6152050495147705,
+        "throughput": 99.15393257599627,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_27",
+        "loading_time_sec": 1.126358985900879,
+        "inference_time_sec": 0.6055343151092529,
+        "throughput": 100.73747841853378,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_28",
+        "loading_time_sec": 1.147780418395996,
+        "inference_time_sec": 0.6178109645843506,
+        "throughput": 98.7357031467375,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_29",
+        "loading_time_sec": 1.1361196041107178,
+        "inference_time_sec": 0.6155211925506592,
+        "throughput": 99.10300528763601,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    }
+]

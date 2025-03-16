@@ -1,9 +1,9 @@
 [
     {
         "model_name": "facebook/opt-1.3b_0",
-        "loading_time": 1.3263757228851318,
-        "end_to_end_time": 0.6873178482055664,
-        "throughput": 88.7507870765431,
+        "loading_time": 1.3307859897613525,
+        "end_to_end_time": 0.7413010597229004,
+        "throughput": 82.28775502196355,
         "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
     }
 ]

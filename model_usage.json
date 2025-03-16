@@ -8,5 +8,25 @@
         "count": 0,
         "gpu_percent": 40.0,
         "cpu_percent": 40.0
+    },
+    "MobileNetV3": {
+        "count": 0,
+        "gpu_percent": 40.0,
+        "cpu_percent": 40.0
+    },
+    "MobileNetV2": {
+        "count": 0,
+        "gpu_percent": 40.0,
+        "cpu_percent": 40.0
+    },
+    "ResNet": {
+        "count": 0,
+        "gpu_percent": 40.0,
+        "cpu_percent": 40.0
+    },
+    "VGG": {
+        "count": 0,
+        "gpu_percent": 40.0,
+        "cpu_percent": 40.0
     }
 }

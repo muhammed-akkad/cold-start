@@ -1,106 +1,58 @@
-# ---------------------------------------------------------------------------- #
-#  ServerlessLLM                                                               #
-#  Copyright (c) ServerlessLLM Team 2024                                       #
-#                                                                              #
-#  Licensed under the Apache License, Version 2.0 (the "License");             #
-#  you may not use this file except in compliance with the License.            #
-#                                                                              #
-#  You may obtain a copy of the License at                                     #
-#                                                                              #
-#                  http://www.apache.org/licenses/LICENSE-2.0                  #
-#                                                                              #
-#  Unless required by applicable law or agreed to in writing, software         #
-#  distributed under the License is distributed on an "AS IS" BASIS,           #
-#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.    #
-#  See the License for the specific language governing permissions and         #
-#  limitations under the License.                                              #
-# ---------------------------------------------------------------------------- #
 import argparse
 import json
 import os
+from benchmark_utils import _warmup_cuda, _warmup_inference, measure_single
+from benchmark_util_torch import _warmup_inference_tv, measure_single_tv
+def save_result_to_json(result, output_filename):
+    """
+    Appends 'result' to a list of results in 'output_filename'.
+    If 'output_filename' doesn't exist, it creates a new file with a list.
+    """
+    # 1) Check if the file exists
+    if os.path.exists(output_filename):
+        # 2) If so, load existing data
+        with open(output_filename, "r") as f:
+            try:
+                data = json.load(f)
+            except json.JSONDecodeError:
+                # If the file is empty or corrupted, start a new list
+                data = []
+    else:
+        data = []
 
-import torch
-from benchmark_utils import _warmup_cuda, _warmup_inference, measure
+    # 3) Append the new result
+    data.append(result)
 
+    # 4) Write back to JSON
+    with open(output_filename, "w") as f:
+        json.dump(data, f, indent=4)
+    print(f"Appended results to {output_filename}")
 
 def get_args():
-    parser = argparse.ArgumentParser(description="Load test")
-    parser.add_argument(
-        "--model-name",
-        type=str,
-        required=True,
-        help="Name of the model to serve",
-    )
-    parser.add_argument(
-        "--model-format",
-        type=str,
-        required=True,
-        choices=["sllm", "safetensors"],
-        help="Format to save the model in",
-    )
-    parser.add_argument(
-        "--model-dir",
-        type=str,
-        required=True,
-        help="Directory to load models",
-    )
-    parser.add_argument(
-        "--num-replicas",
-        type=int,
-        default=1,
-        help="Number of replicas to load",
-    )
-    parser.add_argument(
-        "--output-dir",
-        type=str,
-        default="./results",
-        help="Directory to save results",
-    )
-    parser.add_argument(
-        "--benchmark-type",
-        type=str,
-        required=True,
-        choices=["random", "single"],
-        help="Name of the test.",
-    )
+    parser = argparse.ArgumentParser(description="Single Model Load Benchmark")
+    parser.add_argument("--model-type", type=str, required=True, choices=["tv", "hf"])
+    parser.add_argument("--model-name", type=str, required=True)
+    parser.add_argument("--model-format", type=str, required=True, choices=["iceCrusher", "safetensors"])
+    parser.add_argument("--model-dir", type=str, required=True)
+    parser.add_argument("--replica", type=int, default=0)
+    
     return parser.parse_args()
-
 
 def main():
     args = get_args()
     _warmup_cuda()
-    _warmup_inference()
-
-    model_format = args.model_format
-    model_name = args.model_name
-    model_dir = args.model_dir
-    num_replicas = args.num_replicas
-    output_dir = args.output_dir
-    benchmark_type = args.benchmark_type
-
-    # Check if model_dir exists
-    if not os.path.exists(model_dir):
-        raise FileNotFoundError(f"Directory {model_dir} does not exist")
-
-    if benchmark_type == "random":
-        loading_order = torch.randperm(num_replicas)
-    elif benchmark_type == "single":
-        loading_order = [0] * num_replicas
+    if args.model_type == "tv":
+        _warmup_inference_tv()
+        result = measure_single_tv(args.model_name, args.model_format, args.model_dir, args.replica)
     else:
-        raise ValueError(f"Unknown benchmark type {benchmark_type}")
+        _warmup_inference()
+        result = measure_single(args.model_name, args.model_format, args.model_dir, args.replica)
 
-    results = measure(model_name, model_format, model_dir, loading_order)
 
-    output_filename = (
-        f"{model_name}_{model_format}_{num_replicas}_{benchmark_type}.json"
-    )
-    output_filename = output_filename.replace("/", "_")
-    output_filename = os.path.join(output_dir, output_filename)
+    output_filename = "results_facebook_opt-6.7b_B.json"
+    save_result_to_json(result, output_filename)
 
-    with open(output_filename, "w") as f:
-        json.dump(results, f, indent=4)
-    print(f"Results saved to {output_filename}")
-
+    print(f"Saved benchmark results to {output_filename}")
 
 if __name__ == "__main__":
     main()

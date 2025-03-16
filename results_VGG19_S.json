@@ -1,0 +1,212 @@
+[
+    {
+        "model_name": "vgg19_0",
+        "loading_time_sec": 2.398268461227417,
+        "inference_time_sec": 0.28669142723083496,
+        "throughput": 3.488070814181797,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_1",
+        "loading_time_sec": 2.294525623321533,
+        "inference_time_sec": 0.0648813247680664,
+        "throughput": 15.41275557450061,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_2",
+        "loading_time_sec": 2.966547966003418,
+        "inference_time_sec": 0.0635535717010498,
+        "throughput": 15.73475688673972,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_3",
+        "loading_time_sec": 2.3515000343322754,
+        "inference_time_sec": 0.06394577026367188,
+        "throughput": 15.638250909741693,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_4",
+        "loading_time_sec": 2.3841934204101562,
+        "inference_time_sec": 0.06458568572998047,
+        "throughput": 15.483307000575875,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_5",
+        "loading_time_sec": 2.6247243881225586,
+        "inference_time_sec": 0.06615185737609863,
+        "throughput": 15.116733522909525,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_6",
+        "loading_time_sec": 2.299726724624634,
+        "inference_time_sec": 0.0691523551940918,
+        "throughput": 14.460823455589804,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_7",
+        "loading_time_sec": 2.3506195545196533,
+        "inference_time_sec": 0.06430983543395996,
+        "throughput": 15.549721022485032,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_8",
+        "loading_time_sec": 2.3885669708251953,
+        "inference_time_sec": 0.06368446350097656,
+        "throughput": 15.70241696367067,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_9",
+        "loading_time_sec": 2.3530690670013428,
+        "inference_time_sec": 0.06537127494812012,
+        "throughput": 15.29723874581946,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_10",
+        "loading_time_sec": 2.3196613788604736,
+        "inference_time_sec": 0.06344437599182129,
+        "throughput": 15.761838372071175,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_11",
+        "loading_time_sec": 2.600040912628174,
+        "inference_time_sec": 0.06589221954345703,
+        "throughput": 15.176298612015689,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_12",
+        "loading_time_sec": 2.378693103790283,
+        "inference_time_sec": 0.0751807689666748,
+        "throughput": 13.301273899489743,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_13",
+        "loading_time_sec": 2.3549587726593018,
+        "inference_time_sec": 0.0656747817993164,
+        "throughput": 15.226544688884049,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_14",
+        "loading_time_sec": 2.2899107933044434,
+        "inference_time_sec": 0.06604170799255371,
+        "throughput": 15.141946360817187,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_15",
+        "loading_time_sec": 2.3610637187957764,
+        "inference_time_sec": 0.06564927101135254,
+        "throughput": 15.232461603832173,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_16",
+        "loading_time_sec": 2.355954170227051,
+        "inference_time_sec": 0.06517624855041504,
+        "throughput": 15.343012558117417,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_17",
+        "loading_time_sec": 2.3473522663116455,
+        "inference_time_sec": 0.06516814231872559,
+        "throughput": 15.344921067554466,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_18",
+        "loading_time_sec": 2.446352481842041,
+        "inference_time_sec": 0.06409382820129395,
+        "throughput": 15.602126258699768,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_19",
+        "loading_time_sec": 2.3393640518188477,
+        "inference_time_sec": 0.06723904609680176,
+        "throughput": 14.872310927200457,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_20",
+        "loading_time_sec": 2.6469030380249023,
+        "inference_time_sec": 0.06759023666381836,
+        "throughput": 14.795036226516258,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_21",
+        "loading_time_sec": 2.4337761402130127,
+        "inference_time_sec": 0.06836342811584473,
+        "throughput": 14.627704133055728,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_22",
+        "loading_time_sec": 2.418327569961548,
+        "inference_time_sec": 0.06584572792053223,
+        "throughput": 15.187014124999548,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_23",
+        "loading_time_sec": 2.345860719680786,
+        "inference_time_sec": 0.06606006622314453,
+        "throughput": 15.137738382248914,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_24",
+        "loading_time_sec": 2.319064140319824,
+        "inference_time_sec": 0.06402969360351562,
+        "throughput": 15.617753946976467,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_25",
+        "loading_time_sec": 2.338665723800659,
+        "inference_time_sec": 0.0652925968170166,
+        "throughput": 15.315672047820577,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_26",
+        "loading_time_sec": 2.3420474529266357,
+        "inference_time_sec": 0.06436848640441895,
+        "throughput": 15.535552501842723,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_27",
+        "loading_time_sec": 2.3602519035339355,
+        "inference_time_sec": 0.07026433944702148,
+        "throughput": 14.231970411591055,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_28",
+        "loading_time_sec": 2.3528952598571777,
+        "inference_time_sec": 0.06360960006713867,
+        "throughput": 15.720897458001934,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_29",
+        "loading_time_sec": 2.354884624481201,
+        "inference_time_sec": 0.06427383422851562,
+        "throughput": 15.558430767404595,
+        "output_info": "torch.Size([1, 1000])"
+    }
+]

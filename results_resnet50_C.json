@@ -1,0 +1,452 @@
+[
+    {
+        "model_name": "resnet50_0",
+        "profiling": {
+            "read_index_sec": 0.000946044921875,
+            "instantiate_model_sec": 0.050543785095214844,
+            "load_params_sec": 0.07073283195495605,
+            "assign_params_sec": 0.04133343696594238,
+            "dispatch_model_sec": 0.03717803955078125,
+            "total_sec": 0.20074057579040527
+        },
+        "loading_time_sec": 0.20371437072753906,
+        "inference_time_sec": 0.1202247142791748,
+        "throughput": 8.317757342952728,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_1",
+        "profiling": {
+            "read_index_sec": 0.0009186267852783203,
+            "instantiate_model_sec": 0.04665088653564453,
+            "load_params_sec": 0.10517406463623047,
+            "assign_params_sec": 0.04251456260681152,
+            "dispatch_model_sec": 0.03891801834106445,
+            "total_sec": 0.23418164253234863
+        },
+        "loading_time_sec": 0.23688864707946777,
+        "inference_time_sec": 0.12624716758728027,
+        "throughput": 7.920969785786723,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_2",
+        "profiling": {
+            "read_index_sec": 0.0010640621185302734,
+            "instantiate_model_sec": 0.04567289352416992,
+            "load_params_sec": 0.07245397567749023,
+            "assign_params_sec": 0.03877401351928711,
+            "dispatch_model_sec": 0.03173542022705078,
+            "total_sec": 0.18970727920532227
+        },
+        "loading_time_sec": 0.1926589012145996,
+        "inference_time_sec": 0.11472964286804199,
+        "throughput": 8.716143230308534,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_3",
+        "profiling": {
+            "read_index_sec": 0.000934600830078125,
+            "instantiate_model_sec": 0.04584813117980957,
+            "load_params_sec": 0.06709432601928711,
+            "assign_params_sec": 0.05313563346862793,
+            "dispatch_model_sec": 0.04164576530456543,
+            "total_sec": 0.2086658477783203
+        },
+        "loading_time_sec": 0.21141362190246582,
+        "inference_time_sec": 0.1166529655456543,
+        "throughput": 8.57243530262959,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_4",
+        "profiling": {
+            "read_index_sec": 0.0009520053863525391,
+            "instantiate_model_sec": 0.04542350769042969,
+            "load_params_sec": 0.07984209060668945,
+            "assign_params_sec": 0.03832888603210449,
+            "dispatch_model_sec": 0.03386092185974121,
+            "total_sec": 0.19841361045837402
+        },
+        "loading_time_sec": 0.20107197761535645,
+        "inference_time_sec": 0.1174778938293457,
+        "throughput": 8.512239770425662,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_5",
+        "profiling": {
+            "read_index_sec": 0.0013778209686279297,
+            "instantiate_model_sec": 0.048964500427246094,
+            "load_params_sec": 0.07681727409362793,
+            "assign_params_sec": 0.03791093826293945,
+            "dispatch_model_sec": 0.037995100021362305,
+            "total_sec": 0.20307087898254395
+        },
+        "loading_time_sec": 0.206282377243042,
+        "inference_time_sec": 0.11927270889282227,
+        "throughput": 8.384147633459,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_6",
+        "profiling": {
+            "read_index_sec": 0.0009329319000244141,
+            "instantiate_model_sec": 0.050591230392456055,
+            "load_params_sec": 0.07281756401062012,
+            "assign_params_sec": 0.04017376899719238,
+            "dispatch_model_sec": 0.03610372543334961,
+            "total_sec": 0.2006242275238037
+        },
+        "loading_time_sec": 0.20324444770812988,
+        "inference_time_sec": 0.1169428825378418,
+        "throughput": 8.55118309296342,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_7",
+        "profiling": {
+            "read_index_sec": 0.0009577274322509766,
+            "instantiate_model_sec": 0.04611611366271973,
+            "load_params_sec": 0.07465004920959473,
+            "assign_params_sec": 0.03925132751464844,
+            "dispatch_model_sec": 0.03158402442932129,
+            "total_sec": 0.1925647258758545
+        },
+        "loading_time_sec": 0.19563651084899902,
+        "inference_time_sec": 0.12546491622924805,
+        "throughput": 7.970355618560423,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_8",
+        "profiling": {
+            "read_index_sec": 0.0009434223175048828,
+            "instantiate_model_sec": 0.045226097106933594,
+            "load_params_sec": 0.08676671981811523,
+            "assign_params_sec": 0.0374906063079834,
+            "dispatch_model_sec": 0.026962995529174805,
+            "total_sec": 0.19739484786987305
+        },
+        "loading_time_sec": 0.19994544982910156,
+        "inference_time_sec": 0.11797499656677246,
+        "throughput": 8.476372359409325,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_9",
+        "profiling": {
+            "read_index_sec": 0.0009741783142089844,
+            "instantiate_model_sec": 0.0573430061340332,
+            "load_params_sec": 0.08195734024047852,
+            "assign_params_sec": 0.040686607360839844,
+            "dispatch_model_sec": 0.035193681716918945,
+            "total_sec": 0.21615958213806152
+        },
+        "loading_time_sec": 0.21883845329284668,
+        "inference_time_sec": 0.11769914627075195,
+        "throughput": 8.496238347384669,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_10",
+        "profiling": {
+            "read_index_sec": 0.0009531974792480469,
+            "instantiate_model_sec": 0.045941829681396484,
+            "load_params_sec": 0.06871724128723145,
+            "assign_params_sec": 0.035462379455566406,
+            "dispatch_model_sec": 0.030566692352294922,
+            "total_sec": 0.18164587020874023
+        },
+        "loading_time_sec": 0.18421053886413574,
+        "inference_time_sec": 0.12037944793701172,
+        "throughput": 8.307065841697893,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_11",
+        "profiling": {
+            "read_index_sec": 0.0010933876037597656,
+            "instantiate_model_sec": 0.04759025573730469,
+            "load_params_sec": 0.08376193046569824,
+            "assign_params_sec": 0.038454294204711914,
+            "dispatch_model_sec": 0.02706170082092285,
+            "total_sec": 0.1979665756225586
+        },
+        "loading_time_sec": 0.20103859901428223,
+        "inference_time_sec": 0.1144876480102539,
+        "throughput": 8.734566718589909,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_12",
+        "profiling": {
+            "read_index_sec": 0.0009500980377197266,
+            "instantiate_model_sec": 0.048020124435424805,
+            "load_params_sec": 0.06685805320739746,
+            "assign_params_sec": 0.03731799125671387,
+            "dispatch_model_sec": 0.025571346282958984,
+            "total_sec": 0.17872190475463867
+        },
+        "loading_time_sec": 0.1817491054534912,
+        "inference_time_sec": 0.12861371040344238,
+        "throughput": 7.775220828814801,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_13",
+        "profiling": {
+            "read_index_sec": 0.0009348392486572266,
+            "instantiate_model_sec": 0.047005653381347656,
+            "load_params_sec": 0.10802793502807617,
+            "assign_params_sec": 0.03748035430908203,
+            "dispatch_model_sec": 0.029578447341918945,
+            "total_sec": 0.22303271293640137
+        },
+        "loading_time_sec": 0.22603392601013184,
+        "inference_time_sec": 0.11623048782348633,
+        "throughput": 8.60359462242516,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_14",
+        "profiling": {
+            "read_index_sec": 0.0009586811065673828,
+            "instantiate_model_sec": 0.04599165916442871,
+            "load_params_sec": 0.06799602508544922,
+            "assign_params_sec": 0.0449976921081543,
+            "dispatch_model_sec": 0.03442049026489258,
+            "total_sec": 0.19436931610107422
+        },
+        "loading_time_sec": 0.19745135307312012,
+        "inference_time_sec": 0.12202095985412598,
+        "throughput": 8.195313339572834,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_15",
+        "profiling": {
+            "read_index_sec": 0.0011754035949707031,
+            "instantiate_model_sec": 0.046228885650634766,
+            "load_params_sec": 0.0774695873260498,
+            "assign_params_sec": 0.03618478775024414,
+            "dispatch_model_sec": 0.029877185821533203,
+            "total_sec": 0.19094061851501465
+        },
+        "loading_time_sec": 0.1941373348236084,
+        "inference_time_sec": 0.11611795425415039,
+        "throughput": 8.611932637146483,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_16",
+        "profiling": {
+            "read_index_sec": 0.0009272098541259766,
+            "instantiate_model_sec": 0.04605507850646973,
+            "load_params_sec": 0.07040858268737793,
+            "assign_params_sec": 0.04038405418395996,
+            "dispatch_model_sec": 0.04970073699951172,
+            "total_sec": 0.20748233795166016
+        },
+        "loading_time_sec": 0.21052336692810059,
+        "inference_time_sec": 0.12592554092407227,
+        "throughput": 7.9412007497586,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_17",
+        "profiling": {
+            "read_index_sec": 0.0009386539459228516,
+            "instantiate_model_sec": 0.04609537124633789,
+            "load_params_sec": 0.0764005184173584,
+            "assign_params_sec": 0.03713274002075195,
+            "dispatch_model_sec": 0.027620315551757812,
+            "total_sec": 0.18819332122802734
+        },
+        "loading_time_sec": 0.19083714485168457,
+        "inference_time_sec": 0.12059807777404785,
+        "throughput": 8.29200612860179,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_18",
+        "profiling": {
+            "read_index_sec": 0.0009429454803466797,
+            "instantiate_model_sec": 0.046025991439819336,
+            "load_params_sec": 0.0845193862915039,
+            "assign_params_sec": 0.03738689422607422,
+            "dispatch_model_sec": 0.03428936004638672,
+            "total_sec": 0.20317864418029785
+        },
+        "loading_time_sec": 0.20629429817199707,
+        "inference_time_sec": 0.1242821216583252,
+        "throughput": 8.046209596817047,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_19",
+        "profiling": {
+            "read_index_sec": 0.0009691715240478516,
+            "instantiate_model_sec": 0.05221080780029297,
+            "load_params_sec": 0.0690462589263916,
+            "assign_params_sec": 0.041535377502441406,
+            "dispatch_model_sec": 0.03761553764343262,
+            "total_sec": 0.2013835906982422
+        },
+        "loading_time_sec": 0.20454096794128418,
+        "inference_time_sec": 0.12042689323425293,
+        "throughput": 8.303793057708564,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_20",
+        "profiling": {
+            "read_index_sec": 0.0009322166442871094,
+            "instantiate_model_sec": 0.04527878761291504,
+            "load_params_sec": 0.07905077934265137,
+            "assign_params_sec": 0.03870534896850586,
+            "dispatch_model_sec": 0.029186010360717773,
+            "total_sec": 0.19315814971923828
+        },
+        "loading_time_sec": 0.19576621055603027,
+        "inference_time_sec": 0.12153148651123047,
+        "throughput": 8.22832032016322,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_21",
+        "profiling": {
+            "read_index_sec": 0.0009310245513916016,
+            "instantiate_model_sec": 0.04660964012145996,
+            "load_params_sec": 0.06682062149047852,
+            "assign_params_sec": 0.03922867774963379,
+            "dispatch_model_sec": 0.03461480140686035,
+            "total_sec": 0.18821024894714355
+        },
+        "loading_time_sec": 0.19124341011047363,
+        "inference_time_sec": 0.1168222427368164,
+        "throughput": 8.560013714621583,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_22",
+        "profiling": {
+            "read_index_sec": 0.0009284019470214844,
+            "instantiate_model_sec": 0.0454554557800293,
+            "load_params_sec": 0.07784509658813477,
+            "assign_params_sec": 0.041223764419555664,
+            "dispatch_model_sec": 0.031188488006591797,
+            "total_sec": 0.19664621353149414
+        },
+        "loading_time_sec": 0.19933414459228516,
+        "inference_time_sec": 0.12111210823059082,
+        "throughput": 8.256812754807758,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_23",
+        "profiling": {
+            "read_index_sec": 0.0009377002716064453,
+            "instantiate_model_sec": 0.045493364334106445,
+            "load_params_sec": 0.09160327911376953,
+            "assign_params_sec": 0.04060626029968262,
+            "dispatch_model_sec": 0.03439831733703613,
+            "total_sec": 0.2130436897277832
+        },
+        "loading_time_sec": 0.21567773818969727,
+        "inference_time_sec": 0.12602853775024414,
+        "throughput": 7.934710803213004,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_24",
+        "profiling": {
+            "read_index_sec": 0.0009372234344482422,
+            "instantiate_model_sec": 0.045137882232666016,
+            "load_params_sec": 0.06621956825256348,
+            "assign_params_sec": 0.03324723243713379,
+            "dispatch_model_sec": 0.026233434677124023,
+            "total_sec": 0.17177987098693848
+        },
+        "loading_time_sec": 0.1744682788848877,
+        "inference_time_sec": 0.12589287757873535,
+        "throughput": 7.9432611219374545,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_25",
+        "profiling": {
+            "read_index_sec": 0.0011229515075683594,
+            "instantiate_model_sec": 0.04732251167297363,
+            "load_params_sec": 0.08277559280395508,
+            "assign_params_sec": 0.03722691535949707,
+            "dispatch_model_sec": 0.02884650230407715,
+            "total_sec": 0.19730019569396973
+        },
+        "loading_time_sec": 0.2006216049194336,
+        "inference_time_sec": 0.1186671257019043,
+        "throughput": 8.426933694442324,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_26",
+        "profiling": {
+            "read_index_sec": 0.0013284683227539062,
+            "instantiate_model_sec": 0.04799199104309082,
+            "load_params_sec": 0.0682992935180664,
+            "assign_params_sec": 0.03778505325317383,
+            "dispatch_model_sec": 0.02970409393310547,
+            "total_sec": 0.18511343002319336
+        },
+        "loading_time_sec": 0.18868350982666016,
+        "inference_time_sec": 0.11558842658996582,
+        "throughput": 8.651385173252367,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_27",
+        "profiling": {
+            "read_index_sec": 0.0009922981262207031,
+            "instantiate_model_sec": 0.04551529884338379,
+            "load_params_sec": 0.0655825138092041,
+            "assign_params_sec": 0.03856301307678223,
+            "dispatch_model_sec": 0.03209733963012695,
+            "total_sec": 0.1827559471130371
+        },
+        "loading_time_sec": 0.1853165626525879,
+        "inference_time_sec": 0.1340501308441162,
+        "throughput": 7.459895739772733,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_28",
+        "profiling": {
+            "read_index_sec": 0.0009543895721435547,
+            "instantiate_model_sec": 0.045316457748413086,
+            "load_params_sec": 0.0948493480682373,
+            "assign_params_sec": 0.03841805458068848,
+            "dispatch_model_sec": 0.028031587600708008,
+            "total_sec": 0.20757484436035156
+        },
+        "loading_time_sec": 0.21011090278625488,
+        "inference_time_sec": 0.12149763107299805,
+        "throughput": 8.230613149973117,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "resnet50_29",
+        "profiling": {
+            "read_index_sec": 0.0010001659393310547,
+            "instantiate_model_sec": 0.04548144340515137,
+            "load_params_sec": 0.06565713882446289,
+            "assign_params_sec": 0.035639286041259766,
+            "dispatch_model_sec": 0.025130748748779297,
+            "total_sec": 0.1729145050048828
+        },
+        "loading_time_sec": 0.1755068302154541,
+        "inference_time_sec": 0.12880253791809082,
+        "throughput": 7.7638221743420015,
+        "output_info": "torch.Size([1, 1000])"
+    }
+]

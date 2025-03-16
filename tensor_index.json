@@ -1,35 +1,35 @@
 {
     "model.decoder.embed_tokens.weight": {
         "location": "gpu",
-        "size_bytes": 411828224,
+        "size_bytes": 823656448,
         "shape": [
             50272,
-            2048
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.embed_positions.weight": {
         "location": "gpu",
-        "size_bytes": 16793600,
+        "size_bytes": 33587200,
         "shape": [
             2050,
-            2048
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.final_layer_norm.weight": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -38,9 +38,9 @@
     },
     "model.decoder.final_layer_norm.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -49,22 +49,22 @@
     },
     "model.decoder.layers.0.self_attn.k_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.0.self_attn.k_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -73,22 +73,22 @@
     },
     "model.decoder.layers.0.self_attn.v_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.0.self_attn.v_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -97,22 +97,22 @@
     },
     "model.decoder.layers.0.self_attn.q_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.0.self_attn.q_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -121,22 +121,22 @@
     },
     "model.decoder.layers.0.self_attn.out_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.0.self_attn.out_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -145,9 +145,9 @@
     },
     "model.decoder.layers.0.self_attn_layer_norm.weight": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -156,9 +156,9 @@
     },
     "model.decoder.layers.0.self_attn_layer_norm.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -167,22 +167,22 @@
     },
     "model.decoder.layers.0.fc1.weight": {
         "location": "gpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            8192,
-            2048
+            16384,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.0.fc1.bias": {
         "location": "gpu",
-        "size_bytes": 32768,
+        "size_bytes": 65536,
         "shape": [
-            8192
+            16384
         ],
         "stride": [
             1
@@ -191,22 +191,22 @@
     },
     "model.decoder.layers.0.fc2.weight": {
         "location": "gpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            2048,
-            8192
+            4096,
+            16384
         ],
         "stride": [
-            8192,
+            16384,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.0.fc2.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -215,9 +215,9 @@
     },
     "model.decoder.layers.0.final_layer_norm.weight": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -226,9 +226,9 @@
     },
     "model.decoder.layers.0.final_layer_norm.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -237,22 +237,22 @@
     },
     "model.decoder.layers.1.self_attn.k_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.1.self_attn.k_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -261,22 +261,22 @@
     },
     "model.decoder.layers.1.self_attn.v_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.1.self_attn.v_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -285,22 +285,22 @@
     },
     "model.decoder.layers.1.self_attn.q_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.1.self_attn.q_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -309,22 +309,22 @@
     },
     "model.decoder.layers.1.self_attn.out_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.1.self_attn.out_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -333,9 +333,9 @@
     },
     "model.decoder.layers.1.self_attn_layer_norm.weight": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -344,9 +344,9 @@
     },
     "model.decoder.layers.1.self_attn_layer_norm.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -355,22 +355,22 @@
     },
     "model.decoder.layers.1.fc1.weight": {
         "location": "gpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            8192,
-            2048
+            16384,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.1.fc1.bias": {
         "location": "gpu",
-        "size_bytes": 32768,
+        "size_bytes": 65536,
         "shape": [
-            8192
+            16384
         ],
         "stride": [
             1
@@ -379,22 +379,22 @@
     },
     "model.decoder.layers.1.fc2.weight": {
         "location": "gpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            2048,
-            8192
+            4096,
+            16384
         ],
         "stride": [
-            8192,
+            16384,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.1.fc2.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -403,9 +403,9 @@
     },
     "model.decoder.layers.1.final_layer_norm.weight": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -414,9 +414,9 @@
     },
     "model.decoder.layers.1.final_layer_norm.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -425,22 +425,22 @@
     },
     "model.decoder.layers.2.self_attn.k_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.2.self_attn.k_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -449,22 +449,22 @@
     },
     "model.decoder.layers.2.self_attn.v_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.2.self_attn.v_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -473,22 +473,22 @@
     },
     "model.decoder.layers.2.self_attn.q_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.2.self_attn.q_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -497,22 +497,22 @@
     },
     "model.decoder.layers.2.self_attn.out_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.2.self_attn.out_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -521,9 +521,9 @@
     },
     "model.decoder.layers.2.self_attn_layer_norm.weight": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -532,9 +532,9 @@
     },
     "model.decoder.layers.2.self_attn_layer_norm.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -543,22 +543,22 @@
     },
     "model.decoder.layers.2.fc1.weight": {
         "location": "gpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            8192,
-            2048
+            16384,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.2.fc1.bias": {
         "location": "gpu",
-        "size_bytes": 32768,
+        "size_bytes": 65536,
         "shape": [
-            8192
+            16384
         ],
         "stride": [
             1
@@ -567,22 +567,22 @@
     },
     "model.decoder.layers.2.fc2.weight": {
         "location": "gpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            2048,
-            8192
+            4096,
+            16384
         ],
         "stride": [
-            8192,
+            16384,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.2.fc2.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -591,9 +591,9 @@
     },
     "model.decoder.layers.2.final_layer_norm.weight": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -602,9 +602,9 @@
     },
     "model.decoder.layers.2.final_layer_norm.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -613,22 +613,22 @@
     },
     "model.decoder.layers.3.self_attn.k_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.3.self_attn.k_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -637,22 +637,22 @@
     },
     "model.decoder.layers.3.self_attn.v_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.3.self_attn.v_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -661,22 +661,22 @@
     },
     "model.decoder.layers.3.self_attn.q_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.3.self_attn.q_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -685,22 +685,22 @@
     },
     "model.decoder.layers.3.self_attn.out_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.3.self_attn.out_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -709,9 +709,9 @@
     },
     "model.decoder.layers.3.self_attn_layer_norm.weight": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -720,9 +720,9 @@
     },
     "model.decoder.layers.3.self_attn_layer_norm.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -731,22 +731,22 @@
     },
     "model.decoder.layers.3.fc1.weight": {
         "location": "gpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            8192,
-            2048
+            16384,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.3.fc1.bias": {
         "location": "gpu",
-        "size_bytes": 32768,
+        "size_bytes": 65536,
         "shape": [
-            8192
+            16384
         ],
         "stride": [
             1
@@ -755,22 +755,22 @@
     },
     "model.decoder.layers.3.fc2.weight": {
         "location": "gpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            2048,
-            8192
+            4096,
+            16384
         ],
         "stride": [
-            8192,
+            16384,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.3.fc2.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -779,9 +779,9 @@
     },
     "model.decoder.layers.3.final_layer_norm.weight": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -790,9 +790,9 @@
     },
     "model.decoder.layers.3.final_layer_norm.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -801,22 +801,22 @@
     },
     "model.decoder.layers.4.self_attn.k_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.4.self_attn.k_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -825,22 +825,22 @@
     },
     "model.decoder.layers.4.self_attn.v_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.4.self_attn.v_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -849,22 +849,22 @@
     },
     "model.decoder.layers.4.self_attn.q_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.4.self_attn.q_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -873,22 +873,22 @@
     },
     "model.decoder.layers.4.self_attn.out_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.4.self_attn.out_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -897,9 +897,9 @@
     },
     "model.decoder.layers.4.self_attn_layer_norm.weight": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -908,9 +908,9 @@
     },
     "model.decoder.layers.4.self_attn_layer_norm.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -919,22 +919,22 @@
     },
     "model.decoder.layers.4.fc1.weight": {
         "location": "gpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            8192,
-            2048
+            16384,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.4.fc1.bias": {
         "location": "gpu",
-        "size_bytes": 32768,
+        "size_bytes": 65536,
         "shape": [
-            8192
+            16384
         ],
         "stride": [
             1
@@ -943,22 +943,22 @@
     },
     "model.decoder.layers.4.fc2.weight": {
         "location": "gpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            2048,
-            8192
+            4096,
+            16384
         ],
         "stride": [
-            8192,
+            16384,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.4.fc2.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -967,9 +967,9 @@
     },
     "model.decoder.layers.4.final_layer_norm.weight": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -978,9 +978,9 @@
     },
     "model.decoder.layers.4.final_layer_norm.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -989,22 +989,22 @@
     },
     "model.decoder.layers.5.self_attn.k_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.5.self_attn.k_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1013,22 +1013,22 @@
     },
     "model.decoder.layers.5.self_attn.v_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.5.self_attn.v_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1037,22 +1037,22 @@
     },
     "model.decoder.layers.5.self_attn.q_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.5.self_attn.q_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1061,22 +1061,22 @@
     },
     "model.decoder.layers.5.self_attn.out_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.5.self_attn.out_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1085,9 +1085,9 @@
     },
     "model.decoder.layers.5.self_attn_layer_norm.weight": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1096,9 +1096,9 @@
     },
     "model.decoder.layers.5.self_attn_layer_norm.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1107,22 +1107,22 @@
     },
     "model.decoder.layers.5.fc1.weight": {
         "location": "gpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            8192,
-            2048
+            16384,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.5.fc1.bias": {
         "location": "gpu",
-        "size_bytes": 32768,
+        "size_bytes": 65536,
         "shape": [
-            8192
+            16384
         ],
         "stride": [
             1
@@ -1131,22 +1131,22 @@
     },
     "model.decoder.layers.5.fc2.weight": {
         "location": "gpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            2048,
-            8192
+            4096,
+            16384
         ],
         "stride": [
-            8192,
+            16384,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.5.fc2.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1155,9 +1155,9 @@
     },
     "model.decoder.layers.5.final_layer_norm.weight": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1166,9 +1166,9 @@
     },
     "model.decoder.layers.5.final_layer_norm.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1177,22 +1177,22 @@
     },
     "model.decoder.layers.6.self_attn.k_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.6.self_attn.k_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1201,22 +1201,22 @@
     },
     "model.decoder.layers.6.self_attn.v_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.6.self_attn.v_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1225,22 +1225,22 @@
     },
     "model.decoder.layers.6.self_attn.q_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.6.self_attn.q_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1249,22 +1249,22 @@
     },
     "model.decoder.layers.6.self_attn.out_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.6.self_attn.out_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1273,9 +1273,9 @@
     },
     "model.decoder.layers.6.self_attn_layer_norm.weight": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1284,9 +1284,9 @@
     },
     "model.decoder.layers.6.self_attn_layer_norm.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1295,22 +1295,22 @@
     },
     "model.decoder.layers.6.fc1.weight": {
         "location": "gpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            8192,
-            2048
+            16384,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.6.fc1.bias": {
         "location": "gpu",
-        "size_bytes": 32768,
+        "size_bytes": 65536,
         "shape": [
-            8192
+            16384
         ],
         "stride": [
             1
@@ -1319,22 +1319,22 @@
     },
     "model.decoder.layers.6.fc2.weight": {
         "location": "gpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            2048,
-            8192
+            4096,
+            16384
         ],
         "stride": [
-            8192,
+            16384,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.6.fc2.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1343,9 +1343,9 @@
     },
     "model.decoder.layers.6.final_layer_norm.weight": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1354,9 +1354,9 @@
     },
     "model.decoder.layers.6.final_layer_norm.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1365,22 +1365,22 @@
     },
     "model.decoder.layers.7.self_attn.k_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.7.self_attn.k_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1389,22 +1389,22 @@
     },
     "model.decoder.layers.7.self_attn.v_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.7.self_attn.v_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1413,22 +1413,22 @@
     },
     "model.decoder.layers.7.self_attn.q_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.7.self_attn.q_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1437,22 +1437,22 @@
     },
     "model.decoder.layers.7.self_attn.out_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.7.self_attn.out_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1461,9 +1461,9 @@
     },
     "model.decoder.layers.7.self_attn_layer_norm.weight": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1472,9 +1472,9 @@
     },
     "model.decoder.layers.7.self_attn_layer_norm.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1483,22 +1483,22 @@
     },
     "model.decoder.layers.7.fc1.weight": {
         "location": "gpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            8192,
-            2048
+            16384,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.7.fc1.bias": {
         "location": "gpu",
-        "size_bytes": 32768,
+        "size_bytes": 65536,
         "shape": [
-            8192
+            16384
         ],
         "stride": [
             1
@@ -1507,22 +1507,22 @@
     },
     "model.decoder.layers.7.fc2.weight": {
         "location": "gpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            2048,
-            8192
+            4096,
+            16384
         ],
         "stride": [
-            8192,
+            16384,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.7.fc2.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1531,9 +1531,9 @@
     },
     "model.decoder.layers.7.final_layer_norm.weight": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1542,9 +1542,9 @@
     },
     "model.decoder.layers.7.final_layer_norm.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1553,22 +1553,22 @@
     },
     "model.decoder.layers.8.self_attn.k_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.8.self_attn.k_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1577,22 +1577,22 @@
     },
     "model.decoder.layers.8.self_attn.v_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.8.self_attn.v_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1601,22 +1601,22 @@
     },
     "model.decoder.layers.8.self_attn.q_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.8.self_attn.q_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1625,22 +1625,22 @@
     },
     "model.decoder.layers.8.self_attn.out_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.8.self_attn.out_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1649,9 +1649,9 @@
     },
     "model.decoder.layers.8.self_attn_layer_norm.weight": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1660,9 +1660,9 @@
     },
     "model.decoder.layers.8.self_attn_layer_norm.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1671,22 +1671,22 @@
     },
     "model.decoder.layers.8.fc1.weight": {
         "location": "gpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            8192,
-            2048
+            16384,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.8.fc1.bias": {
         "location": "gpu",
-        "size_bytes": 32768,
+        "size_bytes": 65536,
         "shape": [
-            8192
+            16384
         ],
         "stride": [
             1
@@ -1695,22 +1695,22 @@
     },
     "model.decoder.layers.8.fc2.weight": {
         "location": "gpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            2048,
-            8192
+            4096,
+            16384
         ],
         "stride": [
-            8192,
+            16384,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.8.fc2.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1719,9 +1719,9 @@
     },
     "model.decoder.layers.8.final_layer_norm.weight": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1730,9 +1730,9 @@
     },
     "model.decoder.layers.8.final_layer_norm.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1741,22 +1741,22 @@
     },
     "model.decoder.layers.9.self_attn.k_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.9.self_attn.k_proj.bias": {
         "location": "gpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1765,22 +1765,22 @@
     },
     "model.decoder.layers.9.self_attn.v_proj.weight": {
         "location": "gpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.9.self_attn.v_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1788,23 +1788,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.9.self_attn.q_proj.weight": {
-        "location": "cpu",
-        "size_bytes": 16777216,
+        "location": "gpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.9.self_attn.q_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1812,23 +1812,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.9.self_attn.out_proj.weight": {
-        "location": "cpu",
-        "size_bytes": 16777216,
+        "location": "gpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.9.self_attn.out_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1836,10 +1836,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.9.self_attn_layer_norm.weight": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1847,10 +1847,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.9.self_attn_layer_norm.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1858,23 +1858,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.9.fc1.weight": {
-        "location": "cpu",
-        "size_bytes": 67108864,
+        "location": "gpu",
+        "size_bytes": 268435456,
         "shape": [
-            8192,
-            2048
+            16384,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.9.fc1.bias": {
-        "location": "cpu",
-        "size_bytes": 32768,
+        "location": "gpu",
+        "size_bytes": 65536,
         "shape": [
-            8192
+            16384
         ],
         "stride": [
             1
@@ -1882,23 +1882,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.9.fc2.weight": {
-        "location": "cpu",
-        "size_bytes": 67108864,
+        "location": "gpu",
+        "size_bytes": 268435456,
         "shape": [
-            2048,
-            8192
+            4096,
+            16384
         ],
         "stride": [
-            8192,
+            16384,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.9.fc2.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1906,10 +1906,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.9.final_layer_norm.weight": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1917,10 +1917,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.9.final_layer_norm.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1928,23 +1928,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.10.self_attn.k_proj.weight": {
-        "location": "cpu",
-        "size_bytes": 16777216,
+        "location": "gpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.10.self_attn.k_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1952,23 +1952,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.10.self_attn.v_proj.weight": {
-        "location": "cpu",
-        "size_bytes": 16777216,
+        "location": "gpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.10.self_attn.v_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -1976,23 +1976,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.10.self_attn.q_proj.weight": {
-        "location": "cpu",
-        "size_bytes": 16777216,
+        "location": "gpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.10.self_attn.q_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2000,23 +2000,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.10.self_attn.out_proj.weight": {
-        "location": "cpu",
-        "size_bytes": 16777216,
+        "location": "gpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.10.self_attn.out_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2024,10 +2024,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.10.self_attn_layer_norm.weight": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2035,10 +2035,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.10.self_attn_layer_norm.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2046,23 +2046,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.10.fc1.weight": {
-        "location": "cpu",
-        "size_bytes": 67108864,
+        "location": "gpu",
+        "size_bytes": 268435456,
         "shape": [
-            8192,
-            2048
+            16384,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.10.fc1.bias": {
-        "location": "cpu",
-        "size_bytes": 32768,
+        "location": "gpu",
+        "size_bytes": 65536,
         "shape": [
-            8192
+            16384
         ],
         "stride": [
             1
@@ -2070,23 +2070,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.10.fc2.weight": {
-        "location": "cpu",
-        "size_bytes": 67108864,
+        "location": "gpu",
+        "size_bytes": 268435456,
         "shape": [
-            2048,
-            8192
+            4096,
+            16384
         ],
         "stride": [
-            8192,
+            16384,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.10.fc2.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2094,10 +2094,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.10.final_layer_norm.weight": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2105,10 +2105,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.10.final_layer_norm.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2116,23 +2116,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.11.self_attn.k_proj.weight": {
-        "location": "cpu",
-        "size_bytes": 16777216,
+        "location": "gpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.11.self_attn.k_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2140,23 +2140,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.11.self_attn.v_proj.weight": {
-        "location": "cpu",
-        "size_bytes": 16777216,
+        "location": "gpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.11.self_attn.v_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2164,23 +2164,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.11.self_attn.q_proj.weight": {
-        "location": "cpu",
-        "size_bytes": 16777216,
+        "location": "gpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.11.self_attn.q_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2188,23 +2188,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.11.self_attn.out_proj.weight": {
-        "location": "cpu",
-        "size_bytes": 16777216,
+        "location": "gpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.11.self_attn.out_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2212,10 +2212,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.11.self_attn_layer_norm.weight": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2223,10 +2223,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.11.self_attn_layer_norm.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2234,23 +2234,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.11.fc1.weight": {
-        "location": "cpu",
-        "size_bytes": 67108864,
+        "location": "gpu",
+        "size_bytes": 268435456,
         "shape": [
-            8192,
-            2048
+            16384,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.11.fc1.bias": {
-        "location": "cpu",
-        "size_bytes": 32768,
+        "location": "gpu",
+        "size_bytes": 65536,
         "shape": [
-            8192
+            16384
         ],
         "stride": [
             1
@@ -2258,23 +2258,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.11.fc2.weight": {
-        "location": "cpu",
-        "size_bytes": 67108864,
+        "location": "gpu",
+        "size_bytes": 268435456,
         "shape": [
-            2048,
-            8192
+            4096,
+            16384
         ],
         "stride": [
-            8192,
+            16384,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.11.fc2.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2282,10 +2282,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.11.final_layer_norm.weight": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2293,10 +2293,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.11.final_layer_norm.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2304,23 +2304,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.12.self_attn.k_proj.weight": {
-        "location": "cpu",
-        "size_bytes": 16777216,
+        "location": "gpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.12.self_attn.k_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2328,23 +2328,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.12.self_attn.v_proj.weight": {
-        "location": "cpu",
-        "size_bytes": 16777216,
+        "location": "gpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.12.self_attn.v_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2352,23 +2352,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.12.self_attn.q_proj.weight": {
-        "location": "cpu",
-        "size_bytes": 16777216,
+        "location": "gpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.12.self_attn.q_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2376,23 +2376,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.12.self_attn.out_proj.weight": {
-        "location": "cpu",
-        "size_bytes": 16777216,
+        "location": "gpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.12.self_attn.out_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2400,10 +2400,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.12.self_attn_layer_norm.weight": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2411,10 +2411,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.12.self_attn_layer_norm.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2422,23 +2422,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.12.fc1.weight": {
-        "location": "cpu",
-        "size_bytes": 67108864,
+        "location": "gpu",
+        "size_bytes": 268435456,
         "shape": [
-            8192,
-            2048
+            16384,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.12.fc1.bias": {
-        "location": "cpu",
-        "size_bytes": 32768,
+        "location": "gpu",
+        "size_bytes": 65536,
         "shape": [
-            8192
+            16384
         ],
         "stride": [
             1
@@ -2446,23 +2446,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.12.fc2.weight": {
-        "location": "cpu",
-        "size_bytes": 67108864,
+        "location": "gpu",
+        "size_bytes": 268435456,
         "shape": [
-            2048,
-            8192
+            4096,
+            16384
         ],
         "stride": [
-            8192,
+            16384,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.12.fc2.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2470,10 +2470,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.12.final_layer_norm.weight": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2481,10 +2481,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.12.final_layer_norm.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2492,23 +2492,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.13.self_attn.k_proj.weight": {
-        "location": "cpu",
-        "size_bytes": 16777216,
+        "location": "gpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.13.self_attn.k_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2516,23 +2516,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.13.self_attn.v_proj.weight": {
-        "location": "cpu",
-        "size_bytes": 16777216,
+        "location": "gpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.13.self_attn.v_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2540,23 +2540,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.13.self_attn.q_proj.weight": {
-        "location": "cpu",
-        "size_bytes": 16777216,
+        "location": "gpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.13.self_attn.q_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2564,23 +2564,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.13.self_attn.out_proj.weight": {
-        "location": "cpu",
-        "size_bytes": 16777216,
+        "location": "gpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.13.self_attn.out_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2588,10 +2588,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.13.self_attn_layer_norm.weight": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2599,10 +2599,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.13.self_attn_layer_norm.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2610,23 +2610,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.13.fc1.weight": {
-        "location": "cpu",
-        "size_bytes": 67108864,
+        "location": "gpu",
+        "size_bytes": 268435456,
         "shape": [
-            8192,
-            2048
+            16384,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.13.fc1.bias": {
-        "location": "cpu",
-        "size_bytes": 32768,
+        "location": "gpu",
+        "size_bytes": 65536,
         "shape": [
-            8192
+            16384
         ],
         "stride": [
             1
@@ -2634,23 +2634,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.13.fc2.weight": {
-        "location": "cpu",
-        "size_bytes": 67108864,
+        "location": "gpu",
+        "size_bytes": 268435456,
         "shape": [
-            2048,
-            8192
+            4096,
+            16384
         ],
         "stride": [
-            8192,
+            16384,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.13.fc2.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2658,10 +2658,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.13.final_layer_norm.weight": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2669,10 +2669,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.13.final_layer_norm.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2680,23 +2680,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.14.self_attn.k_proj.weight": {
-        "location": "cpu",
-        "size_bytes": 16777216,
+        "location": "gpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.14.self_attn.k_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2704,23 +2704,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.14.self_attn.v_proj.weight": {
-        "location": "cpu",
-        "size_bytes": 16777216,
+        "location": "gpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.14.self_attn.v_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2728,23 +2728,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.14.self_attn.q_proj.weight": {
-        "location": "cpu",
-        "size_bytes": 16777216,
+        "location": "gpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.14.self_attn.q_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2752,23 +2752,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.14.self_attn.out_proj.weight": {
-        "location": "cpu",
-        "size_bytes": 16777216,
+        "location": "gpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.14.self_attn.out_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2776,10 +2776,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.14.self_attn_layer_norm.weight": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2787,10 +2787,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.14.self_attn_layer_norm.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2798,23 +2798,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.14.fc1.weight": {
-        "location": "cpu",
-        "size_bytes": 67108864,
+        "location": "gpu",
+        "size_bytes": 268435456,
         "shape": [
-            8192,
-            2048
+            16384,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.14.fc1.bias": {
-        "location": "cpu",
-        "size_bytes": 32768,
+        "location": "gpu",
+        "size_bytes": 65536,
         "shape": [
-            8192
+            16384
         ],
         "stride": [
             1
@@ -2822,23 +2822,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.14.fc2.weight": {
-        "location": "cpu",
-        "size_bytes": 67108864,
+        "location": "gpu",
+        "size_bytes": 268435456,
         "shape": [
-            2048,
-            8192
+            4096,
+            16384
         ],
         "stride": [
-            8192,
+            16384,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.14.fc2.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2846,10 +2846,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.14.final_layer_norm.weight": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2857,10 +2857,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.14.final_layer_norm.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2868,23 +2868,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.15.self_attn.k_proj.weight": {
-        "location": "cpu",
-        "size_bytes": 16777216,
+        "location": "gpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.15.self_attn.k_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2892,23 +2892,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.15.self_attn.v_proj.weight": {
-        "location": "cpu",
-        "size_bytes": 16777216,
+        "location": "gpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.15.self_attn.v_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2916,23 +2916,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.15.self_attn.q_proj.weight": {
-        "location": "cpu",
-        "size_bytes": 16777216,
+        "location": "gpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.15.self_attn.q_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2940,23 +2940,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.15.self_attn.out_proj.weight": {
-        "location": "cpu",
-        "size_bytes": 16777216,
+        "location": "gpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.15.self_attn.out_proj.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2964,10 +2964,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.15.self_attn_layer_norm.weight": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2975,10 +2975,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.15.self_attn_layer_norm.bias": {
-        "location": "cpu",
-        "size_bytes": 8192,
+        "location": "gpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -2986,23 +2986,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.15.fc1.weight": {
-        "location": "cpu",
-        "size_bytes": 67108864,
+        "location": "gpu",
+        "size_bytes": 268435456,
         "shape": [
-            8192,
-            2048
+            16384,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.15.fc1.bias": {
-        "location": "cpu",
-        "size_bytes": 32768,
+        "location": "gpu",
+        "size_bytes": 65536,
         "shape": [
-            8192
+            16384
         ],
         "stride": [
             1
@@ -3010,23 +3010,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.15.fc2.weight": {
-        "location": "cpu",
-        "size_bytes": 67108864,
+        "location": "gpu",
+        "size_bytes": 268435456,
         "shape": [
-            2048,
-            8192
+            4096,
+            16384
         ],
         "stride": [
-            8192,
+            16384,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.15.fc2.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3035,9 +3035,9 @@
     },
     "model.decoder.layers.15.final_layer_norm.weight": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3046,9 +3046,9 @@
     },
     "model.decoder.layers.15.final_layer_norm.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3057,22 +3057,22 @@
     },
     "model.decoder.layers.16.self_attn.k_proj.weight": {
         "location": "cpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.16.self_attn.k_proj.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3081,22 +3081,22 @@
     },
     "model.decoder.layers.16.self_attn.v_proj.weight": {
         "location": "cpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.16.self_attn.v_proj.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3105,22 +3105,22 @@
     },
     "model.decoder.layers.16.self_attn.q_proj.weight": {
         "location": "cpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.16.self_attn.q_proj.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3129,22 +3129,22 @@
     },
     "model.decoder.layers.16.self_attn.out_proj.weight": {
         "location": "cpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.16.self_attn.out_proj.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3153,9 +3153,9 @@
     },
     "model.decoder.layers.16.self_attn_layer_norm.weight": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3164,9 +3164,9 @@
     },
     "model.decoder.layers.16.self_attn_layer_norm.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3175,22 +3175,22 @@
     },
     "model.decoder.layers.16.fc1.weight": {
         "location": "cpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            8192,
-            2048
+            16384,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.16.fc1.bias": {
         "location": "cpu",
-        "size_bytes": 32768,
+        "size_bytes": 65536,
         "shape": [
-            8192
+            16384
         ],
         "stride": [
             1
@@ -3199,22 +3199,22 @@
     },
     "model.decoder.layers.16.fc2.weight": {
         "location": "cpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            2048,
-            8192
+            4096,
+            16384
         ],
         "stride": [
-            8192,
+            16384,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.16.fc2.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3223,9 +3223,9 @@
     },
     "model.decoder.layers.16.final_layer_norm.weight": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3234,9 +3234,9 @@
     },
     "model.decoder.layers.16.final_layer_norm.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3245,22 +3245,22 @@
     },
     "model.decoder.layers.17.self_attn.k_proj.weight": {
         "location": "cpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.17.self_attn.k_proj.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3269,22 +3269,22 @@
     },
     "model.decoder.layers.17.self_attn.v_proj.weight": {
         "location": "cpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.17.self_attn.v_proj.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3293,22 +3293,22 @@
     },
     "model.decoder.layers.17.self_attn.q_proj.weight": {
         "location": "cpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.17.self_attn.q_proj.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3317,22 +3317,22 @@
     },
     "model.decoder.layers.17.self_attn.out_proj.weight": {
         "location": "cpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.17.self_attn.out_proj.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3341,9 +3341,9 @@
     },
     "model.decoder.layers.17.self_attn_layer_norm.weight": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3352,9 +3352,9 @@
     },
     "model.decoder.layers.17.self_attn_layer_norm.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3363,22 +3363,22 @@
     },
     "model.decoder.layers.17.fc1.weight": {
         "location": "cpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            8192,
-            2048
+            16384,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.17.fc1.bias": {
         "location": "cpu",
-        "size_bytes": 32768,
+        "size_bytes": 65536,
         "shape": [
-            8192
+            16384
         ],
         "stride": [
             1
@@ -3387,22 +3387,22 @@
     },
     "model.decoder.layers.17.fc2.weight": {
         "location": "cpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            2048,
-            8192
+            4096,
+            16384
         ],
         "stride": [
-            8192,
+            16384,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.17.fc2.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3411,9 +3411,9 @@
     },
     "model.decoder.layers.17.final_layer_norm.weight": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3422,9 +3422,9 @@
     },
     "model.decoder.layers.17.final_layer_norm.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3433,22 +3433,22 @@
     },
     "model.decoder.layers.18.self_attn.k_proj.weight": {
         "location": "cpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.18.self_attn.k_proj.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3457,22 +3457,22 @@
     },
     "model.decoder.layers.18.self_attn.v_proj.weight": {
         "location": "cpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.18.self_attn.v_proj.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3481,22 +3481,22 @@
     },
     "model.decoder.layers.18.self_attn.q_proj.weight": {
         "location": "cpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.18.self_attn.q_proj.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3505,22 +3505,22 @@
     },
     "model.decoder.layers.18.self_attn.out_proj.weight": {
         "location": "cpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.18.self_attn.out_proj.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3529,9 +3529,9 @@
     },
     "model.decoder.layers.18.self_attn_layer_norm.weight": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3540,9 +3540,9 @@
     },
     "model.decoder.layers.18.self_attn_layer_norm.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3551,22 +3551,22 @@
     },
     "model.decoder.layers.18.fc1.weight": {
         "location": "cpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            8192,
-            2048
+            16384,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.18.fc1.bias": {
         "location": "cpu",
-        "size_bytes": 32768,
+        "size_bytes": 65536,
         "shape": [
-            8192
+            16384
         ],
         "stride": [
             1
@@ -3575,22 +3575,22 @@
     },
     "model.decoder.layers.18.fc2.weight": {
         "location": "cpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            2048,
-            8192
+            4096,
+            16384
         ],
         "stride": [
-            8192,
+            16384,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.18.fc2.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3599,9 +3599,9 @@
     },
     "model.decoder.layers.18.final_layer_norm.weight": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3610,9 +3610,9 @@
     },
     "model.decoder.layers.18.final_layer_norm.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3621,22 +3621,22 @@
     },
     "model.decoder.layers.19.self_attn.k_proj.weight": {
         "location": "cpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.19.self_attn.k_proj.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3645,22 +3645,22 @@
     },
     "model.decoder.layers.19.self_attn.v_proj.weight": {
         "location": "cpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.19.self_attn.v_proj.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3669,22 +3669,22 @@
     },
     "model.decoder.layers.19.self_attn.q_proj.weight": {
         "location": "cpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.19.self_attn.q_proj.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3693,22 +3693,22 @@
     },
     "model.decoder.layers.19.self_attn.out_proj.weight": {
         "location": "cpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.19.self_attn.out_proj.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3717,9 +3717,9 @@
     },
     "model.decoder.layers.19.self_attn_layer_norm.weight": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3728,9 +3728,9 @@
     },
     "model.decoder.layers.19.self_attn_layer_norm.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3739,22 +3739,22 @@
     },
     "model.decoder.layers.19.fc1.weight": {
         "location": "cpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            8192,
-            2048
+            16384,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.19.fc1.bias": {
         "location": "cpu",
-        "size_bytes": 32768,
+        "size_bytes": 65536,
         "shape": [
-            8192
+            16384
         ],
         "stride": [
             1
@@ -3763,22 +3763,22 @@
     },
     "model.decoder.layers.19.fc2.weight": {
         "location": "cpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            2048,
-            8192
+            4096,
+            16384
         ],
         "stride": [
-            8192,
+            16384,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.19.fc2.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3787,9 +3787,9 @@
     },
     "model.decoder.layers.19.final_layer_norm.weight": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3798,9 +3798,9 @@
     },
     "model.decoder.layers.19.final_layer_norm.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3809,22 +3809,22 @@
     },
     "model.decoder.layers.20.self_attn.k_proj.weight": {
         "location": "cpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.20.self_attn.k_proj.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3833,22 +3833,22 @@
     },
     "model.decoder.layers.20.self_attn.v_proj.weight": {
         "location": "cpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.20.self_attn.v_proj.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3857,22 +3857,22 @@
     },
     "model.decoder.layers.20.self_attn.q_proj.weight": {
         "location": "cpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.20.self_attn.q_proj.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3881,22 +3881,22 @@
     },
     "model.decoder.layers.20.self_attn.out_proj.weight": {
         "location": "cpu",
-        "size_bytes": 16777216,
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.20.self_attn.out_proj.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3905,9 +3905,9 @@
     },
     "model.decoder.layers.20.self_attn_layer_norm.weight": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3916,9 +3916,9 @@
     },
     "model.decoder.layers.20.self_attn_layer_norm.bias": {
         "location": "cpu",
-        "size_bytes": 8192,
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3927,22 +3927,22 @@
     },
     "model.decoder.layers.20.fc1.weight": {
         "location": "cpu",
-        "size_bytes": 67108864,
+        "size_bytes": 268435456,
         "shape": [
-            8192,
-            2048
+            16384,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.20.fc1.bias": {
-        "location": "disk",
-        "size_bytes": 32768,
+        "location": "cpu",
+        "size_bytes": 65536,
         "shape": [
-            8192
+            16384
         ],
         "stride": [
             1
@@ -3950,23 +3950,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.20.fc2.weight": {
-        "location": "disk",
-        "size_bytes": 67108864,
+        "location": "cpu",
+        "size_bytes": 268435456,
         "shape": [
-            2048,
-            8192
+            4096,
+            16384
         ],
         "stride": [
-            8192,
+            16384,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.20.fc2.bias": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3974,10 +3974,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.20.final_layer_norm.weight": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3985,10 +3985,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.20.final_layer_norm.bias": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -3996,23 +3996,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.21.self_attn.k_proj.weight": {
-        "location": "disk",
-        "size_bytes": 16777216,
+        "location": "cpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.21.self_attn.k_proj.bias": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -4020,23 +4020,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.21.self_attn.v_proj.weight": {
-        "location": "disk",
-        "size_bytes": 16777216,
+        "location": "cpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.21.self_attn.v_proj.bias": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -4044,23 +4044,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.21.self_attn.q_proj.weight": {
-        "location": "disk",
-        "size_bytes": 16777216,
+        "location": "cpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.21.self_attn.q_proj.bias": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -4068,23 +4068,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.21.self_attn.out_proj.weight": {
-        "location": "disk",
-        "size_bytes": 16777216,
+        "location": "cpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.21.self_attn.out_proj.bias": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -4092,10 +4092,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.21.self_attn_layer_norm.weight": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -4103,10 +4103,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.21.self_attn_layer_norm.bias": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -4114,23 +4114,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.21.fc1.weight": {
-        "location": "disk",
-        "size_bytes": 67108864,
+        "location": "cpu",
+        "size_bytes": 268435456,
         "shape": [
-            8192,
-            2048
+            16384,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.21.fc1.bias": {
-        "location": "disk",
-        "size_bytes": 32768,
+        "location": "cpu",
+        "size_bytes": 65536,
         "shape": [
-            8192
+            16384
         ],
         "stride": [
             1
@@ -4138,23 +4138,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.21.fc2.weight": {
-        "location": "disk",
-        "size_bytes": 67108864,
+        "location": "cpu",
+        "size_bytes": 268435456,
         "shape": [
-            2048,
-            8192
+            4096,
+            16384
         ],
         "stride": [
-            8192,
+            16384,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.21.fc2.bias": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -4162,10 +4162,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.21.final_layer_norm.weight": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -4173,10 +4173,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.21.final_layer_norm.bias": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -4184,23 +4184,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.22.self_attn.k_proj.weight": {
-        "location": "disk",
-        "size_bytes": 16777216,
+        "location": "cpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.22.self_attn.k_proj.bias": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -4208,23 +4208,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.22.self_attn.v_proj.weight": {
-        "location": "disk",
-        "size_bytes": 16777216,
+        "location": "cpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.22.self_attn.v_proj.bias": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -4232,23 +4232,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.22.self_attn.q_proj.weight": {
-        "location": "disk",
-        "size_bytes": 16777216,
+        "location": "cpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.22.self_attn.q_proj.bias": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -4256,23 +4256,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.22.self_attn.out_proj.weight": {
-        "location": "disk",
-        "size_bytes": 16777216,
+        "location": "cpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.22.self_attn.out_proj.bias": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -4280,10 +4280,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.22.self_attn_layer_norm.weight": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -4291,10 +4291,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.22.self_attn_layer_norm.bias": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -4302,23 +4302,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.22.fc1.weight": {
-        "location": "disk",
-        "size_bytes": 67108864,
+        "location": "cpu",
+        "size_bytes": 268435456,
         "shape": [
-            8192,
-            2048
+            16384,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.22.fc1.bias": {
-        "location": "disk",
-        "size_bytes": 32768,
+        "location": "cpu",
+        "size_bytes": 65536,
         "shape": [
-            8192
+            16384
         ],
         "stride": [
             1
@@ -4326,23 +4326,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.22.fc2.weight": {
-        "location": "disk",
-        "size_bytes": 67108864,
+        "location": "cpu",
+        "size_bytes": 268435456,
         "shape": [
-            2048,
-            8192
+            4096,
+            16384
         ],
         "stride": [
-            8192,
+            16384,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.22.fc2.bias": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -4350,10 +4350,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.22.final_layer_norm.weight": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -4361,10 +4361,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.22.final_layer_norm.bias": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -4372,23 +4372,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.23.self_attn.k_proj.weight": {
-        "location": "disk",
-        "size_bytes": 16777216,
+        "location": "cpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.23.self_attn.k_proj.bias": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -4396,23 +4396,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.23.self_attn.v_proj.weight": {
-        "location": "disk",
-        "size_bytes": 16777216,
+        "location": "cpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.23.self_attn.v_proj.bias": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -4420,23 +4420,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.23.self_attn.q_proj.weight": {
-        "location": "disk",
-        "size_bytes": 16777216,
+        "location": "cpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.23.self_attn.q_proj.bias": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -4444,23 +4444,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.23.self_attn.out_proj.weight": {
-        "location": "disk",
-        "size_bytes": 16777216,
+        "location": "cpu",
+        "size_bytes": 67108864,
         "shape": [
-            2048,
-            2048
+            4096,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.23.self_attn.out_proj.bias": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -4468,10 +4468,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.23.self_attn_layer_norm.weight": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -4479,10 +4479,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.23.self_attn_layer_norm.bias": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -4490,23 +4490,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.23.fc1.weight": {
-        "location": "disk",
-        "size_bytes": 67108864,
+        "location": "cpu",
+        "size_bytes": 268435456,
         "shape": [
-            8192,
-            2048
+            16384,
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.23.fc1.bias": {
-        "location": "disk",
-        "size_bytes": 32768,
+        "location": "cpu",
+        "size_bytes": 65536,
         "shape": [
-            8192
+            16384
         ],
         "stride": [
             1
@@ -4514,23 +4514,23 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.23.fc2.weight": {
-        "location": "disk",
-        "size_bytes": 67108864,
+        "location": "cpu",
+        "size_bytes": 268435456,
         "shape": [
-            2048,
-            8192
+            4096,
+            16384
         ],
         "stride": [
-            8192,
+            16384,
             1
         ],
         "dtype": "torch.float32"
     },
     "model.decoder.layers.23.fc2.bias": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -4538,10 +4538,10 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.23.final_layer_norm.weight": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
         ],
         "stride": [
             1
@@ -4549,10 +4549,1514 @@
         "dtype": "torch.float32"
     },
     "model.decoder.layers.23.final_layer_norm.bias": {
-        "location": "disk",
-        "size_bytes": 8192,
+        "location": "cpu",
+        "size_bytes": 16384,
         "shape": [
-            2048
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.24.self_attn.k_proj.weight": {
+        "location": "cpu",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.24.self_attn.k_proj.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.24.self_attn.v_proj.weight": {
+        "location": "cpu",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.24.self_attn.v_proj.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.24.self_attn.q_proj.weight": {
+        "location": "cpu",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.24.self_attn.q_proj.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.24.self_attn.out_proj.weight": {
+        "location": "cpu",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.24.self_attn.out_proj.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.24.self_attn_layer_norm.weight": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.24.self_attn_layer_norm.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.24.fc1.weight": {
+        "location": "cpu",
+        "size_bytes": 268435456,
+        "shape": [
+            16384,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.24.fc1.bias": {
+        "location": "cpu",
+        "size_bytes": 65536,
+        "shape": [
+            16384
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.24.fc2.weight": {
+        "location": "cpu",
+        "size_bytes": 268435456,
+        "shape": [
+            4096,
+            16384
+        ],
+        "stride": [
+            16384,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.24.fc2.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.24.final_layer_norm.weight": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.24.final_layer_norm.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.25.self_attn.k_proj.weight": {
+        "location": "cpu",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.25.self_attn.k_proj.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.25.self_attn.v_proj.weight": {
+        "location": "cpu",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.25.self_attn.v_proj.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.25.self_attn.q_proj.weight": {
+        "location": "cpu",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.25.self_attn.q_proj.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.25.self_attn.out_proj.weight": {
+        "location": "cpu",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.25.self_attn.out_proj.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.25.self_attn_layer_norm.weight": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.25.self_attn_layer_norm.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.25.fc1.weight": {
+        "location": "cpu",
+        "size_bytes": 268435456,
+        "shape": [
+            16384,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.25.fc1.bias": {
+        "location": "cpu",
+        "size_bytes": 65536,
+        "shape": [
+            16384
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.25.fc2.weight": {
+        "location": "cpu",
+        "size_bytes": 268435456,
+        "shape": [
+            4096,
+            16384
+        ],
+        "stride": [
+            16384,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.25.fc2.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.25.final_layer_norm.weight": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.25.final_layer_norm.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.26.self_attn.k_proj.weight": {
+        "location": "cpu",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.26.self_attn.k_proj.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.26.self_attn.v_proj.weight": {
+        "location": "cpu",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.26.self_attn.v_proj.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.26.self_attn.q_proj.weight": {
+        "location": "cpu",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.26.self_attn.q_proj.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.26.self_attn.out_proj.weight": {
+        "location": "cpu",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.26.self_attn.out_proj.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.26.self_attn_layer_norm.weight": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.26.self_attn_layer_norm.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.26.fc1.weight": {
+        "location": "cpu",
+        "size_bytes": 268435456,
+        "shape": [
+            16384,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.26.fc1.bias": {
+        "location": "cpu",
+        "size_bytes": 65536,
+        "shape": [
+            16384
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.26.fc2.weight": {
+        "location": "cpu",
+        "size_bytes": 268435456,
+        "shape": [
+            4096,
+            16384
+        ],
+        "stride": [
+            16384,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.26.fc2.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.26.final_layer_norm.weight": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.26.final_layer_norm.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.27.self_attn.k_proj.weight": {
+        "location": "cpu",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.27.self_attn.k_proj.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.27.self_attn.v_proj.weight": {
+        "location": "cpu",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.27.self_attn.v_proj.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.27.self_attn.q_proj.weight": {
+        "location": "cpu",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.27.self_attn.q_proj.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.27.self_attn.out_proj.weight": {
+        "location": "cpu",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.27.self_attn.out_proj.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.27.self_attn_layer_norm.weight": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.27.self_attn_layer_norm.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.27.fc1.weight": {
+        "location": "cpu",
+        "size_bytes": 268435456,
+        "shape": [
+            16384,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.27.fc1.bias": {
+        "location": "cpu",
+        "size_bytes": 65536,
+        "shape": [
+            16384
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.27.fc2.weight": {
+        "location": "cpu",
+        "size_bytes": 268435456,
+        "shape": [
+            4096,
+            16384
+        ],
+        "stride": [
+            16384,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.27.fc2.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.27.final_layer_norm.weight": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.27.final_layer_norm.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.28.self_attn.k_proj.weight": {
+        "location": "cpu",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.28.self_attn.k_proj.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.28.self_attn.v_proj.weight": {
+        "location": "cpu",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.28.self_attn.v_proj.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.28.self_attn.q_proj.weight": {
+        "location": "cpu",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.28.self_attn.q_proj.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.28.self_attn.out_proj.weight": {
+        "location": "cpu",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.28.self_attn.out_proj.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.28.self_attn_layer_norm.weight": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.28.self_attn_layer_norm.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.28.fc1.weight": {
+        "location": "cpu",
+        "size_bytes": 268435456,
+        "shape": [
+            16384,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.28.fc1.bias": {
+        "location": "cpu",
+        "size_bytes": 65536,
+        "shape": [
+            16384
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.28.fc2.weight": {
+        "location": "cpu",
+        "size_bytes": 268435456,
+        "shape": [
+            4096,
+            16384
+        ],
+        "stride": [
+            16384,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.28.fc2.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.28.final_layer_norm.weight": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.28.final_layer_norm.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.29.self_attn.k_proj.weight": {
+        "location": "cpu",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.29.self_attn.k_proj.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.29.self_attn.v_proj.weight": {
+        "location": "cpu",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.29.self_attn.v_proj.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.29.self_attn.q_proj.weight": {
+        "location": "cpu",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.29.self_attn.q_proj.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.29.self_attn.out_proj.weight": {
+        "location": "cpu",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.29.self_attn.out_proj.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.29.self_attn_layer_norm.weight": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.29.self_attn_layer_norm.bias": {
+        "location": "cpu",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.29.fc1.weight": {
+        "location": "cpu",
+        "size_bytes": 268435456,
+        "shape": [
+            16384,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.29.fc1.bias": {
+        "location": "disk",
+        "size_bytes": 65536,
+        "shape": [
+            16384
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.29.fc2.weight": {
+        "location": "disk",
+        "size_bytes": 268435456,
+        "shape": [
+            4096,
+            16384
+        ],
+        "stride": [
+            16384,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.29.fc2.bias": {
+        "location": "disk",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.29.final_layer_norm.weight": {
+        "location": "disk",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.29.final_layer_norm.bias": {
+        "location": "disk",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.30.self_attn.k_proj.weight": {
+        "location": "disk",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.30.self_attn.k_proj.bias": {
+        "location": "disk",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.30.self_attn.v_proj.weight": {
+        "location": "disk",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.30.self_attn.v_proj.bias": {
+        "location": "disk",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.30.self_attn.q_proj.weight": {
+        "location": "disk",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.30.self_attn.q_proj.bias": {
+        "location": "disk",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.30.self_attn.out_proj.weight": {
+        "location": "disk",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.30.self_attn.out_proj.bias": {
+        "location": "disk",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.30.self_attn_layer_norm.weight": {
+        "location": "disk",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.30.self_attn_layer_norm.bias": {
+        "location": "disk",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.30.fc1.weight": {
+        "location": "disk",
+        "size_bytes": 268435456,
+        "shape": [
+            16384,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.30.fc1.bias": {
+        "location": "disk",
+        "size_bytes": 65536,
+        "shape": [
+            16384
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.30.fc2.weight": {
+        "location": "disk",
+        "size_bytes": 268435456,
+        "shape": [
+            4096,
+            16384
+        ],
+        "stride": [
+            16384,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.30.fc2.bias": {
+        "location": "disk",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.30.final_layer_norm.weight": {
+        "location": "disk",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.30.final_layer_norm.bias": {
+        "location": "disk",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.31.self_attn.k_proj.weight": {
+        "location": "disk",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.31.self_attn.k_proj.bias": {
+        "location": "disk",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.31.self_attn.v_proj.weight": {
+        "location": "disk",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.31.self_attn.v_proj.bias": {
+        "location": "disk",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.31.self_attn.q_proj.weight": {
+        "location": "disk",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.31.self_attn.q_proj.bias": {
+        "location": "disk",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.31.self_attn.out_proj.weight": {
+        "location": "disk",
+        "size_bytes": 67108864,
+        "shape": [
+            4096,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.31.self_attn.out_proj.bias": {
+        "location": "disk",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.31.self_attn_layer_norm.weight": {
+        "location": "disk",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.31.self_attn_layer_norm.bias": {
+        "location": "disk",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.31.fc1.weight": {
+        "location": "disk",
+        "size_bytes": 268435456,
+        "shape": [
+            16384,
+            4096
+        ],
+        "stride": [
+            4096,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.31.fc1.bias": {
+        "location": "disk",
+        "size_bytes": 65536,
+        "shape": [
+            16384
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.31.fc2.weight": {
+        "location": "disk",
+        "size_bytes": 268435456,
+        "shape": [
+            4096,
+            16384
+        ],
+        "stride": [
+            16384,
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.31.fc2.bias": {
+        "location": "disk",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.31.final_layer_norm.weight": {
+        "location": "disk",
+        "size_bytes": 16384,
+        "shape": [
+            4096
+        ],
+        "stride": [
+            1
+        ],
+        "dtype": "torch.float32"
+    },
+    "model.decoder.layers.31.final_layer_norm.bias": {
+        "location": "disk",
+        "size_bytes": 16384,
+        "shape": [
+            4096
         ],
         "stride": [
             1
@@ -4561,13 +6065,13 @@
     },
     "lm_head.weight": {
         "location": "disk",
-        "size_bytes": 411828224,
+        "size_bytes": 823656448,
         "shape": [
             50272,
-            2048
+            4096
         ],
         "stride": [
-            2048,
+            4096,
             1
         ],
         "dtype": "torch.float32"

@@ -6,16 +6,16 @@ import torchvision.models as models
 import cuda_saver  # Import the C++ module
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-from torchvision.models import MobileNet_V3_Large_Weights
+device = torch.device('cpu')
+from torchvision.models import ResNet50_Weights
 
-#model = models.mobilenet_v3_large(weights=MobileNet_V3_Large_Weights.DEFAULT).to(device)
-model_name = "facebook/opt-1.3b"
-local_cache = "./local_cache_opt_1.3b"
+# model = models.resnet50(weights=ResNet50_Weights.DEFAULT).to(device)
+model_name = "facebook/opt-6.7b"
+local_cache = "./local_cache_opt_6.7b"
 
 tokenizer = AutoTokenizer.from_pretrained(
     model_name,
-    cache_dir=local_cache  # This will store the downloaded files locally on disk
+  # cache_dir=local_cache  # This will store the downloaded files locally on disk
 )
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
@@ -222,7 +222,7 @@ def main():
         gpu_percent, cpu_percent = inital_allocation(model)
         print(f"Chosen: GPU={gpu_percent}%, CPU={cpu_percent}%")
 
-        #save_model(model, "./", gpu_percent=40, cpu_percent=40)
+        save_model(model, "./", gpu_percent=50, cpu_percent=40)
         
 if __name__ == "__main__":
     main()

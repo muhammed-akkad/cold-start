@@ -1,0 +1,452 @@
+[
+    {
+        "model_name": "vgg19_0",
+        "profiling": {
+            "read_index_sec": 0.000370025634765625,
+            "instantiate_model_sec": 0.015539169311523438,
+            "load_params_sec": 0.037808895111083984,
+            "assign_params_sec": 0.008730411529541016,
+            "dispatch_model_sec": 0.02957439422607422,
+            "total_sec": 0.09202766418457031
+        },
+        "loading_time_sec": 0.09460091590881348,
+        "inference_time_sec": 0.08264970779418945,
+        "throughput": 12.099256327562035,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_1",
+        "profiling": {
+            "read_index_sec": 0.0003476142883300781,
+            "instantiate_model_sec": 0.016168832778930664,
+            "load_params_sec": 0.04055905342102051,
+            "assign_params_sec": 0.008991003036499023,
+            "dispatch_model_sec": 0.038076162338256836,
+            "total_sec": 0.10414767265319824
+        },
+        "loading_time_sec": 0.10832595825195312,
+        "inference_time_sec": 0.07754302024841309,
+        "throughput": 12.89606719981306,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_2",
+        "profiling": {
+            "read_index_sec": 0.000347137451171875,
+            "instantiate_model_sec": 0.015532493591308594,
+            "load_params_sec": 0.03617286682128906,
+            "assign_params_sec": 0.009172677993774414,
+            "dispatch_model_sec": 0.03685402870178223,
+            "total_sec": 0.0980839729309082
+        },
+        "loading_time_sec": 0.10066056251525879,
+        "inference_time_sec": 0.07579803466796875,
+        "throughput": 13.192954202315049,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_3",
+        "profiling": {
+            "read_index_sec": 0.00033664703369140625,
+            "instantiate_model_sec": 0.015779733657836914,
+            "load_params_sec": 0.03633570671081543,
+            "assign_params_sec": 0.007982254028320312,
+            "dispatch_model_sec": 0.03603410720825195,
+            "total_sec": 0.09647226333618164
+        },
+        "loading_time_sec": 0.0990440845489502,
+        "inference_time_sec": 0.07589006423950195,
+        "throughput": 13.17695550822165,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_4",
+        "profiling": {
+            "read_index_sec": 0.00035119056701660156,
+            "instantiate_model_sec": 0.015624761581420898,
+            "load_params_sec": 0.036934614181518555,
+            "assign_params_sec": 0.008847713470458984,
+            "dispatch_model_sec": 0.03374743461608887,
+            "total_sec": 0.09551072120666504
+        },
+        "loading_time_sec": 0.0980842113494873,
+        "inference_time_sec": 0.08119034767150879,
+        "throughput": 12.316735039070645,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_5",
+        "profiling": {
+            "read_index_sec": 0.00038242340087890625,
+            "instantiate_model_sec": 0.015801429748535156,
+            "load_params_sec": 0.03727245330810547,
+            "assign_params_sec": 0.008607625961303711,
+            "dispatch_model_sec": 0.028621912002563477,
+            "total_sec": 0.09069037437438965
+        },
+        "loading_time_sec": 0.09340596199035645,
+        "inference_time_sec": 0.0758662223815918,
+        "throughput": 13.181096522378585,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_6",
+        "profiling": {
+            "read_index_sec": 0.00037741661071777344,
+            "instantiate_model_sec": 0.0160524845123291,
+            "load_params_sec": 0.0363154411315918,
+            "assign_params_sec": 0.007660627365112305,
+            "dispatch_model_sec": 0.03147625923156738,
+            "total_sec": 0.09188675880432129
+        },
+        "loading_time_sec": 0.0945425033569336,
+        "inference_time_sec": 0.0758504867553711,
+        "throughput": 13.18383101779091,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_7",
+        "profiling": {
+            "read_index_sec": 0.0003409385681152344,
+            "instantiate_model_sec": 0.01560211181640625,
+            "load_params_sec": 0.03683757781982422,
+            "assign_params_sec": 0.00811624526977539,
+            "dispatch_model_sec": 0.03425025939941406,
+            "total_sec": 0.09515142440795898
+        },
+        "loading_time_sec": 0.09769344329833984,
+        "inference_time_sec": 0.08272385597229004,
+        "throughput": 12.088411356634166,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_8",
+        "profiling": {
+            "read_index_sec": 0.00037097930908203125,
+            "instantiate_model_sec": 0.017241477966308594,
+            "load_params_sec": 0.036913156509399414,
+            "assign_params_sec": 0.008934736251831055,
+            "dispatch_model_sec": 0.04447317123413086,
+            "total_sec": 0.10793852806091309
+        },
+        "loading_time_sec": 0.11082124710083008,
+        "inference_time_sec": 0.07733917236328125,
+        "throughput": 12.93005820262405,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_9",
+        "profiling": {
+            "read_index_sec": 0.0003330707550048828,
+            "instantiate_model_sec": 0.015430927276611328,
+            "load_params_sec": 0.03832387924194336,
+            "assign_params_sec": 0.011173009872436523,
+            "dispatch_model_sec": 0.056636810302734375,
+            "total_sec": 0.1219029426574707
+        },
+        "loading_time_sec": 0.12469911575317383,
+        "inference_time_sec": 0.07782936096191406,
+        "throughput": 12.848621492464158,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_10",
+        "profiling": {
+            "read_index_sec": 0.0003628730773925781,
+            "instantiate_model_sec": 0.015885114669799805,
+            "load_params_sec": 0.03797435760498047,
+            "assign_params_sec": 0.008611917495727539,
+            "dispatch_model_sec": 0.03733372688293457,
+            "total_sec": 0.1001739501953125
+        },
+        "loading_time_sec": 0.10376667976379395,
+        "inference_time_sec": 0.0779569149017334,
+        "throughput": 12.827598440247725,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_11",
+        "profiling": {
+            "read_index_sec": 0.0003559589385986328,
+            "instantiate_model_sec": 0.015689611434936523,
+            "load_params_sec": 0.03773140907287598,
+            "assign_params_sec": 0.007901906967163086,
+            "dispatch_model_sec": 0.04679369926452637,
+            "total_sec": 0.10848712921142578
+        },
+        "loading_time_sec": 0.11220502853393555,
+        "inference_time_sec": 0.07747840881347656,
+        "throughput": 12.906821594741636,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_12",
+        "profiling": {
+            "read_index_sec": 0.00034737586975097656,
+            "instantiate_model_sec": 0.015374183654785156,
+            "load_params_sec": 0.03632402420043945,
+            "assign_params_sec": 0.00791025161743164,
+            "dispatch_model_sec": 0.03707432746887207,
+            "total_sec": 0.09703445434570312
+        },
+        "loading_time_sec": 0.09968733787536621,
+        "inference_time_sec": 0.08120965957641602,
+        "throughput": 12.313806081886453,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_13",
+        "profiling": {
+            "read_index_sec": 0.0003440380096435547,
+            "instantiate_model_sec": 0.01581573486328125,
+            "load_params_sec": 0.03807401657104492,
+            "assign_params_sec": 0.009346485137939453,
+            "dispatch_model_sec": 0.03556013107299805,
+            "total_sec": 0.09914541244506836
+        },
+        "loading_time_sec": 0.10176301002502441,
+        "inference_time_sec": 0.07478666305541992,
+        "throughput": 13.37136809084475,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_14",
+        "profiling": {
+            "read_index_sec": 0.00034928321838378906,
+            "instantiate_model_sec": 0.016025304794311523,
+            "load_params_sec": 0.038019657135009766,
+            "assign_params_sec": 0.008607149124145508,
+            "dispatch_model_sec": 0.03641366958618164,
+            "total_sec": 0.09941983222961426
+        },
+        "loading_time_sec": 0.10299539566040039,
+        "inference_time_sec": 0.08281540870666504,
+        "throughput": 12.075047574081697,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_15",
+        "profiling": {
+            "read_index_sec": 0.00034427642822265625,
+            "instantiate_model_sec": 0.015770912170410156,
+            "load_params_sec": 0.03947043418884277,
+            "assign_params_sec": 0.008055448532104492,
+            "dispatch_model_sec": 0.032949209213256836,
+            "total_sec": 0.09659457206726074
+        },
+        "loading_time_sec": 0.09930992126464844,
+        "inference_time_sec": 0.07594084739685059,
+        "throughput": 13.168143815596558,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_16",
+        "profiling": {
+            "read_index_sec": 0.0003523826599121094,
+            "instantiate_model_sec": 0.015701770782470703,
+            "load_params_sec": 0.03593158721923828,
+            "assign_params_sec": 0.007936716079711914,
+            "dispatch_model_sec": 0.037569284439086914,
+            "total_sec": 0.09749674797058105
+        },
+        "loading_time_sec": 0.10111117362976074,
+        "inference_time_sec": 0.0813591480255127,
+        "throughput": 12.291180823162245,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_17",
+        "profiling": {
+            "read_index_sec": 0.0007734298706054688,
+            "instantiate_model_sec": 0.017007827758789062,
+            "load_params_sec": 0.03998589515686035,
+            "assign_params_sec": 0.007938146591186523,
+            "dispatch_model_sec": 0.038619041442871094,
+            "total_sec": 0.10432982444763184
+        },
+        "loading_time_sec": 0.10818672180175781,
+        "inference_time_sec": 0.07857894897460938,
+        "throughput": 12.72605466284771,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_18",
+        "profiling": {
+            "read_index_sec": 0.0003712177276611328,
+            "instantiate_model_sec": 0.015923261642456055,
+            "load_params_sec": 0.03838157653808594,
+            "assign_params_sec": 0.008183002471923828,
+            "dispatch_model_sec": 0.03684544563293457,
+            "total_sec": 0.09970903396606445
+        },
+        "loading_time_sec": 0.10236692428588867,
+        "inference_time_sec": 0.07927775382995605,
+        "throughput": 12.61387907312452,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_19",
+        "profiling": {
+            "read_index_sec": 0.000335693359375,
+            "instantiate_model_sec": 0.015681743621826172,
+            "load_params_sec": 0.03688645362854004,
+            "assign_params_sec": 0.008087158203125,
+            "dispatch_model_sec": 0.03545188903808594,
+            "total_sec": 0.09644770622253418
+        },
+        "loading_time_sec": 0.09901857376098633,
+        "inference_time_sec": 0.07544422149658203,
+        "throughput": 13.25482562034661,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_20",
+        "profiling": {
+            "read_index_sec": 0.00035262107849121094,
+            "instantiate_model_sec": 0.015792369842529297,
+            "load_params_sec": 0.03702735900878906,
+            "assign_params_sec": 0.008105278015136719,
+            "dispatch_model_sec": 0.03556513786315918,
+            "total_sec": 0.0968484878540039
+        },
+        "loading_time_sec": 0.09946608543395996,
+        "inference_time_sec": 0.08144092559814453,
+        "throughput": 12.278838835087884,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_21",
+        "profiling": {
+            "read_index_sec": 0.0003528594970703125,
+            "instantiate_model_sec": 0.01728343963623047,
+            "load_params_sec": 0.03656196594238281,
+            "assign_params_sec": 0.008376598358154297,
+            "dispatch_model_sec": 0.03458690643310547,
+            "total_sec": 0.0971674919128418
+        },
+        "loading_time_sec": 0.09974551200866699,
+        "inference_time_sec": 0.07838273048400879,
+        "throughput": 12.757912282782934,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_22",
+        "profiling": {
+            "read_index_sec": 0.0003457069396972656,
+            "instantiate_model_sec": 0.015483617782592773,
+            "load_params_sec": 0.03739023208618164,
+            "assign_params_sec": 0.008427619934082031,
+            "dispatch_model_sec": 0.03420448303222656,
+            "total_sec": 0.0958561897277832
+        },
+        "loading_time_sec": 0.09846711158752441,
+        "inference_time_sec": 0.07672619819641113,
+        "throughput": 13.033357881751204,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_23",
+        "profiling": {
+            "read_index_sec": 0.00035881996154785156,
+            "instantiate_model_sec": 0.01730799674987793,
+            "load_params_sec": 0.03611183166503906,
+            "assign_params_sec": 0.008687257766723633,
+            "dispatch_model_sec": 0.03556203842163086,
+            "total_sec": 0.09803318977355957
+        },
+        "loading_time_sec": 0.10061120986938477,
+        "inference_time_sec": 0.0852360725402832,
+        "throughput": 11.73212197837239,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_24",
+        "profiling": {
+            "read_index_sec": 0.00033736228942871094,
+            "instantiate_model_sec": 0.015457868576049805,
+            "load_params_sec": 0.037378549575805664,
+            "assign_params_sec": 0.008248567581176758,
+            "dispatch_model_sec": 0.03545188903808594,
+            "total_sec": 0.0968787670135498
+        },
+        "loading_time_sec": 0.09943556785583496,
+        "inference_time_sec": 0.07584905624389648,
+        "throughput": 13.184079664543871,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_25",
+        "profiling": {
+            "read_index_sec": 0.0003674030303955078,
+            "instantiate_model_sec": 0.016139745712280273,
+            "load_params_sec": 0.03646588325500488,
+            "assign_params_sec": 0.008647918701171875,
+            "dispatch_model_sec": 0.037271976470947266,
+            "total_sec": 0.09889745712280273
+        },
+        "loading_time_sec": 0.10252594947814941,
+        "inference_time_sec": 0.07922744750976562,
+        "throughput": 12.621888391352497,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_26",
+        "profiling": {
+            "read_index_sec": 0.0003666877746582031,
+            "instantiate_model_sec": 0.016046524047851562,
+            "load_params_sec": 0.03732419013977051,
+            "assign_params_sec": 0.008182525634765625,
+            "dispatch_model_sec": 0.0382084846496582,
+            "total_sec": 0.10013341903686523
+        },
+        "loading_time_sec": 0.10369610786437988,
+        "inference_time_sec": 0.08266735076904297,
+        "throughput": 12.096674088344889,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_27",
+        "profiling": {
+            "read_index_sec": 0.0003654956817626953,
+            "instantiate_model_sec": 0.015444517135620117,
+            "load_params_sec": 0.03800511360168457,
+            "assign_params_sec": 0.00836801528930664,
+            "dispatch_model_sec": 0.032651424407958984,
+            "total_sec": 0.09483957290649414
+        },
+        "loading_time_sec": 0.09737205505371094,
+        "inference_time_sec": 0.0760507583618164,
+        "throughput": 13.149112797040567,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_28",
+        "profiling": {
+            "read_index_sec": 0.0005636215209960938,
+            "instantiate_model_sec": 0.016587257385253906,
+            "load_params_sec": 0.038454294204711914,
+            "assign_params_sec": 0.008002758026123047,
+            "dispatch_model_sec": 0.0377354621887207,
+            "total_sec": 0.1013481616973877
+        },
+        "loading_time_sec": 0.10520482063293457,
+        "inference_time_sec": 0.07787203788757324,
+        "throughput": 12.841579944828684,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "vgg19_29",
+        "profiling": {
+            "read_index_sec": 0.0003619194030761719,
+            "instantiate_model_sec": 0.01641225814819336,
+            "load_params_sec": 0.03648543357849121,
+            "assign_params_sec": 0.009913444519042969,
+            "dispatch_model_sec": 0.04461240768432617,
+            "total_sec": 0.10779023170471191
+        },
+        "loading_time_sec": 0.11120796203613281,
+        "inference_time_sec": 0.07883930206298828,
+        "throughput": 12.68402907982436,
+        "output_info": "torch.Size([1, 1000])"
+    }
+]

@@ -1,0 +1,452 @@
+[
+    {
+        "model_name": "mobilenet_v2_0",
+        "profiling": {
+            "read_index_sec": 0.0009472370147705078,
+            "instantiate_model_sec": 0.04846906661987305,
+            "load_params_sec": 0.05675768852233887,
+            "assign_params_sec": 0.050653934478759766,
+            "dispatch_model_sec": 0.017092227935791016,
+            "total_sec": 0.17392468452453613
+        },
+        "loading_time_sec": 0.1754903793334961,
+        "inference_time_sec": 0.05747509002685547,
+        "throughput": 17.398841820565153,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_1",
+        "profiling": {
+            "read_index_sec": 0.0009465217590332031,
+            "instantiate_model_sec": 0.05313730239868164,
+            "load_params_sec": 0.0691215991973877,
+            "assign_params_sec": 0.0402827262878418,
+            "dispatch_model_sec": 0.012655258178710938,
+            "total_sec": 0.1761484146118164
+        },
+        "loading_time_sec": 0.17761468887329102,
+        "inference_time_sec": 0.030181169509887695,
+        "throughput": 33.13324222483786,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_2",
+        "profiling": {
+            "read_index_sec": 0.0009758472442626953,
+            "instantiate_model_sec": 0.04886293411254883,
+            "load_params_sec": 0.0472714900970459,
+            "assign_params_sec": 0.03834056854248047,
+            "dispatch_model_sec": 0.015430212020874023,
+            "total_sec": 0.15088653564453125
+        },
+        "loading_time_sec": 0.15235209465026855,
+        "inference_time_sec": 0.03216361999511719,
+        "throughput": 31.09102769376742,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_3",
+        "profiling": {
+            "read_index_sec": 0.0009365081787109375,
+            "instantiate_model_sec": 0.04774069786071777,
+            "load_params_sec": 0.04377293586730957,
+            "assign_params_sec": 0.037358760833740234,
+            "dispatch_model_sec": 0.012240886688232422,
+            "total_sec": 0.14205479621887207
+        },
+        "loading_time_sec": 0.1433577537536621,
+        "inference_time_sec": 0.02922964096069336,
+        "throughput": 34.21184684905137,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_4",
+        "profiling": {
+            "read_index_sec": 0.0009157657623291016,
+            "instantiate_model_sec": 0.047583818435668945,
+            "load_params_sec": 0.045662879943847656,
+            "assign_params_sec": 0.03606295585632324,
+            "dispatch_model_sec": 0.013259410858154297,
+            "total_sec": 0.14348888397216797
+        },
+        "loading_time_sec": 0.1450040340423584,
+        "inference_time_sec": 0.02971363067626953,
+        "throughput": 33.65458805404885,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_5",
+        "profiling": {
+            "read_index_sec": 0.0009396076202392578,
+            "instantiate_model_sec": 0.04814743995666504,
+            "load_params_sec": 0.048865318298339844,
+            "assign_params_sec": 0.037271976470947266,
+            "dispatch_model_sec": 0.012542009353637695,
+            "total_sec": 0.14777064323425293
+        },
+        "loading_time_sec": 0.14918065071105957,
+        "inference_time_sec": 0.029424428939819336,
+        "throughput": 33.98536644654215,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_6",
+        "profiling": {
+            "read_index_sec": 0.0009436607360839844,
+            "instantiate_model_sec": 0.05125117301940918,
+            "load_params_sec": 0.046805620193481445,
+            "assign_params_sec": 0.04208707809448242,
+            "dispatch_model_sec": 0.02022528648376465,
+            "total_sec": 0.16131854057312012
+        },
+        "loading_time_sec": 0.16398000717163086,
+        "inference_time_sec": 0.04001927375793457,
+        "throughput": 24.98795970283522,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_7",
+        "profiling": {
+            "read_index_sec": 0.000949859619140625,
+            "instantiate_model_sec": 0.04900979995727539,
+            "load_params_sec": 0.04941749572753906,
+            "assign_params_sec": 0.040036678314208984,
+            "dispatch_model_sec": 0.01406717300415039,
+            "total_sec": 0.1534862518310547
+        },
+        "loading_time_sec": 0.155350923538208,
+        "inference_time_sec": 0.02952098846435547,
+        "throughput": 33.874204490389275,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_8",
+        "profiling": {
+            "read_index_sec": 0.00091552734375,
+            "instantiate_model_sec": 0.04740619659423828,
+            "load_params_sec": 0.06947994232177734,
+            "assign_params_sec": 0.03983163833618164,
+            "dispatch_model_sec": 0.015102624893188477,
+            "total_sec": 0.17274165153503418
+        },
+        "loading_time_sec": 0.17413640022277832,
+        "inference_time_sec": 0.02991962432861328,
+        "throughput": 33.42287954610652,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_9",
+        "profiling": {
+            "read_index_sec": 0.0009150505065917969,
+            "instantiate_model_sec": 0.04838275909423828,
+            "load_params_sec": 0.049564361572265625,
+            "assign_params_sec": 0.03631877899169922,
+            "dispatch_model_sec": 0.013351678848266602,
+            "total_sec": 0.14853811264038086
+        },
+        "loading_time_sec": 0.15006279945373535,
+        "inference_time_sec": 0.03035140037536621,
+        "throughput": 32.94740893773124,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_10",
+        "profiling": {
+            "read_index_sec": 0.0009620189666748047,
+            "instantiate_model_sec": 0.04892539978027344,
+            "load_params_sec": 0.06844353675842285,
+            "assign_params_sec": 0.040494680404663086,
+            "dispatch_model_sec": 0.021318912506103516,
+            "total_sec": 0.18015098571777344
+        },
+        "loading_time_sec": 0.1828014850616455,
+        "inference_time_sec": 0.03334498405456543,
+        "throughput": 29.989518014571818,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_11",
+        "profiling": {
+            "read_index_sec": 0.0009217262268066406,
+            "instantiate_model_sec": 0.04892230033874512,
+            "load_params_sec": 0.07065892219543457,
+            "assign_params_sec": 0.034848928451538086,
+            "dispatch_model_sec": 0.012235403060913086,
+            "total_sec": 0.16759228706359863
+        },
+        "loading_time_sec": 0.16884231567382812,
+        "inference_time_sec": 0.028660297393798828,
+        "throughput": 34.891473255136845,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_12",
+        "profiling": {
+            "read_index_sec": 0.0009217262268066406,
+            "instantiate_model_sec": 0.07239341735839844,
+            "load_params_sec": 0.09713292121887207,
+            "assign_params_sec": 0.0416259765625,
+            "dispatch_model_sec": 0.01859450340270996,
+            "total_sec": 0.23067498207092285
+        },
+        "loading_time_sec": 0.23326611518859863,
+        "inference_time_sec": 0.03209638595581055,
+        "throughput": 31.156155754631488,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_13",
+        "profiling": {
+            "read_index_sec": 0.000946044921875,
+            "instantiate_model_sec": 0.047917842864990234,
+            "load_params_sec": 0.0766904354095459,
+            "assign_params_sec": 0.036502838134765625,
+            "dispatch_model_sec": 0.013150453567504883,
+            "total_sec": 0.17521333694458008
+        },
+        "loading_time_sec": 0.1765611171722412,
+        "inference_time_sec": 0.028862476348876953,
+        "throughput": 34.64706173900114,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_14",
+        "profiling": {
+            "read_index_sec": 0.0009238719940185547,
+            "instantiate_model_sec": 0.04775381088256836,
+            "load_params_sec": 0.053374528884887695,
+            "assign_params_sec": 0.04002523422241211,
+            "dispatch_model_sec": 0.01387166976928711,
+            "total_sec": 0.15595459938049316
+        },
+        "loading_time_sec": 0.15769004821777344,
+        "inference_time_sec": 0.02916717529296875,
+        "throughput": 34.285116400732406,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_15",
+        "profiling": {
+            "read_index_sec": 0.0009779930114746094,
+            "instantiate_model_sec": 0.049642086029052734,
+            "load_params_sec": 0.06364035606384277,
+            "assign_params_sec": 0.03564906120300293,
+            "dispatch_model_sec": 0.012943029403686523,
+            "total_sec": 0.16286778450012207
+        },
+        "loading_time_sec": 0.16431593894958496,
+        "inference_time_sec": 0.029021263122558594,
+        "throughput": 34.45749400282607,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_16",
+        "profiling": {
+            "read_index_sec": 0.0009477138519287109,
+            "instantiate_model_sec": 0.04743552207946777,
+            "load_params_sec": 0.06009697914123535,
+            "assign_params_sec": 0.03618025779724121,
+            "dispatch_model_sec": 0.013184785842895508,
+            "total_sec": 0.1578502655029297
+        },
+        "loading_time_sec": 0.15936017036437988,
+        "inference_time_sec": 0.028917551040649414,
+        "throughput": 34.58107495321092,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_17",
+        "profiling": {
+            "read_index_sec": 0.0010898113250732422,
+            "instantiate_model_sec": 0.04813718795776367,
+            "load_params_sec": 0.07392477989196777,
+            "assign_params_sec": 0.038902997970581055,
+            "dispatch_model_sec": 0.01295781135559082,
+            "total_sec": 0.1750175952911377
+        },
+        "loading_time_sec": 0.1766035556793213,
+        "inference_time_sec": 0.030298471450805664,
+        "throughput": 33.004965337068484,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_18",
+        "profiling": {
+            "read_index_sec": 0.0009512901306152344,
+            "instantiate_model_sec": 0.04798102378845215,
+            "load_params_sec": 0.04857373237609863,
+            "assign_params_sec": 0.0366206169128418,
+            "dispatch_model_sec": 0.012791633605957031,
+            "total_sec": 0.14692282676696777
+        },
+        "loading_time_sec": 0.1486058235168457,
+        "inference_time_sec": 0.02832341194152832,
+        "throughput": 35.30648080338729,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_19",
+        "profiling": {
+            "read_index_sec": 0.001035451889038086,
+            "instantiate_model_sec": 0.04888486862182617,
+            "load_params_sec": 0.05424070358276367,
+            "assign_params_sec": 0.03708052635192871,
+            "dispatch_model_sec": 0.013057708740234375,
+            "total_sec": 0.15430378913879395
+        },
+        "loading_time_sec": 0.1559429168701172,
+        "inference_time_sec": 0.029911279678344727,
+        "throughput": 33.43220386267805,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_20",
+        "profiling": {
+            "read_index_sec": 0.0009067058563232422,
+            "instantiate_model_sec": 0.04720330238342285,
+            "load_params_sec": 0.06143760681152344,
+            "assign_params_sec": 0.03846931457519531,
+            "dispatch_model_sec": 0.012255668640136719,
+            "total_sec": 0.1602766513824463
+        },
+        "loading_time_sec": 0.16153597831726074,
+        "inference_time_sec": 0.028816938400268555,
+        "throughput": 34.70181273631347,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_21",
+        "profiling": {
+            "read_index_sec": 0.0009484291076660156,
+            "instantiate_model_sec": 0.04801654815673828,
+            "load_params_sec": 0.061570167541503906,
+            "assign_params_sec": 0.03865504264831543,
+            "dispatch_model_sec": 0.014460563659667969,
+            "total_sec": 0.16365528106689453
+        },
+        "loading_time_sec": 0.1652050018310547,
+        "inference_time_sec": 0.038718223571777344,
+        "throughput": 25.8276312224439,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_22",
+        "profiling": {
+            "read_index_sec": 0.0009126663208007812,
+            "instantiate_model_sec": 0.04846668243408203,
+            "load_params_sec": 0.04770684242248535,
+            "assign_params_sec": 0.03794121742248535,
+            "dispatch_model_sec": 0.013536930084228516,
+            "total_sec": 0.14856910705566406
+        },
+        "loading_time_sec": 0.15017223358154297,
+        "inference_time_sec": 0.029256343841552734,
+        "throughput": 34.18062097628555,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_23",
+        "profiling": {
+            "read_index_sec": 0.0009770393371582031,
+            "instantiate_model_sec": 0.048050880432128906,
+            "load_params_sec": 0.058222055435180664,
+            "assign_params_sec": 0.0365595817565918,
+            "dispatch_model_sec": 0.012260198593139648,
+            "total_sec": 0.15607476234436035
+        },
+        "loading_time_sec": 0.15774941444396973,
+        "inference_time_sec": 0.028805971145629883,
+        "throughput": 34.71502470596999,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_24",
+        "profiling": {
+            "read_index_sec": 0.0009393692016601562,
+            "instantiate_model_sec": 0.04717659950256348,
+            "load_params_sec": 0.0632333755493164,
+            "assign_params_sec": 0.037302494049072266,
+            "dispatch_model_sec": 0.013325929641723633,
+            "total_sec": 0.16198325157165527
+        },
+        "loading_time_sec": 0.16364574432373047,
+        "inference_time_sec": 0.02908015251159668,
+        "throughput": 34.38771511260874,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_25",
+        "profiling": {
+            "read_index_sec": 0.0009276866912841797,
+            "instantiate_model_sec": 0.04750514030456543,
+            "load_params_sec": 0.046320438385009766,
+            "assign_params_sec": 0.05250430107116699,
+            "dispatch_model_sec": 0.01330423355102539,
+            "total_sec": 0.16056609153747559
+        },
+        "loading_time_sec": 0.1622006893157959,
+        "inference_time_sec": 0.03014826774597168,
+        "throughput": 33.16940158638524,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_26",
+        "profiling": {
+            "read_index_sec": 0.0009579658508300781,
+            "instantiate_model_sec": 0.04888749122619629,
+            "load_params_sec": 0.07270383834838867,
+            "assign_params_sec": 0.036153554916381836,
+            "dispatch_model_sec": 0.0126800537109375,
+            "total_sec": 0.1713881492614746
+        },
+        "loading_time_sec": 0.17278003692626953,
+        "inference_time_sec": 0.02933359146118164,
+        "throughput": 34.0906090999236,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_27",
+        "profiling": {
+            "read_index_sec": 0.0009148120880126953,
+            "instantiate_model_sec": 0.04825925827026367,
+            "load_params_sec": 0.046241044998168945,
+            "assign_params_sec": 0.0363621711730957,
+            "dispatch_model_sec": 0.012526512145996094,
+            "total_sec": 0.14430832862854004
+        },
+        "loading_time_sec": 0.1460416316986084,
+        "inference_time_sec": 0.029169797897338867,
+        "throughput": 34.28203388722241,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_28",
+        "profiling": {
+            "read_index_sec": 0.0009186267852783203,
+            "instantiate_model_sec": 0.048770904541015625,
+            "load_params_sec": 0.04864811897277832,
+            "assign_params_sec": 0.03792166709899902,
+            "dispatch_model_sec": 0.012517929077148438,
+            "total_sec": 0.14878225326538086
+        },
+        "loading_time_sec": 0.15021276473999023,
+        "inference_time_sec": 0.03728318214416504,
+        "throughput": 26.821744885756857,
+        "output_info": "torch.Size([1, 1000])"
+    },
+    {
+        "model_name": "mobilenet_v2_29",
+        "profiling": {
+            "read_index_sec": 0.0009541511535644531,
+            "instantiate_model_sec": 0.049180030822753906,
+            "load_params_sec": 0.04834389686584473,
+            "assign_params_sec": 0.03573942184448242,
+            "dispatch_model_sec": 0.01336216926574707,
+            "total_sec": 0.1475844383239746
+        },
+        "loading_time_sec": 0.1491403579711914,
+        "inference_time_sec": 0.035604238510131836,
+        "throughput": 28.086543676967892,
+        "output_info": "torch.Size([1, 1000])"
+    }
+]

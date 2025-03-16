@@ -1,0 +1,16 @@
+[
+    {
+        "model_name": "facebook/opt-1.3b_1",
+        "loading_time": 1.442563772201538,
+        "end_to_end_time": 0.7146694660186768,
+        "throughput": 85.35414327944139,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    },
+    {
+        "model_name": "facebook/opt-1.3b_0",
+        "loading_time": 1.1013894081115723,
+        "end_to_end_time": 0.6874141693115234,
+        "throughput": 88.73835123459017,
+        "output_text": "The quick brown fox jumps over the lazy dog.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over the quick brown fox.\nThe lazy dog jumps over"
+    }
+]

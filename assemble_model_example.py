@@ -9,8 +9,10 @@ from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer
 from typing import Dict
 from accelerate import init_empty_weights, dispatch_model
 from collections import defaultdict
-
+import torchvision.models as tv_models
 import cuda_saver  # Your custom module for handling tensor loading
+from PIL import Image
+import torchvision.transforms as T
 USAGE_COUNTS_FILE = "model_usage.json"
 
 model_usage_counts = defaultdict(int)
@@ -31,6 +33,7 @@ def _load_tensor_from_index_entry(model_path: str, name: str, meta: Dict) -> (st
         # GPU: Load directly onto GPU
         ipc_file = os.path.join(model_path, 'handlers_gpu', f"{name}_ipc_handle.bin")
         tensor = cuda_saver.load_model_tensor(ipc_file, shape, dtype)
+
     
     elif location == 'cpu':
         # CPU: Load from shared memory
@@ -271,42 +274,293 @@ def save_usage_counts():
 def increment_usage(model_name: str):
     model_usage_counts[model_name] += 1
     
+def _assign_param_or_buffer(full_name, loaded_tensors, module_dict):
+    """
+    full_name: e.g. "features.0.1.running_mean"
+    loaded_tensors: a dict of {param_name: torch.Tensor}
+    module_dict: e.g. dict(model.named_modules()) so we can find the correct submodule
+
+    We check whether it's a parameter or a buffer in the submodule and assign accordingly.
+    """
+    if full_name not in loaded_tensors:
+        return f"[MISSING] {full_name}"
+
+    tensor = loaded_tensors[full_name]
+    #print(full_name)
+    # Separate the submodule path vs. the attribute name (e.g., "running_mean")
+    if '.' in full_name:
+        module_path, attrib_name = full_name.rsplit('.', 1)
+    else:
+        module_path, attrib_name = '', full_name
+
+    module = module_dict.get(module_path)
+    if module is None:
+        return f"[WARNING] Submodule not found for {full_name}"
+
+    # Check if this attribute is a parameter or a buffer in the submodule
+    is_param = attrib_name in module._parameters
+    is_buffer = attrib_name in module._buffers
+    
+    if is_param:
+        # It's a learnable parameter
+        param = torch.nn.Parameter(tensor)
+        setattr(module, attrib_name, param)
+        return f"[ASSIGNED PARAM] {full_name}"
+    
+    elif is_buffer:
+        # It's a buffer (e.g. BN running stats)
+        # You can either assign directly or use register_buffer:
+        module.register_buffer(attrib_name, tensor)
+        #print(f"[ASSIGNED BUFFER] {full_name} to {module_path}.{attrib_name} = {tensor[:4]}")
+        return f"[ASSIGNED BUFFER] {full_name}"
+
+    else:
+        # It's neither in _parameters nor _buffers.
+        # Possibly a leftover, or a mismatch in naming. Log or skip it.
+        return f"[WARNING] {full_name} not found as param or buffer"
+def instantiate_hf_model(model_name):
+    """
+    For a Hugging Face model, we do:
+       config = AutoConfig.from_pretrained(model_name)
+       with init_empty_weights():
+           model = AutoModelForCausalLM.from_config(config)
+    or adapt if you use a different HF model class.
+    """
+    config = AutoConfig.from_pretrained(model_name)
+    with init_empty_weights():
+        model = AutoModelForCausalLM.from_config(config)
+    return model
+
+def instantiate_torchvision_model(model_name):
+    """
+    For a TorchVision model, we skip all config objects and directly instantiate inside init_empty_weights.
+    For example, if model_name == 'mobilenet_v3_large'.
+    """
+    with init_empty_weights():
+        if model_name == "mobilenet_v3_large":
+            model = tv_models.mobilenet_v3_large()
+        elif model_name == "resnet50":
+            model = tv_models.resnet50()
+        elif model_name == "mobilenet_v2":
+            model = tv_models.mobilenet_v2()
+        elif model_name == "vgg19":
+            model = tv_models.vgg19()
+        else:
+            raise ValueError(f"Unsupported TorchVision model: {model_name}")
+    return model
+
+
+# -------------------------------
+# Single universal assemble function
+# -------------------------------
+def assemble_model(
+    model_type: str,    # 'torchvision' or 'hf'
+    model_name: str,    # e.g. 'mobilenet_v3_large' or 'facebook/opt-1.3b'
+    model_path: str     # path with tensor_index.json and shards
+):
+    """
+    Reads `tensor_index.json` from `model_path`,
+    Instantiates an empty model according to `model_type`,
+    Loads and assigns parameters in parallel,
+    Dispatches submodules to devices according to the index.
+
+    Returns:
+      (model, timings): A 2-tuple where
+        - model is the fully loaded PyTorch model
+        - timings is a dict of time measurements, including total time
+    """
+
+    overall_start = time.time()
+
+    # ----------------------------------------------------------------------
+    # 1) Load the tensor_index.json
+    # ----------------------------------------------------------------------
+    t0 = time.time()
+    tensor_index_file = os.path.join(model_path, "tensor_index.json")
+    with open(tensor_index_file, "r") as f:
+        tensor_index = json.load(f)
+    t_index = time.time() - t0
+
+    # ----------------------------------------------------------------------
+    # 2) Instantiate the empty model
+    # ----------------------------------------------------------------------
+    t0 = time.time()
+    if model_type == "hf":
+        model = instantiate_hf_model(model_name)
+    elif model_type == "torchvision":
+        model = instantiate_torchvision_model(model_name)
+    else:
+        raise ValueError("model_type must be 'hf' or 'torchvision'")
+    t_instantiate = time.time() - t0
+
+    # ----------------------------------------------------------------------
+    # 3) Parallel-load all parameters from shards
+    # ----------------------------------------------------------------------
+    t0 = time.time()
+    st_dict = {}
+    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
+        futures = []
+        for param_name, meta in tensor_index.items():
+            futures.append(
+                executor.submit(_load_tensor_from_index_entry, model_path, param_name, meta)
+            )
+        for fut in concurrent.futures.as_completed(futures):
+            name, tensor = fut.result()
+            st_dict[name] = tensor
+    t_load = time.time() - t0
+
+    # ----------------------------------------------------------------------
+    # 4) Parallel-assign the loaded tensors to the model's parameters
+    # ----------------------------------------------------------------------
+    t0 = time.time()
+    module_dict = dict(model.named_modules())
+
+    all_keys = list(st_dict.keys())
+    with concurrent.futures.ThreadPoolExecutor(max_workers=16) as executor:
+        assign_futures = []
+        for name in all_keys:
+            assign_futures.append(
+                executor.submit(_assign_param_or_buffer, name, st_dict, module_dict)
+            )
+        for fut in concurrent.futures.as_completed(assign_futures):
+            _ = fut.result()
+    t_assign = time.time() - t0
+
+    # ----------------------------------------------------------------------
+    # 5) Dispatch model to devices (example: everything to "cuda")
+    # ----------------------------------------------------------------------
+    t0 = time.time()
+    device_map = {"": "cuda"}
+    model = dispatch_model(model, device_map=device_map)
+    t_dispatch = time.time() - t0
+
+    # ----------------------------------------------------------------------
+    # Measure total time
+    # ----------------------------------------------------------------------
+    total_time = time.time() - overall_start
+
+    # ----------------------------------------------------------------------
+    # Build timings dict
+    # ----------------------------------------------------------------------
+    timings = {
+        "read_index_sec":          t_index,
+        "instantiate_model_sec":   t_instantiate,
+        "load_params_sec":         t_load,
+        "assign_params_sec":       t_assign,
+        "dispatch_model_sec":      t_dispatch,
+        "total_sec":               total_time
+    }
+
+    # Optional summary printout
+    print(f"\n--- {model_name} Assembly Summary ---")
+    print(f"Read index:        {t_index:.2f} s")
+    print(f"Instantiate model: {t_instantiate:.2f} s")
+    print(f"Load parameters:   {t_load:.2f} s")
+    print(f"Assign parameters: {t_assign:.2f} s")
+    print(f"Dispatch model:    {t_dispatch:.2f} s")
+    print(f"Total:             {total_time:.2f} s")
+
+    return model, timings
+
+def test_mobilenet(loaded_model, image_path):
+    """
+    Test a loaded MobileNet V3 by running inference on a sample image.
+    Prints out the top-5 classes with scores.
+    """
+    # 1) Put the model in eval mode, just to be safe
+    loaded_model.eval()
+
+    # 2) Load the image with PIL
+    img = Image.open(image_path).convert("RGB")
+
+    # 3) Apply the MobileNet V3 transforms
+    #    Typically, for ImageNet-trained MobileNet, you'd do:
+    transform = T.Compose([
+        T.Resize(256),             # resize shorter side to 256
+        T.CenterCrop(224),         # center crop to 224x224
+        T.ToTensor(),              # turn into a [C,H,W] float tensor in [0..1]
+        T.Normalize(mean=[0.485, 0.456, 0.406],  # standard ImageNet norms
+                    std=[0.229, 0.224, 0.225]),
+    ])
+    tensor_input = transform(img).unsqueeze(0)  # shape (1, 3, 224, 224)
+
+    # 4) Move input to the same device as the model
+    #    (If you used accelerate dispatch, check where the first param is)
+    device = next(loaded_model.parameters()).device
+    tensor_input = tensor_input.to(device)
+
+    # 5) Forward pass
+    with torch.no_grad():
+        output = loaded_model(tensor_input)  # shape: (1, 1000) for ImageNet
+    
+    # 6) Get class probabilities
+    probs = torch.nn.functional.softmax(output[0], dim=0)
+
+    # 7) Top-5 labels
+    top5 = torch.topk(probs, k=5)
+    top5_probs = top5.values.cpu().numpy()
+    top5_indices = top5.indices.cpu().numpy()
+
+    # 8) If you want to map indices -> class names for ImageNet:
+    #    Download the ImageNet labels file from somewhere or define your own
+    #    For a quick hack, you can do something like:
+    IMAGENET_LABELS = {0: "tench, Tinca tinca", 1: "goldfish, Carassius auratus", 771: "safe"}
+    # (Truncated for brevity—there are 1000 labels in total.)
+
+    print("Top-5 Predictions:")
+    for i in range(5):
+        idx = top5_indices[i]
+        label_str = IMAGENET_LABELS.get(idx, f"Class {idx}")
+        score = top5_probs[i]
+        print(f"  {label_str} ({idx}): {score:.4f}")
+
 def main():
-    model_path = "./"  # Directory where your model shards (GPU, CPU, Disk) are saved
-    hf_model_name = "facebook/opt-1.3b"  # or "facebook/opt-350m", etc.
+    """     model_path = "./"  # Directory where your model shards (GPU, CPU, Disk) are saved
+        hf_model_name = "facebook/opt-1.3b"  # or "facebook/opt-350m", etc.
 
-    # 1) Load the tokenizer from Hugging Face
-    tokenizer = AutoTokenizer.from_pretrained(hf_model_name)
+        # 1) Load the tokenizer from Hugging Face
+        tokenizer = AutoTokenizer.from_pretrained(hf_model_name)
 
-    # 2) Prepare text input
-    input_text = "The meaning of life is"
-    input_tokens = tokenizer(input_text, return_tensors="pt").to("cuda")
+        # 2) Prepare text input
+        input_text = "The meaning of life is"
+        input_tokens = tokenizer(input_text, return_tensors="pt").to("cuda")
 
-    # 3) Load the model using our custom loader
+        # 3) Load the model using our custom loader
+        start_time = time.time()
+        custom_model = pre_load_model(AutoModelForCausalLM, model_path, hf_model_name=hf_model_name)
+        custom_model.eval()
+        custom_loading_time = time.time() - start_time
+
+        # 4) Run inference (generate text)
+        start_time = time.time()
+        generated_ids = custom_model.generate(
+            input_tokens["input_ids"],  # tokenized input
+            max_length=50, 
+            do_sample=True, 
+            temperature=0.7
+        )
+        custom_inference_time = time.time() - start_time
+
+        # 5) Decode the output tokens into text
+        generated_text = tokenizer.decode(generated_ids[0], skip_special_tokens=True)
+
+        # 6) Print the results
+        print("Custom Loading Method:")
+        print(f"  Loading Time: {custom_loading_time:.4f} seconds")
+        print(f"  Inference Time: {custom_inference_time:.4f} seconds")
+        print(f"  Generated Text: {generated_text}")
+    """
     start_time = time.time()
-    custom_model = pre_load_model(AutoModelForCausalLM, model_path, hf_model_name=hf_model_name)
-    custom_model.eval()
-    custom_loading_time = time.time() - start_time
+    model = assemble_model('hf', 'facebook/opt-1.3b', './')
+    end_time = time.time()
+    print( end_time - start_time)
+    
+    model.eval()
+    # test_mobilenet(model, "images.webp")
+    # device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-    # 4) Run inference (generate text)
-    start_time = time.time()
-    generated_ids = custom_model.generate(
-        input_tokens["input_ids"],  # tokenized input
-        max_length=50, 
-        do_sample=True, 
-        temperature=0.7
-    )
-    custom_inference_time = time.time() - start_time
-
-    # 5) Decode the output tokens into text
-    generated_text = tokenizer.decode(generated_ids[0], skip_special_tokens=True)
-
-    # 6) Print the results
-    print("Custom Loading Method:")
-    print(f"  Loading Time: {custom_loading_time:.4f} seconds")
-    print(f"  Inference Time: {custom_inference_time:.4f} seconds")
-    print(f"  Generated Text: {generated_text}")
-
+    # fresh = tv_models.mobilenet_v3_large(weights=tv_models.MobileNet_V3_Large_Weights.DEFAULT).to(device)
+    # test_mobilenet(fresh, "images.webp")
 
 if __name__ == "__main__":
     main()

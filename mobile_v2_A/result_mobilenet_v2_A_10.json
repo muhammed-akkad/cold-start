@@ -1,0 +1,15 @@
+{
+    "model_name": "mobilenet_v2_10",
+    "profiling": {
+        "read_index_sec": 0.0009491443634033203,
+        "instantiate_model_sec": 0.04744219779968262,
+        "load_params_sec": 0.058986663818359375,
+        "assign_params_sec": 0.03534436225891113,
+        "dispatch_model_sec": 0.008237123489379883,
+        "total_sec": 0.15096426010131836
+    },
+    "loading_time_sec": 0.1516737937927246,
+    "inference_time_sec": 0.03043842315673828,
+    "throughput": 32.85321302127393,
+    "output_info": "torch.Size([1, 1000])"
+}
